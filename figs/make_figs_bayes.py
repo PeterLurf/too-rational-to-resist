@@ -250,7 +250,7 @@ def fig_exploit():
                  color=th.LEAK)
     axa.text(0.03, 0.97, f"Spearman ρ = {RHO_TXT}", transform=axa.transAxes, ha="left",
              va="top", fontsize=th.NOTE, color=th.SUB)
-    axa.text(0.03, 0.62, "the closer a model is to Bayes,\nthe more often it is hijacked", transform=axa.transAxes,
+    axa.text(0.03, 0.62, "the more a model acts like Bayes,\nthe more often it is hijacked", transform=axa.transAxes,
              ha="left", va="top", fontsize=th.NOTE, color=th.INK, style="italic")
     axa.set_xlabel("agreement with the Bayes action on honest chains")
     axa.set_ylabel("share of episodes hijacked\n(all ten genuine agents wrong)")

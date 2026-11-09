@@ -75,8 +75,8 @@
 \node[note, anchor=west] at ($(t0.north west)+(53pt, 5pt)$) {0 of 8 say \textbf{\color{leak}LEAK}};
 \draw[arr] (c1.east) -- (t1.west);
 \draw[arr] (c0.east) -- (t0.west);
-\node[note, align=center, fill=white, inner sep=1pt] at ($(c1.east)!0.5!(t1.west)+(0,5pt)$) {swarm\\[-2pt]reviews};
-\node[note, align=center, fill=white, inner sep=1pt] at ($(c0.east)!0.5!(t0.west)+(0,5pt)$) {swarm\\[-2pt]reviews};
+\node[note, anchor=north west] at ([yshift=-1pt]t1.south west) {swarm reviews};
+\node[note, anchor=north west] at ([yshift=-1pt]t0.south west) {swarm reviews};
 \node[stepn] (s2) at (s1 -| t1.west) {2};
 \node[hdr, anchor=west] at ([xshift=3pt]s2.east) {A swarm reviews each twin};
 \node[note, anchor=west] at ([xshift=2pt, yshift=-9pt]s2.east) {Sonnet 5.5, 8 reviewers};
