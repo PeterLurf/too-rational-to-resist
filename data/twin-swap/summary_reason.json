@@ -232,332 +232,24 @@
     24
    ]
   },
-  "deepseek/deepseek-v4-flash|anthropic-api/claude-sonnet-5-5@r1": {
+  "claude-opus-5-5|anthropic-api/claude-sonnet-5-5@r1": {
    "evid1": [
     1.0,
     1.0,
     1.0,
-    56
-   ],
-   "evid0": [
-    0.982,
-    0.946,
-    1.0,
-    56
-   ],
-   "true1": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "true0": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "false_clear": [
-    0.821,
-    0.714,
-    0.911,
-    56
-   ],
-   "false_alarm": [
-    0.964,
-    0.911,
-    1.0,
-    56
-   ],
-   "n_both_correct": 55,
-   "sus_clear": [
-    0.182,
-    0.091,
-    0.291,
-    55
-   ],
-   "sus_alarm": [
-    0.036,
-    0.0,
-    0.091,
-    55
-   ],
-   "clear_minus_alarm": [
-    0.145,
-    0.036,
-    0.273,
-    55
-   ]
-  },
-  "deepseek/deepseek-v4-flash|POOLED": {
-   "sus_clear": [
-    0.182,
-    0.091,
-    0.291,
-    55
-   ],
-   "sus_alarm": [
-    0.036,
-    0.0,
-    0.091,
-    55
-   ],
-   "clear_minus_alarm": [
-    0.145,
-    0.036,
-    0.273,
-    55
-   ]
-  },
-  "qwen/qwen3-32b|anthropic-api/claude-sonnet-5-5@r1": {
-   "evid1": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "evid0": [
-    0.929,
-    0.857,
-    0.982,
-    56
-   ],
-   "true1": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "true0": [
-    0.929,
-    0.857,
-    0.982,
-    56
-   ],
-   "false_clear": [
-    0.696,
-    0.571,
-    0.821,
-    56
-   ],
-   "false_alarm": [
-    0.145,
-    0.055,
-    0.236,
-    55
-   ],
-   "n_both_correct": 51,
-   "sus_clear": [
-    0.314,
-    0.196,
-    0.451,
-    51
-   ],
-   "sus_alarm": [
-    0.843,
-    0.745,
-    0.941,
-    51
-   ],
-   "clear_minus_alarm": [
-    -0.529,
-    -0.686,
-    -0.373,
-    51
-   ]
-  },
-  "qwen/qwen3-32b|POOLED": {
-   "sus_clear": [
-    0.314,
-    0.196,
-    0.451,
-    51
-   ],
-   "sus_alarm": [
-    0.843,
-    0.725,
-    0.941,
-    51
-   ],
-   "clear_minus_alarm": [
-    -0.529,
-    -0.686,
-    -0.353,
-    51
-   ]
-  },
-  "google/gemini-3.8-flash|anthropic-api/claude-sonnet-5-5@r1": {
-   "evid1": [
-    1.0,
-    1.0,
-    1.0,
-    56
+    16
    ],
    "evid0": [
     1.0,
     1.0,
     1.0,
-    56
+    49
    ],
    "true1": [
     1.0,
     1.0,
     1.0,
-    56
-   ],
-   "true0": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "false_clear": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "false_alarm": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "n_both_correct": 56,
-   "sus_clear": [
-    0.0,
-    0.0,
-    0.0,
-    56
-   ],
-   "sus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    56
-   ],
-   "clear_minus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    56
-   ]
-  },
-  "google/gemini-3.8-flash|POOLED": {
-   "sus_clear": [
-    0.0,
-    0.0,
-    0.0,
-    56
-   ],
-   "sus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    56
-   ],
-   "clear_minus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    56
-   ]
-  },
-  "meta-llama/llama-3.1-70b-instruct|anthropic-api/claude-sonnet-5-5@r1": {
-   "evid1": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "evid0": [
-    0.893,
-    0.804,
-    0.964,
-    56
-   ],
-   "true1": [
-    1.0,
-    1.0,
-    1.0,
-    56
-   ],
-   "true0": [
-    0.946,
-    0.875,
-    1.0,
-    56
-   ],
-   "false_clear": [
-    0.054,
-    0.0,
-    0.125,
-    56
-   ],
-   "false_alarm": [
-    0.179,
-    0.089,
-    0.286,
-    56
-   ],
-   "n_both_correct": 50,
-   "sus_clear": [
-    0.94,
-    0.86,
-    1.0,
-    50
-   ],
-   "sus_alarm": [
-    0.8,
-    0.68,
-    0.9,
-    50
-   ],
-   "clear_minus_alarm": [
-    0.14,
-    0.0,
-    0.28,
-    50
-   ]
-  },
-  "meta-llama/llama-3.1-70b-instruct|POOLED": {
-   "sus_clear": [
-    0.94,
-    0.86,
-    1.0,
-    50
-   ],
-   "sus_alarm": [
-    0.8,
-    0.68,
-    0.9,
-    50
-   ],
-   "clear_minus_alarm": [
-    0.14,
-    0.0,
-    0.28,
-    50
-   ]
-  },
-  "claude-sonnet-5-5|anthropic-api/claude-sonnet-5-5@r1": {
-   "evid1": [
-    1.0,
-    1.0,
-    1.0,
-    43
-   ],
-   "evid0": [
-    1.0,
-    1.0,
-    1.0,
-    50
-   ],
-   "true1": [
-    1.0,
-    1.0,
-    1.0,
-    45
+    18
    ],
    "true0": [
     1.0,
@@ -569,52 +261,129 @@
     1.0,
     1.0,
     1.0,
-    42
+    17
    ],
    "false_alarm": [
     1.0,
     1.0,
     1.0,
-    54
+    32
    ],
-   "n_both_correct": 32,
+   "n_both_correct": 10,
    "sus_clear": [
     0.0,
     0.0,
     0.0,
-    32
+    10
    ],
    "sus_alarm": [
     0.0,
     0.0,
     0.0,
-    32
+    10
    ],
    "clear_minus_alarm": [
     0.0,
     0.0,
     0.0,
-    32
+    10
    ]
   },
-  "claude-sonnet-5-5|POOLED": {
+  "claude-opus-5-5|POOLED": {
    "sus_clear": [
     0.0,
     0.0,
     0.0,
-    32
+    10
    ],
    "sus_alarm": [
     0.0,
     0.0,
     0.0,
-    32
+    10
    ],
    "clear_minus_alarm": [
     0.0,
     0.0,
     0.0,
-    32
+    10
+   ]
+  },
+  "openai/gpt-oss-20b|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.911,
+    0.821,
+    0.982,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.554,
+    0.429,
+    0.679,
+    56
+   ],
+   "false_alarm": [
+    0.321,
+    0.214,
+    0.446,
+    56
+   ],
+   "n_both_correct": 51,
+   "sus_clear": [
+    0.431,
+    0.314,
+    0.569,
+    51
+   ],
+   "sus_alarm": [
+    0.706,
+    0.588,
+    0.824,
+    51
+   ],
+   "clear_minus_alarm": [
+    -0.275,
+    -0.451,
+    -0.098,
+    51
+   ]
+  },
+  "openai/gpt-oss-20b|POOLED": {
+   "sus_clear": [
+    0.431,
+    0.294,
+    0.569,
+    51
+   ],
+   "sus_alarm": [
+    0.706,
+    0.588,
+    0.824,
+    51
+   ],
+   "clear_minus_alarm": [
+    -0.275,
+    -0.451,
+    -0.098,
+    51
    ]
   },
   "meta-llama/llama-4-maverick|anthropic-api/claude-sonnet-5-5@r1": {
@@ -694,7 +463,7 @@
     53
    ]
   },
-  "openai/gpt-oss-20b|anthropic-api/claude-sonnet-5-5@r1": {
+  "qwen/qwen3-32b|anthropic-api/claude-sonnet-5-5@r1": {
    "evid1": [
     1.0,
     1.0,
@@ -702,8 +471,8 @@
     56
    ],
    "evid0": [
-    0.911,
-    0.821,
+    0.929,
+    0.857,
     0.982,
     56
    ],
@@ -714,60 +483,60 @@
     56
    ],
    "true0": [
-    0.964,
-    0.911,
-    1.0,
+    0.929,
+    0.857,
+    0.982,
     56
    ],
    "false_clear": [
-    0.554,
-    0.429,
-    0.679,
+    0.696,
+    0.571,
+    0.821,
     56
    ],
    "false_alarm": [
-    0.321,
-    0.214,
-    0.446,
-    56
+    0.145,
+    0.055,
+    0.236,
+    55
    ],
    "n_both_correct": 51,
    "sus_clear": [
-    0.431,
     0.314,
-    0.569,
+    0.196,
+    0.451,
     51
    ],
    "sus_alarm": [
-    0.706,
-    0.588,
-    0.824,
+    0.843,
+    0.745,
+    0.941,
     51
    ],
    "clear_minus_alarm": [
-    -0.275,
-    -0.451,
-    -0.098,
+    -0.529,
+    -0.686,
+    -0.373,
     51
    ]
   },
-  "openai/gpt-oss-20b|POOLED": {
+  "qwen/qwen3-32b|POOLED": {
    "sus_clear": [
-    0.431,
-    0.294,
-    0.569,
+    0.314,
+    0.196,
+    0.451,
     51
    ],
    "sus_alarm": [
-    0.706,
-    0.588,
-    0.824,
+    0.843,
+    0.725,
+    0.941,
     51
    ],
    "clear_minus_alarm": [
-    -0.275,
-    -0.451,
-    -0.098,
+    -0.529,
+    -0.686,
+    -0.353,
     51
    ]
   },
@@ -925,6 +694,160 @@
     48
    ]
   },
+  "deepseek/deepseek-v4-flash|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.982,
+    0.946,
+    1.0,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.821,
+    0.714,
+    0.911,
+    56
+   ],
+   "false_alarm": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "n_both_correct": 55,
+   "sus_clear": [
+    0.182,
+    0.091,
+    0.291,
+    55
+   ],
+   "sus_alarm": [
+    0.036,
+    0.0,
+    0.091,
+    55
+   ],
+   "clear_minus_alarm": [
+    0.145,
+    0.036,
+    0.273,
+    55
+   ]
+  },
+  "deepseek/deepseek-v4-flash|POOLED": {
+   "sus_clear": [
+    0.182,
+    0.091,
+    0.291,
+    55
+   ],
+   "sus_alarm": [
+    0.036,
+    0.0,
+    0.091,
+    55
+   ],
+   "clear_minus_alarm": [
+    0.145,
+    0.036,
+    0.273,
+    55
+   ]
+  },
+  "google/gemini-3.8-flash|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "n_both_correct": 56,
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ]
+  },
+  "google/gemini-3.8-flash|POOLED": {
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ]
+  },
   "claude-haiku-5-5|anthropic-api/claude-sonnet-5-5@r1": {
    "evid1": [
     1.0,
@@ -1000,6 +923,83 @@
     0.0,
     0.054,
     56
+   ]
+  },
+  "meta-llama/llama-3.1-70b-instruct|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.893,
+    0.804,
+    0.964,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.946,
+    0.875,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.054,
+    0.0,
+    0.125,
+    56
+   ],
+   "false_alarm": [
+    0.179,
+    0.089,
+    0.286,
+    56
+   ],
+   "n_both_correct": 50,
+   "sus_clear": [
+    0.94,
+    0.86,
+    1.0,
+    50
+   ],
+   "sus_alarm": [
+    0.8,
+    0.68,
+    0.9,
+    50
+   ],
+   "clear_minus_alarm": [
+    0.14,
+    0.0,
+    0.28,
+    50
+   ]
+  },
+  "meta-llama/llama-3.1-70b-instruct|POOLED": {
+   "sus_clear": [
+    0.94,
+    0.86,
+    1.0,
+    50
+   ],
+   "sus_alarm": [
+    0.8,
+    0.68,
+    0.9,
+    50
+   ],
+   "clear_minus_alarm": [
+    0.14,
+    0.0,
+    0.28,
+    50
    ]
   },
   "google/gemma-4-31b-it|anthropic-api/claude-sonnet-5-5@r1": {
@@ -1079,83 +1079,6 @@
     48
    ]
   },
-  "claude-opus-5-5|anthropic-api/claude-sonnet-5-5@r1": {
-   "evid1": [
-    1.0,
-    1.0,
-    1.0,
-    16
-   ],
-   "evid0": [
-    1.0,
-    1.0,
-    1.0,
-    49
-   ],
-   "true1": [
-    1.0,
-    1.0,
-    1.0,
-    18
-   ],
-   "true0": [
-    1.0,
-    1.0,
-    1.0,
-    46
-   ],
-   "false_clear": [
-    1.0,
-    1.0,
-    1.0,
-    17
-   ],
-   "false_alarm": [
-    1.0,
-    1.0,
-    1.0,
-    32
-   ],
-   "n_both_correct": 10,
-   "sus_clear": [
-    0.0,
-    0.0,
-    0.0,
-    10
-   ],
-   "sus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    10
-   ],
-   "clear_minus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    10
-   ]
-  },
-  "claude-opus-5-5|POOLED": {
-   "sus_clear": [
-    0.0,
-    0.0,
-    0.0,
-    10
-   ],
-   "sus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    10
-   ],
-   "clear_minus_alarm": [
-    0.0,
-    0.0,
-    0.0,
-    10
-   ]
-  },
   "openai/gpt-oss-120b|anthropic-api/claude-sonnet-5-5@r1": {
    "evid1": [
     0.982,
@@ -1231,6 +1154,83 @@
     -0.208,
     0.17,
     53
+   ]
+  },
+  "claude-sonnet-5-5|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    43
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    50
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    45
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    46
+   ],
+   "false_clear": [
+    1.0,
+    1.0,
+    1.0,
+    42
+   ],
+   "false_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    54
+   ],
+   "n_both_correct": 32,
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    32
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    32
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    32
+   ]
+  },
+  "claude-sonnet-5-5|POOLED": {
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    32
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    32
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    32
    ]
   }
  },

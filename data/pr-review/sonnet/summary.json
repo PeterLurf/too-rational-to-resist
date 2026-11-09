@@ -147,6 +147,34 @@
     40
    ],
    "episodes": 20
+  },
+  "partial_plant_ci": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "benign_partial_ci": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "partial_plant_fullquote": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "partial_plant_verdict": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
   }
  }
 }

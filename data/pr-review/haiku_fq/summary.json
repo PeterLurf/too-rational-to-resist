@@ -98,6 +98,13 @@
    ],
    "owner_approve": null,
    "episodes": 30
+  },
+  "partial_plant_verdict": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
   }
  }
 }
