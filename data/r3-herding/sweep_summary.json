@@ -1,0 +1,194 @@
+{
+ "claude-sonnet-5-5|think|verdicts_plant1": {
+  "acc": [
+   0.445,
+   0.268,
+   0.627,
+   20
+  ],
+  "all_wrong": [
+   0.2,
+   0.05,
+   0.4,
+   20
+  ],
+  "rational_acc": 0.445,
+  "rational_all_wrong": 0.3
+ },
+ "claude-sonnet-5-5|think|verdicts_plant": {
+  "acc": [
+   0.11,
+   0.04,
+   0.2,
+   30
+  ],
+  "all_wrong": [
+   0.667,
+   0.5,
+   0.833,
+   30
+  ],
+  "rational_acc": 0.0,
+  "rational_all_wrong": 1.0
+ },
+ "claude-sonnet-5-5|think|verdicts_plant3": {
+  "acc": [
+   0.056,
+   0.022,
+   0.1,
+   20
+  ],
+  "all_wrong": [
+   0.65,
+   0.45,
+   0.85,
+   20
+  ],
+  "rational_acc": 0.0,
+  "rational_all_wrong": 1.0
+ },
+ "claude-sonnet-5-5|think|verdicts_plantmid": {
+  "acc": [
+   0.506,
+   0.319,
+   0.706,
+   16
+  ],
+  "all_wrong": [
+   0.188,
+   0.0,
+   0.375,
+   16
+  ],
+  "rational_acc": 0.544,
+  "rational_all_wrong": 0.188
+ },
+ "claude-haiku-5-5|think|verdicts_plant1": {
+  "acc": [
+   0.488,
+   0.336,
+   0.639,
+   30
+  ],
+  "all_wrong": [
+   0.333,
+   0.167,
+   0.5,
+   30
+  ],
+  "rational_acc": 0.433,
+  "rational_all_wrong": 0.367
+ },
+ "claude-haiku-5-5|think|verdicts_plant": {
+  "acc": [
+   0.27,
+   0.177,
+   0.373,
+   30
+  ],
+  "all_wrong": [
+   0.367,
+   0.2,
+   0.533,
+   30
+  ],
+  "rational_acc": 0.0,
+  "rational_all_wrong": 1.0
+ },
+ "claude-haiku-5-5|think|verdicts_plant3": {
+  "acc": [
+   0.303,
+   0.188,
+   0.437,
+   29
+  ],
+  "all_wrong": [
+   0.483,
+   0.31,
+   0.655,
+   29
+  ],
+  "rational_acc": 0.0,
+  "rational_all_wrong": 1.0
+ },
+ "claude-haiku-5-5|think|verdicts_plantmid": {
+  "acc": [
+   0.0,
+   0.0,
+   0.0,
+   1
+  ],
+  "all_wrong": [
+   1.0,
+   1.0,
+   1.0,
+   1
+  ],
+  "rational_acc": 0.2,
+  "rational_all_wrong": 0.0
+ },
+ "claude-haiku-5-5|fast|verdicts_plant1": {
+  "acc": [
+   0.415,
+   0.279,
+   0.561,
+   30
+  ],
+  "all_wrong": [
+   0.2,
+   0.067,
+   0.367,
+   30
+  ],
+  "rational_acc": 0.433,
+  "rational_all_wrong": 0.367
+ },
+ "claude-haiku-5-5|fast|verdicts_plant": {
+  "acc": [
+   0.187,
+   0.12,
+   0.263,
+   30
+  ],
+  "all_wrong": [
+   0.333,
+   0.167,
+   0.5,
+   30
+  ],
+  "rational_acc": 0.0,
+  "rational_all_wrong": 1.0
+ },
+ "claude-haiku-5-5|fast|verdicts_plant3": {
+  "acc": [
+   0.233,
+   0.156,
+   0.315,
+   30
+  ],
+  "all_wrong": [
+   0.233,
+   0.1,
+   0.4,
+   30
+  ],
+  "rational_acc": 0.0,
+  "rational_all_wrong": 1.0
+ },
+ "claude-haiku-5-5|fast|verdicts_plantmid": {
+  "acc": [
+   0.617,
+   0.483,
+   0.75,
+   30
+  ],
+  "all_wrong": [
+   0.1,
+   0.0,
+   0.2,
+   30
+  ],
+  "rational_acc": 0.593,
+  "rational_all_wrong": 0.167
+ }
+}

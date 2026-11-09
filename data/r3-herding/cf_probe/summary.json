@@ -1,0 +1,255 @@
+{
+ "claude-haiku-5-5|fast": {
+  "discriminating": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    40
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    40
+   ]
+  },
+  "control": {
+   "follows_exact": [
+    0.963,
+    0.912,
+    1.0,
+    80
+   ],
+   "p_err_exact": [
+    0.01,
+    0.001,
+    0.026,
+    80
+   ]
+  },
+  "disc_prior60": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "disc_prior40": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "offpath_D2_mean_p": 49.88
+ },
+ "claude-opus-5-5|think": {
+  "discriminating": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    40
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    40
+   ]
+  },
+  "control": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    80
+   ],
+   "p_err_exact": [
+    0.002,
+    0.001,
+    0.002,
+    80
+   ]
+  },
+  "disc_prior60": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "disc_prior40": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "offpath_D2_mean_p": 50.0
+ },
+ "claude-sonnet-5-5|think": {
+  "discriminating": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    40
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    40
+   ]
+  },
+  "control": {
+   "follows_exact": [
+    0.988,
+    0.963,
+    1.0,
+    80
+   ],
+   "p_err_exact": [
+    0.003,
+    0.001,
+    0.008,
+    80
+   ]
+  },
+  "disc_prior60": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "disc_prior40": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "offpath_D2_mean_p": 47.85
+ },
+ "deepseek/deepseek-v4-flash|think": {
+  "discriminating": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    20
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    20
+   ]
+  },
+  "control": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    2
+   ]
+  },
+  "disc_prior60": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "disc_prior40": null,
+  "offpath_D2_mean_p": 44.68
+ },
+ "openai/gpt-6.1-sol|think": {
+  "discriminating": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    40
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    40
+   ]
+  },
+  "control": {
+   "follows_exact": [
+    1.0,
+    1.0,
+    1.0,
+    80
+   ],
+   "p_err_exact": [
+    0.0,
+    0.0,
+    0.0,
+    80
+   ]
+  },
+  "disc_prior60": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "disc_prior40": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "offpath_D2_mean_p": 51.11
+ },
+ "qwen/qwen3-14b|think": {
+  "discriminating": {
+   "follows_exact": [
+    0.875,
+    0.775,
+    0.975,
+    40
+   ],
+   "p_err_exact": [
+    0.003,
+    0.0,
+    0.008,
+    40
+   ]
+  },
+  "control": {
+   "follows_exact": [
+    0.887,
+    0.812,
+    0.95,
+    80
+   ],
+   "p_err_exact": [
+    0.002,
+    0.001,
+    0.002,
+    80
+   ]
+  },
+  "disc_prior60": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "disc_prior40": [
+   0.75,
+   0.55,
+   0.95,
+   20
+  ],
+  "offpath_D2_mean_p": 50.25
+ }
+}

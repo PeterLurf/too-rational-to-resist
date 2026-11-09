@@ -1,0 +1,229 @@
+{
+ "openai/gpt-6.1-sol|think|probs": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   212
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   212
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   347
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   374
+  ],
+  "override_at_tie": [
+   0.0,
+   0.0,
+   0.0,
+   147
+  ],
+  "first_acc": [
+   0.6444,
+   0.5444,
+   0.7336,
+   90
+  ],
+  "final_acc": [
+   0.7889,
+   0.7,
+   0.8667,
+   90
+  ],
+  "chain_majority_acc": [
+   0.8434,
+   0.7711,
+   0.9157,
+   83
+  ],
+  "indep_signal_majority_acc": [
+   0.8571,
+   0.7792,
+   0.9351,
+   77
+  ],
+  "bhw_rational_final_acc": [
+   0.7889,
+   0.7,
+   0.8667,
+   90
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   90
+  ],
+  "p_abs_err_vs_bayes": 0.0006,
+  "mean_out_tok": 159.8
+ },
+ "openai/gpt-6.1-sol|think|signals": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   212
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   212
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   347
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   374
+  ],
+  "override_at_tie": [
+   0.0952,
+   0.0457,
+   0.1548,
+   147
+  ],
+  "first_acc": [
+   0.6444,
+   0.5444,
+   0.7336,
+   90
+  ],
+  "final_acc": [
+   0.8,
+   0.7111,
+   0.8778,
+   90
+  ],
+  "chain_majority_acc": [
+   0.8313,
+   0.747,
+   0.9036,
+   83
+  ],
+  "indep_signal_majority_acc": [
+   0.8571,
+   0.7792,
+   0.9351,
+   77
+  ],
+  "bhw_rational_final_acc": [
+   0.7889,
+   0.7,
+   0.8667,
+   90
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   90
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 83.4
+ },
+ "openai/gpt-6.1-sol|think|solo": {
+  "signal_following": [
+   1.0,
+   1.0,
+   1.0,
+   180
+  ],
+  "accuracy": [
+   0.6611,
+   0.5889,
+   0.7278,
+   180
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 24.7
+ },
+ "openai/gpt-6.1-sol|think|verdicts": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   331
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   331
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   459
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   226
+  ],
+  "override_at_tie": [
+   0.1406,
+   0.0645,
+   0.2241,
+   64
+  ],
+  "first_acc": [
+   0.6444,
+   0.5444,
+   0.7336,
+   90
+  ],
+  "final_acc": [
+   0.7556,
+   0.6667,
+   0.8333,
+   90
+  ],
+  "chain_majority_acc": [
+   0.7556,
+   0.6667,
+   0.8333,
+   90
+  ],
+  "indep_signal_majority_acc": [
+   0.8571,
+   0.7792,
+   0.9351,
+   77
+  ],
+  "bhw_rational_final_acc": [
+   0.7667,
+   0.6778,
+   0.8444,
+   90
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   90
+  ],
+  "p_abs_err_vs_bayes": 0.0041,
+  "mean_out_tok": 492.1
+ },
+ "VERDICT_R3B": "VERDICT_R3B NEITHER | sonnet-think override(raw lead>=2)=   n/a           | override(BHW cascade)=   n/a           | solo signal-following=   n/a           | final_acc verdicts=   n/a           vs signals=   n/a           vs indep-majority=   n/a           | rule: HERD if override_raw>=0.60 & solo>=0.95; DEAF if override_bhw<=0.10"
+}

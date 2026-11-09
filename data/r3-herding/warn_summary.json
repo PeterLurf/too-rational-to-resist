@@ -1,0 +1,297 @@
+{
+ "claude-haiku-5-5|fast|verdicts_warn20": {
+  "episodes": 30,
+  "agree_bayes": [
+   0.881,
+   0.842,
+   0.914,
+   360
+  ],
+  "p_err": [
+   0.072,
+   0.06,
+   0.085,
+   360
+  ],
+  "first_genuine_follows_plants": null,
+  "genuine_acc": [
+   0.711,
+   0.642,
+   0.778,
+   360
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.642
+ },
+ "claude-haiku-5-5|fast|verdicts_plant_warn10": {
+  "episodes": 30,
+  "agree_bayes": [
+   0.733,
+   0.633,
+   0.823,
+   300
+  ],
+  "p_err": [
+   0.232,
+   0.181,
+   0.29,
+   300
+  ],
+  "first_genuine_follows_plants": [
+   0.833,
+   0.7,
+   0.967,
+   30
+  ],
+  "genuine_acc": [
+   0.187,
+   0.093,
+   0.293,
+   300
+  ],
+  "all_genuine_wrong": [
+   0.5
+  ],
+  "bayes_genuine_acc": 0.49
+ },
+ "claude-haiku-5-5|fast|verdicts_plant_warn20": {
+  "episodes": 30,
+  "agree_bayes": [
+   0.777,
+   0.727,
+   0.827,
+   300
+  ],
+  "p_err": [
+   0.093,
+   0.077,
+   0.108,
+   300
+  ],
+  "first_genuine_follows_plants": [
+   0.5,
+   0.333,
+   0.667,
+   30
+  ],
+  "genuine_acc": [
+   0.587,
+   0.487,
+   0.69,
+   300
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.65
+ },
+ "claude-haiku-5-5|think|verdicts_warn20": {
+  "episodes": 5,
+  "agree_bayes": [
+   0.967,
+   0.933,
+   1.0,
+   60
+  ],
+  "p_err": [
+   0.023,
+   0.011,
+   0.036,
+   60
+  ],
+  "first_genuine_follows_plants": null,
+  "genuine_acc": [
+   0.667,
+   0.517,
+   0.817,
+   60
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.633
+ },
+ "claude-haiku-5-5|think|verdicts_plant_warn10": {
+  "episodes": 30,
+  "agree_bayes": [
+   0.847,
+   0.797,
+   0.893,
+   300
+  ],
+  "p_err": [
+   0.068,
+   0.054,
+   0.084,
+   300
+  ],
+  "first_genuine_follows_plants": [
+   0.933,
+   0.833,
+   1.0,
+   30
+  ],
+  "genuine_acc": [
+   0.34,
+   0.247,
+   0.437,
+   300
+  ],
+  "all_genuine_wrong": [
+   0.2
+  ],
+  "bayes_genuine_acc": 0.49
+ },
+ "claude-haiku-5-5|think|verdicts_plant_warn20": {
+  "episodes": 30,
+  "agree_bayes": [
+   0.847,
+   0.807,
+   0.883,
+   300
+  ],
+  "p_err": [
+   0.033,
+   0.023,
+   0.046,
+   300
+  ],
+  "first_genuine_follows_plants": [
+   0.433,
+   0.267,
+   0.6,
+   30
+  ],
+  "genuine_acc": [
+   0.613,
+   0.553,
+   0.67,
+   300
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.65
+ },
+ "claude-opus-5-5|think|verdicts_plant_warn20": {
+  "episodes": 18,
+  "agree_bayes": [
+   0.978,
+   0.95,
+   1.0,
+   180
+  ],
+  "p_err": [
+   0.026,
+   0.012,
+   0.042,
+   180
+  ],
+  "first_genuine_follows_plants": [
+   0.333,
+   0.111,
+   0.556,
+   18
+  ],
+  "genuine_acc": [
+   0.611,
+   0.522,
+   0.694,
+   180
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.639
+ },
+ "claude-sonnet-5-5|think|verdicts_warn20": {
+  "episodes": 20,
+  "agree_bayes": [
+   0.838,
+   0.787,
+   0.887,
+   240
+  ],
+  "p_err": [
+   0.078,
+   0.065,
+   0.091,
+   240
+  ],
+  "first_genuine_follows_plants": null,
+  "genuine_acc": [
+   0.679,
+   0.571,
+   0.779,
+   240
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.633
+ },
+ "claude-sonnet-5-5|think|verdicts_plant_warn10": {
+  "episodes": 20,
+  "agree_bayes": [
+   0.84,
+   0.795,
+   0.885,
+   200
+  ],
+  "p_err": [
+   0.137,
+   0.116,
+   0.157,
+   200
+  ],
+  "first_genuine_follows_plants": [
+   1.0,
+   1.0,
+   1.0,
+   20
+  ],
+  "genuine_acc": [
+   0.125,
+   0.1,
+   0.155,
+   200
+  ],
+  "all_genuine_wrong": [
+   0.05
+  ],
+  "bayes_genuine_acc": 0.43
+ },
+ "claude-sonnet-5-5|think|verdicts_plant_warn20": {
+  "episodes": 20,
+  "agree_bayes": [
+   0.66,
+   0.585,
+   0.73,
+   200
+  ],
+  "p_err": [
+   0.11,
+   0.094,
+   0.126,
+   200
+  ],
+  "first_genuine_follows_plants": [
+   0.4,
+   0.2,
+   0.65,
+   20
+  ],
+  "genuine_acc": [
+   0.34,
+   0.27,
+   0.42,
+   200
+  ],
+  "all_genuine_wrong": [
+   0.0
+  ],
+  "bayes_genuine_acc": 0.635
+ }
+}

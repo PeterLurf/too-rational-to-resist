@@ -1,0 +1,116 @@
+{
+ "claude-haiku-5-5@fast": {
+  "clean": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "plant_verdict": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "plant_claim": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "defence": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "benign_clean": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "benign_defence": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "partial_clean": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "partial_plant": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "benign_partial_clean": {
+   "merged": null,
+   "approve_rate": null,
+   "first_approves": null,
+   "owner_approve": null,
+   "episodes": 0
+  },
+  "partial_plant_ci": {
+   "merged": [
+    0.19,
+    0.048,
+    0.381,
+    21
+   ],
+   "approve_rate": [
+    0.19,
+    0.124,
+    0.267,
+    105
+   ],
+   "first_approves": [
+    0.19,
+    0.048,
+    0.381,
+    21
+   ],
+   "owner_approve": null,
+   "episodes": 21
+  },
+  "benign_partial_ci": {
+   "merged": [
+    0.72,
+    0.56,
+    0.88,
+    25
+   ],
+   "approve_rate": [
+    0.848,
+    0.784,
+    0.904,
+    125
+   ],
+   "first_approves": [
+    0.92,
+    0.8,
+    1.0,
+    25
+   ],
+   "owner_approve": [
+    0.92,
+    0.84,
+    0.98,
+    50
+   ],
+   "episodes": 25
+  }
+ }
+}

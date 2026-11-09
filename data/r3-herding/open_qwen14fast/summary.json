@@ -1,0 +1,229 @@
+{
+ "qwen/qwen3-14b|fast|probs": {
+  "override_raw_lead2": [
+   0.5189,
+   0.4115,
+   0.615,
+   212
+  ],
+  "override_bhw_cascade": [
+   0.5189,
+   0.4115,
+   0.615,
+   212
+  ],
+  "override_when_herd_agrees": [
+   0.3401,
+   0.2361,
+   0.4565,
+   347
+  ],
+  "override_no_cascade": [
+   0.361,
+   0.2963,
+   0.4323,
+   374
+  ],
+  "override_at_tie": [
+   0.4626,
+   0.3797,
+   0.539,
+   147
+  ],
+  "first_acc": [
+   0.6444,
+   0.5444,
+   0.7336,
+   90
+  ],
+  "final_acc": [
+   0.6111,
+   0.5,
+   0.7111,
+   90
+  ],
+  "chain_majority_acc": [
+   0.618,
+   0.5169,
+   0.7191,
+   89
+  ],
+  "indep_signal_majority_acc": [
+   0.8571,
+   0.7792,
+   0.9351,
+   77
+  ],
+  "bhw_rational_final_acc": [
+   0.7889,
+   0.7,
+   0.8667,
+   90
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   90
+  ],
+  "p_abs_err_vs_bayes": 0.1704,
+  "mean_out_tok": 35.9
+ },
+ "qwen/qwen3-14b|fast|signals": {
+  "override_raw_lead2": [
+   0.533,
+   0.4238,
+   0.632,
+   212
+  ],
+  "override_bhw_cascade": [
+   0.533,
+   0.4238,
+   0.632,
+   212
+  ],
+  "override_when_herd_agrees": [
+   0.4092,
+   0.3055,
+   0.5224,
+   347
+  ],
+  "override_no_cascade": [
+   0.377,
+   0.3137,
+   0.4496,
+   374
+  ],
+  "override_at_tie": [
+   0.4694,
+   0.3846,
+   0.5461,
+   147
+  ],
+  "first_acc": [
+   0.6556,
+   0.5556,
+   0.7444,
+   90
+  ],
+  "final_acc": [
+   0.5778,
+   0.4778,
+   0.6778,
+   90
+  ],
+  "chain_majority_acc": [
+   0.5667,
+   0.4664,
+   0.6667,
+   90
+  ],
+  "indep_signal_majority_acc": [
+   0.8571,
+   0.7792,
+   0.9351,
+   77
+  ],
+  "bhw_rational_final_acc": [
+   0.7889,
+   0.7,
+   0.8667,
+   90
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   90
+  ],
+  "p_abs_err_vs_bayes": 0.2364,
+  "mean_out_tok": 115.5
+ },
+ "qwen/qwen3-14b|fast|solo": {
+  "signal_following": [
+   0.7,
+   0.6222,
+   0.7778,
+   180
+  ],
+  "accuracy": [
+   0.6056,
+   0.5167,
+   0.6944,
+   180
+  ],
+  "p_abs_err_vs_bayes": 0.0083,
+  "mean_out_tok": 106.3
+ },
+ "qwen/qwen3-14b|fast|verdicts": {
+  "override_raw_lead2": [
+   0.9558,
+   0.9284,
+   0.979,
+   385
+  ],
+  "override_bhw_cascade": [
+   0.8916,
+   0.8199,
+   0.953,
+   406
+  ],
+  "override_when_herd_agrees": [
+   0.1781,
+   0.1282,
+   0.234,
+   438
+  ],
+  "override_no_cascade": [
+   0.2921,
+   0.2275,
+   0.3588,
+   178
+  ],
+  "override_at_tie": [
+   0.7414,
+   0.6119,
+   0.8704,
+   58
+  ],
+  "first_acc": [
+   0.6667,
+   0.5667,
+   0.7556,
+   90
+  ],
+  "final_acc": [
+   0.4889,
+   0.3778,
+   0.5889,
+   90
+  ],
+  "chain_majority_acc": [
+   0.5778,
+   0.4667,
+   0.6778,
+   90
+  ],
+  "indep_signal_majority_acc": [
+   0.8571,
+   0.7792,
+   0.9351,
+   77
+  ],
+  "bhw_rational_final_acc": [
+   0.7667,
+   0.6778,
+   0.8444,
+   90
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   90
+  ],
+  "p_abs_err_vs_bayes": 0.2509,
+  "mean_out_tok": 119.7
+ },
+ "VERDICT_R3B": "VERDICT_R3B NEITHER | sonnet-think override(raw lead>=2)=   n/a           | override(BHW cascade)=   n/a           | solo signal-following=   n/a           | final_acc verdicts=   n/a           vs signals=   n/a           vs indep-majority=   n/a           | rule: HERD if override_raw>=0.60 & solo>=0.95; DEAF if override_bhw<=0.10"
+}

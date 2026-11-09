@@ -1,0 +1,143 @@
+{
+ "claude-haiku-5-5|think|probs": {
+  "override_raw_lead2": [
+   0.9855,
+   0.9508,
+   1.0,
+   69
+  ],
+  "override_bhw_cascade": [
+   0.9855,
+   0.9508,
+   1.0,
+   69
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   105
+  ],
+  "override_no_cascade": [
+   0.0077,
+   0.0,
+   0.025,
+   130
+  ],
+  "override_at_tie": [
+   0.4821,
+   0.3509,
+   0.625,
+   56
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.8,
+   0.6658,
+   0.9333,
+   30
+  ],
+  "chain_majority_acc": [
+   0.7778,
+   0.5926,
+   0.9259,
+   27
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.8,
+   0.6333,
+   0.9333,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.0053,
+  "mean_out_tok": 1463.2
+ },
+ "claude-opus-5-5|think|probs": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   69
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   69
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   105
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   130
+  ],
+  "override_at_tie": [
+   0.0714,
+   0.0179,
+   0.1379,
+   56
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.8,
+   0.6333,
+   0.9333,
+   30
+  ],
+  "chain_majority_acc": [
+   0.8462,
+   0.6923,
+   0.9615,
+   26
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.8,
+   0.6333,
+   0.9333,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.0022,
+  "mean_out_tok": 766.2
+ },
+ "VERDICT_R3B": "VERDICT_R3B NEITHER | sonnet-think override(raw lead>=2)=   n/a           | override(BHW cascade)=   n/a           | solo signal-following=   n/a           | final_acc verdicts=   n/a           vs signals=   n/a           vs indep-majority=   n/a           | rule: HERD if override_raw>=0.60 & solo>=0.95; DEAF if override_bhw<=0.10"
+}

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+# raw API logs (download with: python reproduce.py --from-raw)
+data/**/*.jsonl
+data/**/*.log
+data/**/*.err
+data/**/*.md
+data/**/*.txt
+raw_api_logs.tar.gz
+external/
+*.aux
+*.log

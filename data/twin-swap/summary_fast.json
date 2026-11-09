@@ -1,0 +1,1318 @@
+{
+ "mode": "fast",
+ "rows": {
+  "openai/gpt-6-luna|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.911,
+    0.839,
+    0.982,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.946,
+    0.875,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "false_alarm": [
+    0.946,
+    0.875,
+    1.0,
+    56
+   ],
+   "n_both_correct": 51,
+   "sus_clear": [
+    0.039,
+    0.0,
+    0.098,
+    51
+   ],
+   "sus_alarm": [
+    0.059,
+    0.0,
+    0.137,
+    51
+   ],
+   "clear_minus_alarm": [
+    -0.02,
+    -0.098,
+    0.059,
+    51
+   ]
+  },
+  "openai/gpt-6-luna|POOLED": {
+   "sus_clear": [
+    0.039,
+    0.0,
+    0.098,
+    51
+   ],
+   "sus_alarm": [
+    0.059,
+    0.0,
+    0.137,
+    51
+   ],
+   "clear_minus_alarm": [
+    -0.02,
+    -0.118,
+    0.059,
+    51
+   ]
+  },
+  "qwen/qwen3-14b|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.696,
+    0.571,
+    0.804,
+    56
+   ],
+   "evid0": [
+    0.607,
+    0.482,
+    0.732,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.036,
+    0.0,
+    0.089,
+    56
+   ],
+   "false_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "n_both_correct": 17,
+   "sus_clear": [
+    0.941,
+    0.824,
+    1.0,
+    17
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    17
+   ],
+   "clear_minus_alarm": [
+    -0.059,
+    -0.176,
+    0.0,
+    17
+   ]
+  },
+  "qwen/qwen3-14b|POOLED": {
+   "sus_clear": [
+    0.941,
+    0.824,
+    1.0,
+    17
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    17
+   ],
+   "clear_minus_alarm": [
+    -0.059,
+    -0.176,
+    0.0,
+    17
+   ]
+  },
+  "meta-llama/llama-3.1-8b-instruct|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true1": [
+    0.875,
+    0.786,
+    0.946,
+    56
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "false_alarm": [
+    0.107,
+    0.036,
+    0.196,
+    56
+   ],
+   "n_both_correct": 0,
+   "sus_clear": null,
+   "sus_alarm": null,
+   "clear_minus_alarm": null
+  },
+  "meta-llama/llama-3.1-8b-instruct|POOLED": {
+   "sus_clear": null,
+   "sus_alarm": null,
+   "clear_minus_alarm": null
+  },
+  "openai/gpt-oss-120b|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.929,
+    0.857,
+    0.982,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.946,
+    0.875,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.571,
+    0.446,
+    0.696,
+    56
+   ],
+   "false_alarm": [
+    0.429,
+    0.304,
+    0.554,
+    56
+   ],
+   "n_both_correct": 52,
+   "sus_clear": [
+    0.423,
+    0.288,
+    0.558,
+    52
+   ],
+   "sus_alarm": [
+    0.596,
+    0.462,
+    0.731,
+    52
+   ],
+   "clear_minus_alarm": [
+    -0.173,
+    -0.365,
+    0.019,
+    52
+   ]
+  },
+  "openai/gpt-oss-120b|POOLED": {
+   "sus_clear": [
+    0.423,
+    0.288,
+    0.558,
+    52
+   ],
+   "sus_alarm": [
+    0.596,
+    0.462,
+    0.731,
+    52
+   ],
+   "clear_minus_alarm": [
+    -0.173,
+    -0.365,
+    0.019,
+    52
+   ]
+  },
+  "meta-llama/llama-4-maverick|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.875,
+    0.786,
+    0.964,
+    56
+   ],
+   "evid0": [
+    0.393,
+    0.268,
+    0.518,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.839,
+    0.732,
+    0.929,
+    56
+   ],
+   "false_clear": [
+    0.164,
+    0.073,
+    0.273,
+    55
+   ],
+   "false_alarm": [
+    0.089,
+    0.018,
+    0.179,
+    56
+   ],
+   "n_both_correct": 15,
+   "sus_clear": [
+    0.933,
+    0.8,
+    1.0,
+    15
+   ],
+   "sus_alarm": [
+    0.867,
+    0.667,
+    1.0,
+    15
+   ],
+   "clear_minus_alarm": [
+    0.067,
+    -0.133,
+    0.267,
+    15
+   ]
+  },
+  "meta-llama/llama-4-maverick|POOLED": {
+   "sus_clear": [
+    0.933,
+    0.8,
+    1.0,
+    15
+   ],
+   "sus_alarm": [
+    0.867,
+    0.667,
+    1.0,
+    15
+   ],
+   "clear_minus_alarm": [
+    0.067,
+    -0.133,
+    0.267,
+    15
+   ]
+  },
+  "mistralai/mistral-small-3.2-24b-instruct|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.679,
+    0.554,
+    0.804,
+    56
+   ],
+   "evid0": [
+    0.571,
+    0.446,
+    0.696,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.036,
+    0.0,
+    0.089,
+    56
+   ],
+   "false_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "n_both_correct": 18,
+   "sus_clear": [
+    0.944,
+    0.833,
+    1.0,
+    18
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    18
+   ],
+   "clear_minus_alarm": [
+    -0.056,
+    -0.167,
+    0.0,
+    18
+   ]
+  },
+  "mistralai/mistral-small-3.2-24b-instruct|POOLED": {
+   "sus_clear": [
+    0.944,
+    0.833,
+    1.0,
+    18
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    18
+   ],
+   "clear_minus_alarm": [
+    -0.056,
+    -0.167,
+    0.0,
+    18
+   ]
+  },
+  "google/gemini-3.8-flash|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "n_both_correct": 56,
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ]
+  },
+  "google/gemini-3.8-flash|POOLED": {
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ]
+  },
+  "claude-sonnet-5-5|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    53
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    52
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    51
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    54
+   ],
+   "false_clear": [
+    1.0,
+    1.0,
+    1.0,
+    39
+   ],
+   "false_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    53
+   ],
+   "n_both_correct": 38,
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    38
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    38
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    38
+   ]
+  },
+  "claude-sonnet-5-5|POOLED": {
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    38
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    38
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    38
+   ]
+  },
+  "meta-llama/llama-3.3-70b-instruct|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.268,
+    0.161,
+    0.393,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.982,
+    0.946,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.018,
+    0.0,
+    0.054,
+    56
+   ],
+   "false_alarm": [
+    0.232,
+    0.125,
+    0.339,
+    56
+   ],
+   "n_both_correct": 13,
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    13
+   ],
+   "sus_alarm": [
+    0.692,
+    0.462,
+    0.923,
+    13
+   ],
+   "clear_minus_alarm": [
+    0.308,
+    0.077,
+    0.538,
+    13
+   ]
+  },
+  "meta-llama/llama-3.3-70b-instruct|POOLED": {
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    13
+   ],
+   "sus_alarm": [
+    0.692,
+    0.462,
+    0.923,
+    13
+   ],
+   "clear_minus_alarm": [
+    0.308,
+    0.077,
+    0.538,
+    13
+   ]
+  },
+  "claude-opus-5-5|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    40
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    44
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    25
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    54
+   ],
+   "false_clear": [
+    1.0,
+    1.0,
+    1.0,
+    36
+   ],
+   "false_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    31
+   ],
+   "n_both_correct": 16,
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ]
+  },
+  "claude-opus-5-5|POOLED": {
+   "sus_clear": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ],
+   "sus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ]
+  },
+  "qwen/qwen3-32b|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.054,
+    0.0,
+    0.107,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.946,
+    0.875,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.036,
+    0.0,
+    0.089,
+    56
+   ],
+   "false_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "n_both_correct": 3,
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    3
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    3
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    3
+   ]
+  },
+  "qwen/qwen3-32b|POOLED": {
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    3
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    3
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    3
+   ]
+  },
+  "google/gemma-3-27b-it|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.982,
+    0.946,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.286,
+    0.179,
+    0.411,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.786,
+    0.679,
+    0.893,
+    56
+   ],
+   "false_clear": [
+    0.214,
+    0.107,
+    0.321,
+    56
+   ],
+   "false_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "n_both_correct": 15,
+   "sus_clear": [
+    0.867,
+    0.667,
+    1.0,
+    15
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    15
+   ],
+   "clear_minus_alarm": [
+    -0.133,
+    -0.333,
+    0.0,
+    15
+   ]
+  },
+  "google/gemma-3-27b-it|POOLED": {
+   "sus_clear": [
+    0.867,
+    0.667,
+    1.0,
+    15
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    15
+   ],
+   "clear_minus_alarm": [
+    -0.133,
+    -0.333,
+    0.0,
+    15
+   ]
+  },
+  "meta-llama/llama-3.1-70b-instruct|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.018,
+    0.0,
+    0.054,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.054,
+    0.0,
+    0.125,
+    56
+   ],
+   "false_alarm": [
+    0.036,
+    0.0,
+    0.089,
+    56
+   ],
+   "n_both_correct": 1,
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  "meta-llama/llama-3.1-70b-instruct|POOLED": {
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ],
+   "clear_minus_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  "google/gemma-4-31b-it|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "evid0": null,
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "true0": null,
+   "false_clear": null,
+   "false_alarm": null,
+   "n_both_correct": 0,
+   "sus_clear": null,
+   "sus_alarm": null,
+   "clear_minus_alarm": null
+  },
+  "google/gemma-4-31b-it|POOLED": {
+   "sus_clear": null,
+   "sus_alarm": null,
+   "clear_minus_alarm": null
+  },
+  "qwen/qwen3-235b-a22b-2507|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    0.929,
+    0.857,
+    0.982,
+    56
+   ],
+   "evid0": [
+    0.232,
+    0.125,
+    0.339,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.911,
+    0.839,
+    0.982,
+    56
+   ],
+   "false_clear": [
+    0.071,
+    0.018,
+    0.143,
+    56
+   ],
+   "false_alarm": [
+    0.0,
+    0.0,
+    0.0,
+    56
+   ],
+   "n_both_correct": 10,
+   "sus_clear": [
+    0.8,
+    0.5,
+    1.0,
+    10
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    10
+   ],
+   "clear_minus_alarm": [
+    -0.2,
+    -0.5,
+    0.0,
+    10
+   ]
+  },
+  "qwen/qwen3-235b-a22b-2507|POOLED": {
+   "sus_clear": [
+    0.8,
+    0.5,
+    1.0,
+    10
+   ],
+   "sus_alarm": [
+    1.0,
+    1.0,
+    1.0,
+    10
+   ],
+   "clear_minus_alarm": [
+    -0.2,
+    -0.5,
+    0.0,
+    10
+   ]
+  },
+  "deepseek/deepseek-v4-flash|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    54
+   ],
+   "evid0": [
+    1.0,
+    1.0,
+    1.0,
+    55
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.982,
+    0.945,
+    1.0,
+    55
+   ],
+   "false_clear": [
+    0.442,
+    0.308,
+    0.577,
+    52
+   ],
+   "false_alarm": [
+    0.76,
+    0.64,
+    0.86,
+    50
+   ],
+   "n_both_correct": 45,
+   "sus_clear": [
+    0.6,
+    0.444,
+    0.733,
+    45
+   ],
+   "sus_alarm": [
+    0.222,
+    0.111,
+    0.356,
+    45
+   ],
+   "clear_minus_alarm": [
+    0.378,
+    0.178,
+    0.556,
+    45
+   ]
+  },
+  "deepseek/deepseek-v4-flash|POOLED": {
+   "sus_clear": [
+    0.6,
+    0.467,
+    0.733,
+    45
+   ],
+   "sus_alarm": [
+    0.222,
+    0.111,
+    0.356,
+    45
+   ],
+   "clear_minus_alarm": [
+    0.378,
+    0.2,
+    0.556,
+    45
+   ]
+  },
+  "claude-haiku-5-5|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.446,
+    0.321,
+    0.589,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.036,
+    0.0,
+    0.089,
+    56
+   ],
+   "false_alarm": [
+    0.107,
+    0.036,
+    0.196,
+    56
+   ],
+   "n_both_correct": 25,
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    25
+   ],
+   "sus_alarm": [
+    0.76,
+    0.6,
+    0.92,
+    25
+   ],
+   "clear_minus_alarm": [
+    0.24,
+    0.08,
+    0.4,
+    25
+   ]
+  },
+  "claude-haiku-5-5|POOLED": {
+   "sus_clear": [
+    1.0,
+    1.0,
+    1.0,
+    25
+   ],
+   "sus_alarm": [
+    0.76,
+    0.6,
+    0.92,
+    25
+   ],
+   "clear_minus_alarm": [
+    0.24,
+    0.08,
+    0.4,
+    25
+   ]
+  },
+  "openai/gpt-oss-20b|anthropic-api/claude-sonnet-5-5@r1": {
+   "evid1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "evid0": [
+    0.982,
+    0.946,
+    1.0,
+    56
+   ],
+   "true1": [
+    1.0,
+    1.0,
+    1.0,
+    56
+   ],
+   "true0": [
+    0.964,
+    0.911,
+    1.0,
+    56
+   ],
+   "false_clear": [
+    0.518,
+    0.393,
+    0.643,
+    56
+   ],
+   "false_alarm": [
+    0.232,
+    0.125,
+    0.357,
+    56
+   ],
+   "n_both_correct": 55,
+   "sus_clear": [
+    0.491,
+    0.364,
+    0.618,
+    55
+   ],
+   "sus_alarm": [
+    0.782,
+    0.673,
+    0.891,
+    55
+   ],
+   "clear_minus_alarm": [
+    -0.291,
+    -0.436,
+    -0.145,
+    55
+   ]
+  },
+  "openai/gpt-oss-20b|POOLED": {
+   "sus_clear": [
+    0.491,
+    0.364,
+    0.618,
+    55
+   ],
+   "sus_alarm": [
+    0.782,
+    0.673,
+    0.873,
+    55
+   ],
+   "clear_minus_alarm": [
+    -0.291,
+    -0.436,
+    -0.145,
+    55
+   ]
+  }
+ },
+ "verdict": {
+  "verdict": "NULL",
+  "reassurance_models": [
+   "claude-haiku-5-5"
+  ],
+  "alarm_models": []
+ }
+}

@@ -1,0 +1,331 @@
+{
+ "claude-haiku-5-5|fast|solo": {
+  "signal_following": [
+   1.0,
+   1.0,
+   1.0,
+   60
+  ],
+  "accuracy": [
+   0.6,
+   0.4833,
+   0.7167,
+   60
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 214.0
+ },
+ "claude-haiku-5-5|fast|verdicts": {
+  "override_raw_lead2": [
+   0.8304,
+   0.7524,
+   0.8992,
+   112
+  ],
+  "override_bhw_cascade": [
+   0.819,
+   0.7377,
+   0.8919,
+   116
+  ],
+  "override_when_herd_agrees": [
+   0.0316,
+   0.0,
+   0.0793,
+   158
+  ],
+  "override_no_cascade": [
+   0.0154,
+   0.0,
+   0.0462,
+   65
+  ],
+  "override_at_tie": [
+   0.4286,
+   0.2083,
+   0.75,
+   21
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "chain_majority_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.086,
+  "mean_out_tok": 733.6
+ },
+ "claude-opus-5-5|think|solo": {
+  "signal_following": [
+   1.0,
+   1.0,
+   1.0,
+   60
+  ],
+  "accuracy": [
+   0.6,
+   0.4833,
+   0.7167,
+   60
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 296.7
+ },
+ "claude-opus-5-5|think|verdicts": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   109
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   109
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   143
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   84
+  ],
+  "override_at_tie": [
+   0.0,
+   0.0,
+   0.0,
+   24
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "chain_majority_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.0023,
+  "mean_out_tok": 829.0
+ },
+ "claude-sonnet-5-5|think|signals": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   69
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   69
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   105
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   130
+  ],
+  "override_at_tie": [
+   0.125,
+   0.0556,
+   0.2037,
+   56
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.8,
+   0.6333,
+   0.9333,
+   30
+  ],
+  "chain_majority_acc": [
+   0.88,
+   0.72,
+   1.0,
+   25
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.8,
+   0.6333,
+   0.9333,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.0006,
+  "mean_out_tok": 283.5
+ },
+ "claude-sonnet-5-5|think|solo": {
+  "signal_following": [
+   1.0,
+   1.0,
+   1.0,
+   60
+  ],
+  "accuracy": [
+   0.6,
+   0.4833,
+   0.7167,
+   60
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 195.6
+ },
+ "claude-sonnet-5-5|think|verdicts": {
+  "override_raw_lead2": [
+   0.9541,
+   0.9047,
+   0.9913,
+   109
+  ],
+  "override_bhw_cascade": [
+   0.9541,
+   0.9047,
+   0.9913,
+   109
+  ],
+  "override_when_herd_agrees": [
+   0.014,
+   0.0,
+   0.035,
+   143
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   84
+  ],
+  "override_at_tie": [
+   0.0,
+   0.0,
+   0.0,
+   24
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.7333,
+   0.5667,
+   0.8667,
+   30
+  ],
+  "chain_majority_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.7,
+   0.5333,
+   0.8667,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.0163,
+  "mean_out_tok": 672.9
+ },
+ "VERDICT_R3B": "VERDICT_R3B HERD | sonnet-think override(raw lead>=2)=0.95 [0.90,0.99] n=109 | override(BHW cascade)=0.95 [0.90,0.99] n=109 | solo signal-following=1.00 [1.00,1.00] n=60 | final_acc verdicts=0.73 [0.57,0.87] n=30 vs signals=0.80 [0.63,0.93] n=30 vs indep-majority=0.92 [0.79,1.00] n=24 | rule: HERD if override_raw>=0.60 & solo>=0.95; DEAF if override_bhw<=0.10"
+}

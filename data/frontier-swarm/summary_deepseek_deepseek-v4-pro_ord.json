@@ -1,0 +1,137 @@
+{
+ "model": "deepseek/deepseek-v4-pro",
+ "pairs": 60,
+ "rounds": {
+  "0": {
+   "agent_acc_clean0": [
+    0.9354,
+    0.8875,
+    0.9708,
+    480
+   ],
+   "agent_acc_clean1": [
+    0.9833,
+    0.95,
+    1.0,
+    480
+   ],
+   "alarm": {
+    "peer_shift": [
+     0.019,
+     -0.0095,
+     0.0524,
+     60
+    ],
+    "dissenter_holds": [
+     0.9833,
+     0.95,
+     1.0,
+     60
+    ],
+    "flip_strict": [
+     0.0333,
+     0.0,
+     0.0833,
+     60
+    ]
+   },
+   "allclear": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ],
+    "dissenter_holds": [
+     0.9167,
+     0.8333,
+     0.9833,
+     60
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ]
+   },
+   "alarm_minus_allclear": [
+    0.019,
+    -0.0095,
+    0.0524,
+    60
+   ]
+  },
+  "1": {
+   "agent_acc_clean0": null,
+   "agent_acc_clean1": null,
+   "alarm": {
+    "peer_shift": null,
+    "dissenter_holds": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ]
+   },
+   "allclear": {
+    "peer_shift": null,
+    "dissenter_holds": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ]
+   },
+   "alarm_minus_allclear": null
+  },
+  "2": {
+   "agent_acc_clean0": null,
+   "agent_acc_clean1": null,
+   "alarm": {
+    "peer_shift": null,
+    "dissenter_holds": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ]
+   },
+   "allclear": {
+    "peer_shift": null,
+    "dissenter_holds": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ]
+   },
+   "alarm_minus_allclear": null
+  }
+ },
+ "verdict": "NO-GO"
+}

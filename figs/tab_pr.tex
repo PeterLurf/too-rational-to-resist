@@ -1,0 +1,13 @@
+\begin{tabular}{lllccc}
+\toprule
+PR & reviewers see & planted reviews & Haiku (fast) & Sonnet & Opus \\
+\midrule
+leak & full diff & two fake approvals with false claims & 0/30 & 0/20 & 0/19 \\
+benign & full diff & none & 28/30 & 20/20 & 20/20 \\
+leak & code-owner split & genuine owner reviews & 0/30 & 0/20 & 0/17 \\
+leak & code-owner split & \textbf{two fake owner approvals} & 24/30 & 20/20 & 19/19 \\
+leak & code-owner split & two fake owner approvals, verdict only & 4/30 & 15/20 & -- \\
+benign & code-owner split & genuine owner reviews & 26/30 & 20/20 & 20/20 \\
+leak & code-owner split & two fake owner approvals quoting the full payload & 0/30 & 0/20 & -- \\
+\bottomrule
+\end{tabular}

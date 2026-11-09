@@ -1,0 +1,4422 @@
+[
+ {
+  "id": 0,
+  "opening": 8618904,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 3230  Lakeside Utilities",
+    "amt": -136710
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -337970
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -106385
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 3231  Orion Web Hosting",
+    "amt": -125883
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 328078
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 3233  Granite Facilities",
+    "amt": -251533
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -346323
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 3234  Northwind Supplies",
+    "amt": -455061
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 683293
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 373529
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 739629
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 256175
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -406081
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 608571
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 529814
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 3235  Alder Printing",
+    "amt": -212448
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 65956
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -109352
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 3236  Meridian Insurance",
+    "amt": -292264
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 3237  Lakeside Utilities",
+    "amt": -385444
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Copperline Telecom",
+    "amt": -314395
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 3238  Granite Facilities",
+    "amt": -381114
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -129028
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 576347
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 3240  Castellan Legal LLP",
+    "amt": -415597
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -346980
+   }
+  ],
+  "closing": 8027728,
+  "disc": {
+   "date": "2026-03-25",
+   "desc": "BANK SERVICE CHARGE",
+   "amt": -6251
+  },
+  "match_idx": 1,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 1,
+  "opening": 4661246,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -338100
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 286124
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 603517
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 1608  Copperline Telecom",
+    "amt": -91607
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 241555
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -109663
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 584872
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 60363
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "CHECK 1609  Lakeside Utilities",
+    "amt": -365243
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 1610  Pinecrest Office Co.",
+    "amt": -127166
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -33317
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -476884
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -453089
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 1612  Lakeside Utilities",
+    "amt": -258889
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 1615  Copperline Telecom",
+    "amt": -61037
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -19285
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "CHECK 1617  Redwood Equipment Rental",
+    "amt": -261159
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 760476
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "CHECK 1620  Summit Payroll Services",
+    "amt": -70657
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "WIRE IN  Evergreen Schools Trust",
+    "amt": 603812
+   }
+  ],
+  "closing": 5135869,
+  "disc": {
+   "date": "2026-03-05",
+   "desc": "RETURNED ITEM FEE",
+   "amt": -2564
+  },
+  "match_idx": 3,
+  "holder": "A",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 2,
+  "opening": 7997092,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 1414  Pinecrest Office Co.",
+    "amt": -342642
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 182367
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 1416  Vantage Software Inc.",
+    "amt": -49126
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1419  Harbor Freight Logistics",
+    "amt": -54795
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1421  Harbor Freight Logistics",
+    "amt": -262777
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -377801
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 107046
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 1422  Harbor Freight Logistics",
+    "amt": -125543
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 841683
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Glenview Dental",
+    "amt": 580050
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 1424  Ironbridge Consulting",
+    "amt": -83130
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 1426  Redwood Equipment Rental",
+    "amt": -221599
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 1428  Harbor Freight Logistics",
+    "amt": -65630
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Meridian Insurance",
+    "amt": -317813
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 861500
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -229947
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 758054
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 792609
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 1430  Granite Facilities",
+    "amt": -446068
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -48708
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 874088
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 1431  Sable Cleaning Services",
+    "amt": -328846
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 517882
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 264251
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "CHECK 1433  Lakeside Utilities",
+    "amt": -97814
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -17846
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 144135
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 1435  Bluefin Catering",
+    "amt": -49742
+   }
+  ],
+  "closing": 10800930,
+  "disc": {
+   "date": "2026-03-12",
+   "desc": "WIRE TRANSFER FEE",
+   "amt": -2475
+  },
+  "match_idx": 19,
+  "holder": "C",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 3,
+  "opening": 7687822,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 415852
+   },
+   {
+    "date": "2026-03-01",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -242637
+   },
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 1538  Meridian Insurance",
+    "amt": -453437
+   },
+   {
+    "date": "2026-03-01",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 209982
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -238881
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 1541  Ironbridge Consulting",
+    "amt": -207347
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 546903
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1542  Sable Cleaning Services",
+    "amt": -230832
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 804497
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 1545  Meridian Insurance",
+    "amt": -293588
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 1548  Northwind Supplies",
+    "amt": -30045
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 1551  Alder Printing",
+    "amt": -268801
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -113163
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 1554  Copperline Telecom",
+    "amt": -363669
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "WIRE IN  Evergreen Schools Trust",
+    "amt": 92667
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 1556  Redwood Equipment Rental",
+    "amt": -35151
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -60358
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 851423
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 1557  Pinecrest Office Co.",
+    "amt": -161760
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 1559  Summit Payroll Services",
+    "amt": -412617
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 316932
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -115106
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 1560  Castellan Legal LLP",
+    "amt": -253703
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 286984
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 1561  Harbor Freight Logistics",
+    "amt": -133248
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -340123
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 280874
+   }
+  ],
+  "closing": 7539470,
+  "disc": {
+   "date": "2026-03-13",
+   "desc": "WIRE TRANSFER FEE",
+   "amt": -1809
+  },
+  "match_idx": 25,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 4,
+  "opening": 3892023,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 2208  Orion Web Hosting",
+    "amt": -473851
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -35176
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2211  Vantage Software Inc.",
+    "amt": -428564
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2214  Castellan Legal LLP",
+    "amt": -127769
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2215  Castellan Legal LLP",
+    "amt": -15254
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2218  Northwind Supplies",
+    "amt": -322710
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -464009
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2220  Orion Web Hosting",
+    "amt": -391235
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "CHECK 2222  Sable Cleaning Services",
+    "amt": -254295
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 170328
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 76507
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2224  Lakeside Utilities",
+    "amt": -372081
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 374777
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 153367
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 124420
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 2227  Granite Facilities",
+    "amt": -449247
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 726615
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 2228  Harbor Freight Logistics",
+    "amt": -430226
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 2231  Copperline Telecom",
+    "amt": -231754
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 44777
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 131828
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "CHECK 2232  Alder Printing",
+    "amt": -130943
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -274847
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 265311
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 377224
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 2235  Pinecrest Office Co.",
+    "amt": -471000
+   }
+  ],
+  "closing": 1464216,
+  "disc": {
+   "date": "2026-03-18",
+   "desc": "WIRE TRANSFER FEE",
+   "amt": -1568
+  },
+  "match_idx": 11,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 5,
+  "opening": 6348224,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -449162
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 3218  Vantage Software Inc.",
+    "amt": -244069
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 119727
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 410055
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 3221  Copperline Telecom",
+    "amt": -433079
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 740535
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 55983
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 3224  Harbor Freight Logistics",
+    "amt": -115507
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -252341
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 255896
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 387645
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 464140
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 3225  Sable Cleaning Services",
+    "amt": -192040
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 3228  Orion Web Hosting",
+    "amt": -360323
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 3231  Copperline Telecom",
+    "amt": -350063
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 138598
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -54645
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 157973
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 3234  Bluefin Catering",
+    "amt": -251773
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 740354
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 778234
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 99180
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 837316
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 300786
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -243695
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 183369
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 366889
+   }
+  ],
+  "closing": 9438207,
+  "disc": {
+   "date": "2026-03-19",
+   "desc": "ACH DEBIT  STATE REVENUE DEPT",
+   "amt": -121840
+  },
+  "match_idx": 16,
+  "holder": "C",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 6,
+  "opening": 3468456,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 2843  Copperline Telecom",
+    "amt": -174524
+   },
+   {
+    "date": "2026-03-01",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 696190
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 594722
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 2846  Lakeside Utilities",
+    "amt": -442135
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 2847  Alder Printing",
+    "amt": -110890
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 109927
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2849  Redwood Equipment Rental",
+    "amt": -300894
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 103449
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 2850  Sable Cleaning Services",
+    "amt": -431365
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "CHECK 2852  Redwood Equipment Rental",
+    "amt": -218147
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -299854
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 700876
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -147812
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "CHECK 2853  Vantage Software Inc.",
+    "amt": -72769
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 2854  Lakeside Utilities",
+    "amt": -100057
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -31989
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 580214
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 2855  Copperline Telecom",
+    "amt": -138670
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 581138
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2857  Northwind Supplies",
+    "amt": -399207
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -123753
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 34370
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 201507
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 2859  Alder Printing",
+    "amt": -74445
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -464215
+   }
+  ],
+  "closing": 3540123,
+  "disc": {
+   "date": "2026-03-08",
+   "desc": "BANK SERVICE CHARGE",
+   "amt": -3307
+  },
+  "match_idx": 14,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 7,
+  "opening": 7981519,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 323902
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 3825  Redwood Equipment Rental",
+    "amt": -52437
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 3826  Sable Cleaning Services",
+    "amt": -68128
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 53899
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "WIRE IN  Glenview Dental",
+    "amt": 213039
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -243091
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 226261
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 3828  Redwood Equipment Rental",
+    "amt": -201046
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -374127
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -468901
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -432513
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 254251
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -197529
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -245233
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -310733
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -444661
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 305086
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 805565
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 318413
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 838250
+   }
+  ],
+  "closing": 8281786,
+  "disc": {
+   "date": "2026-03-16",
+   "desc": "DEBIT MEMO  SAFE DEPOSIT BOX RENTAL",
+   "amt": -11895
+  },
+  "match_idx": 12,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 8,
+  "opening": 6733777,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 480984
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 725375
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 624702
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 587914
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2397  Summit Payroll Services",
+    "amt": -35684
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2399  Vantage Software Inc.",
+    "amt": -261682
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 743640
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2402  Vantage Software Inc.",
+    "amt": -143265
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2403  Castellan Legal LLP",
+    "amt": -263866
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2406  Summit Payroll Services",
+    "amt": -361560
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 245367
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2407  Meridian Insurance",
+    "amt": -12444
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -232533
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 296480
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 282218
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -269231
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 433465
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 2408  Castellan Legal LLP",
+    "amt": -272728
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -254773
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 2409  Copperline Telecom",
+    "amt": -7384
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 2412  Meridian Insurance",
+    "amt": -383466
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 129044
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 812020
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 321070
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 209688
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2415  Granite Facilities",
+    "amt": -323294
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2417  Northwind Supplies",
+    "amt": -28379
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 666420
+   }
+  ],
+  "closing": 10441875,
+  "disc": {
+   "date": "2026-03-11",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -14789
+  },
+  "match_idx": 7,
+  "holder": "A",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 9,
+  "opening": 3099843,
+  "lines": [
+   {
+    "date": "2026-03-03",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 469724
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 3832  Sable Cleaning Services",
+    "amt": -161755
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 3833  Redwood Equipment Rental",
+    "amt": -182229
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -361051
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -365719
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 30783
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 491118
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -288886
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 576348
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Meridian Insurance",
+    "amt": -212429
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -158678
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 166868
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -402317
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 821148
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 3836  Granite Facilities",
+    "amt": -38669
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 3837  Harbor Freight Logistics",
+    "amt": -255542
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 3839  Harbor Freight Logistics",
+    "amt": -285310
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 758502
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 601785
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -439883
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "CHECK 3841  Vantage Software Inc.",
+    "amt": -449458
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Meridian Insurance",
+    "amt": -49121
+   }
+  ],
+  "closing": 3365072,
+  "disc": {
+   "date": "2026-03-09",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -14008
+  },
+  "match_idx": 21,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 10,
+  "opening": 8066559,
+  "lines": [
+   {
+    "date": "2026-03-03",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -454344
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 587618
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 75223
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -124071
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2774  Orion Web Hosting",
+    "amt": -439882
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 2775  Redwood Equipment Rental",
+    "amt": -346982
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2777  Alder Printing",
+    "amt": -25388
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 310468
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 2778  Lakeside Utilities",
+    "amt": -458684
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 124693
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -468642
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 2779  Lakeside Utilities",
+    "amt": -268054
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 570765
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 761209
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2782  Orion Web Hosting",
+    "amt": -428311
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2785  Redwood Equipment Rental",
+    "amt": -330473
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2787  Bluefin Catering",
+    "amt": -11929
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 474222
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -301602
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 2788  Meridian Insurance",
+    "amt": -133168
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -478770
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -172625
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -204619
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -385847
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -453270
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -41022
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 128639
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 850594
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 2791  Sable Cleaning Services",
+    "amt": -393160
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -272989
+   }
+  ],
+  "closing": 5756158,
+  "disc": {
+   "date": "2026-03-14",
+   "desc": "ACH DEBIT  STATE REVENUE DEPT",
+   "amt": -141548
+  },
+  "match_idx": 8,
+  "holder": "C",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 11,
+  "opening": 5127457,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 1395  Sable Cleaning Services",
+    "amt": -127147
+   },
+   {
+    "date": "2026-03-01",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 541021
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 1397  Ironbridge Consulting",
+    "amt": -109007
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 1398  Vantage Software Inc.",
+    "amt": -228909
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 1399  Meridian Insurance",
+    "amt": -80518
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 1400  Granite Facilities",
+    "amt": -301114
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1403  Sable Cleaning Services",
+    "amt": -40273
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -259158
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 378070
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 821918
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 829721
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 181539
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 622196
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 1405  Bluefin Catering",
+    "amt": -125754
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 1408  Sable Cleaning Services",
+    "amt": -344922
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 1410  Castellan Legal LLP",
+    "amt": -404446
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -94046
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Copperline Telecom",
+    "amt": -315528
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -62351
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 1411  Redwood Equipment Rental",
+    "amt": -441269
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 159065
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -275187
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 767190
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 789673
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -143267
+   }
+  ],
+  "closing": 6864954,
+  "disc": {
+   "date": "2026-03-22",
+   "desc": "WIRE TRANSFER FEE",
+   "amt": -2024
+  },
+  "match_idx": 18,
+  "holder": "A",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 12,
+  "opening": 4329228,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "WIRE IN  Evergreen Schools Trust",
+    "amt": 771788
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 1007  Orion Web Hosting",
+    "amt": -425014
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 813931
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 657182
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 1009  Redwood Equipment Rental",
+    "amt": -288838
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 848561
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1011  Copperline Telecom",
+    "amt": -421125
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1012  Orion Web Hosting",
+    "amt": -80713
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -140924
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -329614
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 711833
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 1015  Alder Printing",
+    "amt": -340781
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 1017  Meridian Insurance",
+    "amt": -397694
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 642229
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 1018  Summit Payroll Services",
+    "amt": -370944
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 1021  Alder Printing",
+    "amt": -32876
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 160783
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -101917
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 766380
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 1022  Sable Cleaning Services",
+    "amt": -164904
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "WIRE IN  Glenview Dental",
+    "amt": 620297
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 34417
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 1024  Summit Payroll Services",
+    "amt": -384614
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -465783
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 1027  Meridian Insurance",
+    "amt": -309754
+   }
+  ],
+  "closing": 6101134,
+  "disc": {
+   "date": "2026-03-25",
+   "desc": "ACH DEBIT  STATE REVENUE DEPT",
+   "amt": -144047
+  },
+  "match_idx": 7,
+  "holder": "C",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 13,
+  "opening": 5139910,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -41408
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 354481
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 2972  Northwind Supplies",
+    "amt": -152748
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2975  Sable Cleaning Services",
+    "amt": -432204
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -266304
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2977  Summit Payroll Services",
+    "amt": -162360
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 2979  Copperline Telecom",
+    "amt": -20682
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 2981  Pinecrest Office Co.",
+    "amt": -367493
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -157125
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "ACH PAYMENT  Copperline Telecom",
+    "amt": -361127
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 589247
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -359668
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 2984  Ironbridge Consulting",
+    "amt": -248998
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 52825
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "WIRE IN  Evergreen Schools Trust",
+    "amt": 841787
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 125662
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 2987  Bluefin Catering",
+    "amt": -380331
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 808586
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 2988  Castellan Legal LLP",
+    "amt": -24268
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 816912
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 511552
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 2990  Meridian Insurance",
+    "amt": -407041
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -33788
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 798264
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 493140
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 2992  Pinecrest Office Co.",
+    "amt": -254534
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 2993  Northwind Supplies",
+    "amt": -260441
+   }
+  ],
+  "closing": 6601846,
+  "disc": {
+   "date": "2026-03-26",
+   "desc": "RETURNED ITEM FEE",
+   "amt": -3366
+  },
+  "match_idx": 16,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 14,
+  "opening": 3047828,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 633881
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 580335
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -383037
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 148683
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 642182
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 678792
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 97233
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 3232  Harbor Freight Logistics",
+    "amt": -343427
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -9120
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 202018
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 3234  Harbor Freight Logistics",
+    "amt": -396873
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 784307
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 3237  Lakeside Utilities",
+    "amt": -26077
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 527566
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 3238  Meridian Insurance",
+    "amt": -156936
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 3240  Vantage Software Inc.",
+    "amt": -106461
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 3243  Bluefin Catering",
+    "amt": -230796
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 749187
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -213416
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 3244  Lakeside Utilities",
+    "amt": -469547
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 3245  Vantage Software Inc.",
+    "amt": -84233
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 860180
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -462724
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 747075
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 290666
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 807956
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 3247  Bluefin Catering",
+    "amt": -229175
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 3248  Harbor Freight Logistics",
+    "amt": -156427
+   }
+  ],
+  "closing": 7529640,
+  "disc": {
+   "date": "2026-03-08",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -59640
+  },
+  "match_idx": 27,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 15,
+  "opening": 5524517,
+  "lines": [
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 1941  Alder Printing",
+    "amt": -314237
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "CHECK 1943  Sable Cleaning Services",
+    "amt": -453812
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -222664
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -280391
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 1945  Alder Printing",
+    "amt": -9601
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 1946  Vantage Software Inc.",
+    "amt": -74104
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -303987
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -276879
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 476288
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 1947  Northwind Supplies",
+    "amt": -177459
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -227809
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 1950  Meridian Insurance",
+    "amt": -467221
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 608980
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 217893
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 836941
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "CHECK 1952  Redwood Equipment Rental",
+    "amt": -429831
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "CHECK 1954  Meridian Insurance",
+    "amt": -17901
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -17474
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 387245
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 1956  Granite Facilities",
+    "amt": -255153
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -259505
+   }
+  ],
+  "closing": 4263836,
+  "disc": {
+   "date": "2026-03-24",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -13801
+  },
+  "match_idx": 4,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 16,
+  "opening": 6275329,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "ACH PAYMENT  Copperline Telecom",
+    "amt": -199510
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -189125
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -288047
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2070  Orion Web Hosting",
+    "amt": -403817
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 2072  Pinecrest Office Co.",
+    "amt": -468772
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 2074  Sable Cleaning Services",
+    "amt": -233032
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -19243
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 251378
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 511319
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 517487
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 337946
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 778765
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 550458
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 305741
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 508659
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 2075  Vantage Software Inc.",
+    "amt": -431721
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -227505
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2078  Castellan Legal LLP",
+    "amt": -341691
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 543749
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 307276
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 560505
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 2080  Bluefin Catering",
+    "amt": -324687
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 77835
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -419092
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2083  Lakeside Utilities",
+    "amt": -182050
+   }
+  ],
+  "closing": 7798155,
+  "disc": {
+   "date": "2026-03-17",
+   "desc": "BANK SERVICE CHARGE",
+   "amt": -5334
+  },
+  "match_idx": 2,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 17,
+  "opening": 8328446,
+  "lines": [
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 2633  Summit Payroll Services",
+    "amt": -60689
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2635  Northwind Supplies",
+    "amt": -342072
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2636  Lakeside Utilities",
+    "amt": -209389
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2638  Harbor Freight Logistics",
+    "amt": -58459
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 2640  Vantage Software Inc.",
+    "amt": -86554
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2643  Harbor Freight Logistics",
+    "amt": -376585
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -375667
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 2645  Redwood Equipment Rental",
+    "amt": -10040
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 143832
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 53315
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 2648  Copperline Telecom",
+    "amt": -173238
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 154152
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 670991
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -264807
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 2651  Alder Printing",
+    "amt": -350912
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2654  Copperline Telecom",
+    "amt": -459223
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -81904
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -447448
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -421404
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -54170
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 148977
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 248368
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "CHECK 2657  Pinecrest Office Co.",
+    "amt": -50776
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 771193
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 413630
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 57384
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -115487
+   }
+  ],
+  "closing": 7051464,
+  "disc": {
+   "date": "2026-03-21",
+   "desc": "ACH DEBIT  STATE REVENUE DEPT",
+   "amt": -143887
+  },
+  "match_idx": 1,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 18,
+  "opening": 8385668,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 531669
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 61262
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 3544  Castellan Legal LLP",
+    "amt": -310701
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 3545  Bluefin Catering",
+    "amt": -90980
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 3546  Orion Web Hosting",
+    "amt": -92238
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 3547  Vantage Software Inc.",
+    "amt": -156081
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -64531
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 891007
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 3548  Redwood Equipment Rental",
+    "amt": -151731
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 227528
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 3549  Granite Facilities",
+    "amt": -129388
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 120760
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 3551  Alder Printing",
+    "amt": -139220
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -117144
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -203600
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 292140
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -373025
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -281869
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -52210
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -434201
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 3552  Lakeside Utilities",
+    "amt": -443835
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 731381
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 3553  Meridian Insurance",
+    "amt": -142404
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 292662
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 3555  Sable Cleaning Services",
+    "amt": -188866
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 3556  Bluefin Catering",
+    "amt": -305377
+   }
+  ],
+  "closing": 7856676,
+  "disc": {
+   "date": "2026-03-14",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -36344
+  },
+  "match_idx": 2,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 19,
+  "opening": 5785706,
+  "lines": [
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 3024  Bluefin Catering",
+    "amt": -426964
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "ACH PAYMENT  Castellan Legal LLP",
+    "amt": -233818
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 3026  Summit Payroll Services",
+    "amt": -466335
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -377415
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 3028  Ironbridge Consulting",
+    "amt": -113544
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 3030  Bluefin Catering",
+    "amt": -303878
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -301903
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 144232
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 3031  Ironbridge Consulting",
+    "amt": -22778
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 3034  Granite Facilities",
+    "amt": -187244
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Helix Biolabs",
+    "amt": 691408
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 470174
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -177429
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 3036  Northwind Supplies",
+    "amt": -140505
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "WIRE IN  Evergreen Schools Trust",
+    "amt": 224268
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 3038  Harbor Freight Logistics",
+    "amt": -263491
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 309019
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -200453
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -464880
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 3039  Orion Web Hosting",
+    "amt": -450733
+   }
+  ],
+  "closing": 3493437,
+  "disc": {
+   "date": "2026-03-11",
+   "desc": "BANK SERVICE CHARGE",
+   "amt": -6150
+  },
+  "match_idx": 1,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 20,
+  "opening": 3206683,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -62431
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 2626  Castellan Legal LLP",
+    "amt": -179685
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 590225
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 567277
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -109336
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -292517
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 2628  Summit Payroll Services",
+    "amt": -402063
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 136294
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 857995
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 2630  Granite Facilities",
+    "amt": -474889
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 206516
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -389243
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 2633  Northwind Supplies",
+    "amt": -464755
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 402755
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2636  Vantage Software Inc.",
+    "amt": -51033
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 2639  Castellan Legal LLP",
+    "amt": -391497
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -290182
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 530290
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -305346
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -396162
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 2640  Northwind Supplies",
+    "amt": -32005
+   }
+  ],
+  "closing": 2656891,
+  "disc": {
+   "date": "2026-03-11",
+   "desc": "WIRE TRANSFER FEE",
+   "amt": -3226
+  },
+  "match_idx": 14,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 21,
+  "opening": 7260339,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -148734
+   },
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 1445  Bluefin Catering",
+    "amt": -433779
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 40278
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -307244
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 1448  Pinecrest Office Co.",
+    "amt": -52722
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "DEPOSIT  Benton & Daughters",
+    "amt": 716419
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 1450  Bluefin Catering",
+    "amt": -434094
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 1453  Alder Printing",
+    "amt": -322690
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 385696
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 1455  Northwind Supplies",
+    "amt": -261313
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 1458  Copperline Telecom",
+    "amt": -120537
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 1461  Lakeside Utilities",
+    "amt": -431270
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -263762
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "ACH PAYMENT  Alder Printing",
+    "amt": -344779
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 113257
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "ACH PAYMENT  Meridian Insurance",
+    "amt": -331713
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -195159
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "CHECK 1464  Harbor Freight Logistics",
+    "amt": -141871
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 147129
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 460040
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 450029
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 1465  Vantage Software Inc.",
+    "amt": -476382
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "CHECK 1468  Granite Facilities",
+    "amt": -248423
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 888863
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "CHECK 1471  Summit Payroll Services",
+    "amt": -251149
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 44132
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 1472  Harbor Freight Logistics",
+    "amt": -122089
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 1473  Harbor Freight Logistics",
+    "amt": -231990
+   }
+  ],
+  "closing": 5386482,
+  "disc": {
+   "date": "2026-03-23",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -38529
+  },
+  "match_idx": 1,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 22,
+  "opening": 6457174,
+  "lines": [
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 3594  Vantage Software Inc.",
+    "amt": -251786
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -48625
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 733933
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 3597  Meridian Insurance",
+    "amt": -111821
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 623067
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -200831
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "CHECK 3598  Castellan Legal LLP",
+    "amt": -157711
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 3599  Bluefin Catering",
+    "amt": -55021
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 3600  Pinecrest Office Co.",
+    "amt": -251906
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -113119
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 161000
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -147617
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -265724
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 785351
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 3601  Meridian Insurance",
+    "amt": -245406
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 868634
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "CHECK 3604  Lakeside Utilities",
+    "amt": -471533
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 630902
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -269028
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -133783
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 3605  Summit Payroll Services",
+    "amt": -267933
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 3608  Sable Cleaning Services",
+    "amt": -10864
+   }
+  ],
+  "closing": 7257353,
+  "disc": {
+   "date": "2026-03-03",
+   "desc": "WIRE TRANSFER FEE",
+   "amt": -2550
+  },
+  "match_idx": 14,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 23,
+  "opening": 6790201,
+  "lines": [
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2220  Vantage Software Inc.",
+    "amt": -450736
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 369600
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 82372
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 416505
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2223  Orion Web Hosting",
+    "amt": -83000
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -413914
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 827278
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "CHECK 2226  Lakeside Utilities",
+    "amt": -231264
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 2228  Harbor Freight Logistics",
+    "amt": -408902
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 480529
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 2230  Alder Printing",
+    "amt": -427831
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 2233  Harbor Freight Logistics",
+    "amt": -156262
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 668576
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 2234  Northwind Supplies",
+    "amt": -315095
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 2237  Bluefin Catering",
+    "amt": -296225
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "CHECK 2240  Meridian Insurance",
+    "amt": -88228
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 189378
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "CHECK 2243  Northwind Supplies",
+    "amt": -269833
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2246  Harbor Freight Logistics",
+    "amt": -145432
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2248  Northwind Supplies",
+    "amt": -466650
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 2250  Sable Cleaning Services",
+    "amt": -372367
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 2253  Castellan Legal LLP",
+    "amt": -242735
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "ACH PAYMENT  Granite Facilities",
+    "amt": -145973
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 2254  Vantage Software Inc.",
+    "amt": -214502
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "CHECK 2255  Pinecrest Office Co.",
+    "amt": -334547
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 2256  Castellan Legal LLP",
+    "amt": -227538
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "CHECK 2258  Copperline Telecom",
+    "amt": -455652
+   }
+  ],
+  "closing": 4077753,
+  "disc": {
+   "date": "2026-03-19",
+   "desc": "RETURNED ITEM FEE",
+   "amt": -3255
+  },
+  "match_idx": 7,
+  "holder": "A",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 24,
+  "opening": 7055882,
+  "lines": [
+   {
+    "date": "2026-03-03",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -338172
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "CHECK 3489  Copperline Telecom",
+    "amt": -365863
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "CHECK 3490  Summit Payroll Services",
+    "amt": -100165
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -124565
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -370309
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 278997
+   },
+   {
+    "date": "2026-03-13",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 380737
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Ironbridge Consulting",
+    "amt": -36412
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Glenview Dental",
+    "amt": 123165
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -459997
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -162313
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -447350
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "CHECK 3492  Harbor Freight Logistics",
+    "amt": -421554
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Vantage Software Inc.",
+    "amt": -424680
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 3495  Copperline Telecom",
+    "amt": -45344
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 879628
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "WIRE IN  Juniper Landscaping",
+    "amt": 599674
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "CHECK 3497  Vantage Software Inc.",
+    "amt": -348031
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "CHECK 3498  Meridian Insurance",
+    "amt": -378360
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 317753
+   }
+  ],
+  "closing": 5612721,
+  "disc": {
+   "date": "2026-03-02",
+   "desc": "DEBIT MEMO  SAFE DEPOSIT BOX RENTAL",
+   "amt": -8756
+  },
+  "match_idx": 11,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 25,
+  "opening": 3480733,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 772515
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 710306
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -211311
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -5205
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 343380
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -122833
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 616864
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -126571
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -106184
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 648791
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "DEPOSIT  Helix Biolabs",
+    "amt": 492248
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 2312  Alder Printing",
+    "amt": -288359
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "DEPOSIT  Glenview Dental",
+    "amt": 396178
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 125824
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 402362
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 2315  Northwind Supplies",
+    "amt": -432654
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Northwind Supplies",
+    "amt": -90572
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 2317  Orion Web Hosting",
+    "amt": -84490
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 2318  Lakeside Utilities",
+    "amt": -462001
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 856624
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 184135
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "ACH PAYMENT  Redwood Equipment Rental",
+    "amt": -62533
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2321  Meridian Insurance",
+    "amt": -83295
+   }
+  ],
+  "closing": 6953952,
+  "disc": {
+   "date": "2026-03-15",
+   "desc": "BANK SERVICE CHARGE",
+   "amt": -4775
+  },
+  "match_idx": 22,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 26,
+  "opening": 6975861,
+  "lines": [
+   {
+    "date": "2026-03-04",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 744097
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "CHECK 2400  Alder Printing",
+    "amt": -188268
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 2403  Redwood Equipment Rental",
+    "amt": -149954
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "CHECK 2404  Pinecrest Office Co.",
+    "amt": -349914
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 2406  Granite Facilities",
+    "amt": -211201
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 2409  Harbor Freight Logistics",
+    "amt": -17048
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "CHECK 2410  Sable Cleaning Services",
+    "amt": -363658
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 843653
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 328320
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "CHECK 2413  Copperline Telecom",
+    "amt": -123927
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 2414  Harbor Freight Logistics",
+    "amt": -157026
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "WIRE IN  Evergreen Schools Trust",
+    "amt": 498116
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 2417  Redwood Equipment Rental",
+    "amt": -263094
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "CHECK 2418  Bluefin Catering",
+    "amt": -49770
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "CHECK 2421  Vantage Software Inc.",
+    "amt": -35020
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "ACH PAYMENT  Copperline Telecom",
+    "amt": -20965
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 404802
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 2422  Granite Facilities",
+    "amt": -73763
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 187912
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "WIRE IN  Kestrel Aviation",
+    "amt": 394068
+   }
+  ],
+  "closing": 8373221,
+  "disc": {
+   "date": "2026-03-04",
+   "desc": "ACH DEBIT  MERCHANT PROCESSING FEES",
+   "amt": -40531
+  },
+  "match_idx": 9,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 27,
+  "opening": 3980343,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 1245  Pinecrest Office Co.",
+    "amt": -316560
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 1248  Granite Facilities",
+    "amt": -312818
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 1249  Copperline Telecom",
+    "amt": -210432
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "CHECK 1251  Harbor Freight Logistics",
+    "amt": -391332
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 737191
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 31440
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -171366
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "WIRE IN  Glenview Dental",
+    "amt": 128271
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "WIRE IN  Cobalt Manufacturing",
+    "amt": 735205
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -452737
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 118333
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 1252  Orion Web Hosting",
+    "amt": -253911
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 1253  Pinecrest Office Co.",
+    "amt": -20815
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "ACH PAYMENT  Meridian Insurance",
+    "amt": -368008
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 1254  Redwood Equipment Rental",
+    "amt": -242578
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 34755
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -27772
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 1256  Castellan Legal LLP",
+    "amt": -100222
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 1258  Castellan Legal LLP",
+    "amt": -98475
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -176926
+   }
+  ],
+  "closing": 2621586,
+  "disc": {
+   "date": "2026-03-26",
+   "desc": "DEBIT MEMO  SAFE DEPOSIT BOX RENTAL",
+   "amt": -9684
+  },
+  "match_idx": 14,
+  "holder": "D",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 28,
+  "opening": 7998672,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "CHECK 2574  Lakeside Utilities",
+    "amt": -302312
+   },
+   {
+    "date": "2026-03-02",
+    "desc": "CHECK 2576  Pinecrest Office Co.",
+    "amt": -230912
+   },
+   {
+    "date": "2026-03-03",
+    "desc": "CHECK 2578  Castellan Legal LLP",
+    "amt": -325007
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -57941
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2579  Lakeside Utilities",
+    "amt": -144559
+   },
+   {
+    "date": "2026-03-04",
+    "desc": "CHECK 2581  Bluefin Catering",
+    "amt": -44000
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 2583  Summit Payroll Services",
+    "amt": -94130
+   },
+   {
+    "date": "2026-03-07",
+    "desc": "WIRE IN  Benton & Daughters",
+    "amt": 717777
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -21636
+   },
+   {
+    "date": "2026-03-10",
+    "desc": "DEPOSIT  Cobalt Manufacturing",
+    "amt": 90038
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -93815
+   },
+   {
+    "date": "2026-03-14",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 373206
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2586  Redwood Equipment Rental",
+    "amt": -179057
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "WIRE IN  Delta Harbor Clinic",
+    "amt": 581208
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 2587  Orion Web Hosting",
+    "amt": -324515
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 193616
+   },
+   {
+    "date": "2026-03-19",
+    "desc": "WIRE IN  Aurora Retail Group",
+    "amt": 92592
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "DEPOSIT  Juniper Landscaping",
+    "amt": 592000
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 2588  Vantage Software Inc.",
+    "amt": -74043
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 2591  Granite Facilities",
+    "amt": -15430
+   },
+   {
+    "date": "2026-03-25",
+    "desc": "ACH PAYMENT  Sable Cleaning Services",
+    "amt": -261258
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Lakeside Utilities",
+    "amt": -167614
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -27489
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2594  Ironbridge Consulting",
+    "amt": -287128
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2595  Lakeside Utilities",
+    "amt": -407161
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "CHECK 2596  Redwood Equipment Rental",
+    "amt": -275657
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "CHECK 2597  Pinecrest Office Co.",
+    "amt": -375884
+   }
+  ],
+  "closing": 6929561,
+  "disc": {
+   "date": "2026-03-17",
+   "desc": "ACH DEBIT  STATE REVENUE DEPT",
+   "amt": -169189
+  },
+  "match_idx": 4,
+  "holder": "A",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ },
+ {
+  "id": 29,
+  "opening": 5587647,
+  "lines": [
+   {
+    "date": "2026-03-01",
+    "desc": "DEPOSIT  Delta Harbor Clinic",
+    "amt": 162395
+   },
+   {
+    "date": "2026-03-05",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 395492
+   },
+   {
+    "date": "2026-03-06",
+    "desc": "CHECK 2396  Harbor Freight Logistics",
+    "amt": -467428
+   },
+   {
+    "date": "2026-03-08",
+    "desc": "WIRE IN  Fairmont Hotels",
+    "amt": 89057
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 50017
+   },
+   {
+    "date": "2026-03-09",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -118533
+   },
+   {
+    "date": "2026-03-11",
+    "desc": "DEPOSIT  Fairmont Hotels",
+    "amt": 215858
+   },
+   {
+    "date": "2026-03-12",
+    "desc": "CHECK 2399  Sable Cleaning Services",
+    "amt": -412901
+   },
+   {
+    "date": "2026-03-15",
+    "desc": "ACH PAYMENT  Harbor Freight Logistics",
+    "amt": -451180
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "ACH PAYMENT  Bluefin Catering",
+    "amt": -213911
+   },
+   {
+    "date": "2026-03-16",
+    "desc": "CHECK 2402  Granite Facilities",
+    "amt": -68635
+   },
+   {
+    "date": "2026-03-17",
+    "desc": "DEPOSIT  Aurora Retail Group",
+    "amt": 488452
+   },
+   {
+    "date": "2026-03-18",
+    "desc": "CHECK 2403  Sable Cleaning Services",
+    "amt": -52995
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "DEPOSIT  Evergreen Schools Trust",
+    "amt": 295695
+   },
+   {
+    "date": "2026-03-20",
+    "desc": "CHECK 2406  Orion Web Hosting",
+    "amt": -121893
+   },
+   {
+    "date": "2026-03-21",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 143893
+   },
+   {
+    "date": "2026-03-22",
+    "desc": "CHECK 2408  Copperline Telecom",
+    "amt": -437466
+   },
+   {
+    "date": "2026-03-23",
+    "desc": "ACH PAYMENT  Meridian Insurance",
+    "amt": -297709
+   },
+   {
+    "date": "2026-03-24",
+    "desc": "CHECK 2409  Redwood Equipment Rental",
+    "amt": -137160
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "ACH PAYMENT  Pinecrest Office Co.",
+    "amt": -320283
+   },
+   {
+    "date": "2026-03-26",
+    "desc": "DEPOSIT  Kestrel Aviation",
+    "amt": 715670
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2412  Vantage Software Inc.",
+    "amt": -325797
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2414  Pinecrest Office Co.",
+    "amt": -299661
+   },
+   {
+    "date": "2026-03-27",
+    "desc": "CHECK 2416  Alder Printing",
+    "amt": -85590
+   },
+   {
+    "date": "2026-03-28",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -57002
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 2417  Lakeside Utilities",
+    "amt": -81913
+   },
+   {
+    "date": "2026-03-29",
+    "desc": "CHECK 2418  Harbor Freight Logistics",
+    "amt": -123511
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Summit Payroll Services",
+    "amt": -340928
+   },
+   {
+    "date": "2026-03-30",
+    "desc": "ACH PAYMENT  Orion Web Hosting",
+    "amt": -336953
+   }
+  ],
+  "closing": 3392727,
+  "disc": {
+   "date": "2026-03-18",
+   "desc": "ACH DEBIT  STATE REVENUE DEPT",
+   "amt": -78027
+  },
+  "match_idx": 21,
+  "holder": "B",
+  "truth": {
+   "TRUE": "NO",
+   "FAKE": "YES",
+   "SOLO": "NO",
+   "ATTESTED": "NO",
+   "CLEAN": "YES",
+   "CLEANP": "YES",
+   "TRUEP": "NO",
+   "FAKEP": "YES"
+  }
+ }
+]

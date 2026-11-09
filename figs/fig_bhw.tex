@@ -1,0 +1,89 @@
+% BHW cascade schematic for bayesian_swarms.tex. One illustrative 8-agent chain with p = 0.65 and a 50/50 prior.
+% Posteriors are exact: Bayes P(C) = sigma((s_k + d_k) * lambda), naive P(C) = sigma((s_k + sum of all earlier
+% verdicts) * lambda), lambda = ln(0.65/0.35); d_k = informative public lead, frozen once |d| = 2.
+% Pooled P(C) over all 8 signals = sigma(-2 lambda) = 0.225.
+% Build:  tectonic figs/fig_bhw.tex
+\documentclass[border=1pt]{standalone}
+\usepackage[sfdefault]{inter}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, decorations.pathreplacing}
+
+\definecolor{ink}{HTML}{191919}
+\definecolor{sub}{HTML}{6B6A66}
+\definecolor{rule}{HTML}{DAD7CD}
+\definecolor{card}{HTML}{FAF9F5}
+\definecolor{leak}{HTML}{B84A33}   % N: non-compliant (the true state here)
+\definecolor{safe}{HTML}{287F70}   % C: compliant
+\definecolor{over}{HTML}{3F6EA8}
+
+\tikzset{
+  base/.style={font=\footnotesize, text=ink, line width=0.5pt, >={Stealth[round,length=4pt,width=3.2pt]}},
+  sig/.style={rounded corners=2pt, minimum width=11pt, minimum height=9pt, inner sep=0pt, font=\scriptsize\bfseries,
+              text=white, fill=#1},
+  hid/.style={rounded corners=2pt, minimum width=11pt, minimum height=9pt, inner sep=0pt, font=\scriptsize\bfseries,
+              text=#1, draw=#1, dashed, fill=white},
+  ag/.style={circle, draw=ink!70, fill=card, minimum size=13pt, inner sep=0pt, font=\scriptsize\bfseries},
+  rowlbl/.style={font=\scriptsize, text=sub, anchor=east, align=right},
+  num/.style={font=\scriptsize, anchor=center},
+  note/.style={font=\scriptsize, text=sub, align=left},
+}
+\hyphenpenalty=10000
+\newcommand{\sx}{11.6mm}   % column pitch
+
+\begin{document}
+\begin{tikzpicture}[base]
+% columns: agent k at x = k * pitch
+\foreach \k/\s/\b/\n in {1/C/0.65/0.65, 2/C/0.78/0.78, 3/N/0.65/0.65, 4/N/0.65/0.78, 5/C/0.86/0.96,
+                         6/N/0.65/0.92, 7/N/0.65/0.96, 8/N/0.65/0.98} {
+  \coordinate (x\k) at (\k*\sx, 0);
+  % private signal
+  \ifnum\k<3
+    \node[sig=safe] (s\k) at ($(x\k)+(0,13mm)$) {\s};
+  \else
+    \if\s C \node[hid=safe] (s\k) at ($(x\k)+(0,13mm)$) {\s};
+    \else  \node[hid=leak] (s\k) at ($(x\k)+(0,13mm)$) {\s}; \fi
+  \fi
+  % agent and verdict
+  \node[ag] (a\k) at ($(x\k)+(0,6.5mm)$) {\k};
+  \node[sig=safe] (v\k) at (x\k) {C};
+  \draw[->, draw=sub!70] (s\k) -- (a\k);
+  \draw[->, draw=sub!70] (a\k) -- (v\k);
+  % posteriors: bars of length P, Bayes (filled) and naive count (outline)
+  % bars run from P = 0.5 (left edge) to P = 1 (right edge of the light track)
+  \fill[rule!60] ($(x\k)+(-4.5mm,-8mm)$) rectangle ++(9mm, 1.6mm);
+  \fill[rule!60] ($(x\k)+(-4.5mm,-11.5mm)$) rectangle ++(9mm, 1.6mm);
+  \fill[over] ($(x\k)+(-4.5mm,-8mm)$) rectangle ++({18mm*(\b-0.5)}, 1.6mm);
+  \draw[over, fill=white] ($(x\k)+(-4.5mm,-11.5mm)$) rectangle ++({18mm*(\n-0.5)}, 1.6mm);
+  \node[num, text=over, font=\scriptsize\bfseries] at ($(x\k)+(0,-4.2mm)$) {\b};
+  \node[num, text=sub] at ($(x\k)+(0,-13.6mm)$) {\n};
+}
+% verdict chain
+\foreach \k [evaluate=\k as \j using int(\k+1)] in {1,...,7} { \draw[->, draw=ink!60] (v\k.east) -- (v\j.west); }
+% agent 3 overrides its own signal
+\draw[leak, line width=0.8pt] (a3) circle (8.5pt);
+
+% row labels
+\node[rowlbl] at ($(s1)+(-8mm,0)$) {private signal\\[-1pt](right w.p. 0.65)};
+\node[rowlbl] at ($(v1)+(-8mm,0)$) {announced\\[-1pt]verdict};
+\node[rowlbl] at ($(x1)+(-8mm,-7.2mm)$) {\textbf{\color{over}P(C), exact Bayes}};
+\node[rowlbl, text=sub] at ($(x1)+(-8mm,-10.7mm)$) {P(C), naive count};
+
+% braces
+\draw[decorate, decoration={brace, amplitude=3pt}, draw=sub] ($(s1.north west)+(0,1.5mm)$) -- ($(s2.north east)+(0,1.5mm)$)
+  node[midway, above=2.5pt, note, align=center] {verdicts reveal\\[-1pt]these signals};
+\draw[decorate, decoration={brace, amplitude=3pt}, draw=leak] ($(s3.north west)+(0,1.5mm)$) -- ($(s8.north east)+(0,1.5mm)$)
+  node[midway, above=2.5pt, note, align=center, text=leak] {cascade: informative lead = 2, so every verdict copies it\\[-1pt]and these signals are never revealed};
+
+% takeaway card
+\node[draw=rule, fill=card, rounded corners=4pt, inner sep=4pt, text width=46mm, align=left, font=\scriptsize,
+      anchor=west] (tk) at ($(x8)+(8mm,3mm)$) {%
+  \textbf{Pooled}, the 8 signals favour \textbf{\color{leak}N} (5 of 8; P(C) = 0.23). The swarm
+  announces \textbf{\color{safe}C} unanimously.\\[3pt]
+  Agent 3 \textbf{\color{leak}overrides} its own signal: two revealed signals outweigh one.\\[3pt]
+  \textbf{Captured:} copy the majority whatever the signal.
+  \textbf{Deaf:} follow the signal whatever the majority.
+  \textbf{Bayesian:} override exactly at an informative lead of 2, and report 0.65 or 0.86, not the naive
+  count's 0.98.};
+
+\end{tikzpicture}
+\end{document}

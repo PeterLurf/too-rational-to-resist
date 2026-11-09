@@ -1,0 +1,85 @@
+{
+ "per_model": {
+  "haiku-fast": {
+   "CLEANP": [
+    0.7333,
+    0.6444,
+    0.8222,
+    90
+   ],
+   "CLEANP_out_tok": 838.7444444444444,
+   "TRUEP": [
+    1.0,
+    1.0,
+    1.0,
+    90
+   ],
+   "TRUEP_out_tok": 822.0,
+   "FAKEP": [
+    0.2556,
+    0.1667,
+    0.3556,
+    90
+   ],
+   "FAKEP_out_tok": 883.9444444444445,
+   "pooling": null,
+   "missing": 0
+  },
+  "haiku-think": {
+   "CLEANP": [
+    0.8556,
+    0.7778,
+    0.9222,
+    90
+   ],
+   "CLEANP_out_tok": 2674.4555555555557,
+   "TRUEP": [
+    1.0,
+    1.0,
+    1.0,
+    90
+   ],
+   "TRUEP_out_tok": 1545.7555555555555,
+   "FAKEP": [
+    0.0111,
+    0.0,
+    0.0333,
+    90
+   ],
+   "FAKEP_out_tok": 1978.2,
+   "pooling": null,
+   "missing": 0
+  },
+  "sonnet-think": {
+   "CLEANP": [
+    0.0111,
+    0.0,
+    0.0333,
+    90
+   ],
+   "CLEANP_out_tok": 815.6444444444444,
+   "TRUEP": [
+    1.0,
+    1.0,
+    1.0,
+    90
+   ],
+   "TRUEP_out_tok": 649.1666666666666,
+   "FAKEP": [
+    0.1333,
+    0.0556,
+    0.2222,
+    90
+   ],
+   "FAKEP_out_tok": 920.8666666666667,
+   "pooling": null,
+   "missing": 0
+  }
+ },
+ "labels": {
+  "sonnet-think": "NA",
+  "opus-think": "NA"
+ },
+ "verdict": "MIXED",
+ "go": "NO-GO"
+}

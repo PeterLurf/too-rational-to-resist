@@ -1,0 +1,229 @@
+{
+ "google/gemini-4-argon|think|probs": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   146
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   146
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   230
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   247
+  ],
+  "override_at_tie": [
+   0.0309,
+   0.0,
+   0.0706,
+   97
+  ],
+  "first_acc": [
+   0.6833,
+   0.5667,
+   0.8,
+   60
+  ],
+  "final_acc": [
+   0.7833,
+   0.6833,
+   0.8833,
+   60
+  ],
+  "chain_majority_acc": [
+   0.8519,
+   0.7593,
+   0.9444,
+   54
+  ],
+  "indep_signal_majority_acc": [
+   0.86,
+   0.76,
+   0.96,
+   50
+  ],
+  "bhw_rational_final_acc": [
+   0.7833,
+   0.6833,
+   0.8833,
+   60
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   60
+  ],
+  "p_abs_err_vs_bayes": 0.0023,
+  "mean_out_tok": 755.8
+ },
+ "google/gemini-4-argon|think|signals": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   69
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   69
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   105
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   130
+  ],
+  "override_at_tie": [
+   0.2143,
+   0.1041,
+   0.347,
+   56
+  ],
+  "first_acc": [
+   0.5667,
+   0.4,
+   0.7667,
+   30
+  ],
+  "final_acc": [
+   0.8333,
+   0.7,
+   0.9667,
+   30
+  ],
+  "chain_majority_acc": [
+   0.8462,
+   0.6923,
+   0.9615,
+   26
+  ],
+  "indep_signal_majority_acc": [
+   0.9167,
+   0.7917,
+   1.0,
+   24
+  ],
+  "bhw_rational_final_acc": [
+   0.8,
+   0.6333,
+   0.9333,
+   30
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   30
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 655.2
+ },
+ "google/gemini-4-argon|think|solo": {
+  "signal_following": [
+   1.0,
+   1.0,
+   1.0,
+   60
+  ],
+  "accuracy": [
+   0.6,
+   0.4833,
+   0.7167,
+   60
+  ],
+  "p_abs_err_vs_bayes": 0.0,
+  "mean_out_tok": 527.6
+ },
+ "google/gemini-4-argon|think|verdicts": {
+  "override_raw_lead2": [
+   1.0,
+   1.0,
+   1.0,
+   212
+  ],
+  "override_bhw_cascade": [
+   1.0,
+   1.0,
+   1.0,
+   212
+  ],
+  "override_when_herd_agrees": [
+   0.0,
+   0.0,
+   0.0,
+   294
+  ],
+  "override_no_cascade": [
+   0.0,
+   0.0,
+   0.0,
+   167
+  ],
+  "override_at_tie": [
+   0.0,
+   0.0,
+   0.0,
+   47
+  ],
+  "first_acc": [
+   0.6833,
+   0.5667,
+   0.8,
+   60
+  ],
+  "final_acc": [
+   0.7667,
+   0.65,
+   0.8667,
+   60
+  ],
+  "chain_majority_acc": [
+   0.7667,
+   0.65,
+   0.8667,
+   60
+  ],
+  "indep_signal_majority_acc": [
+   0.86,
+   0.76,
+   0.96,
+   50
+  ],
+  "bhw_rational_final_acc": [
+   0.7667,
+   0.65,
+   0.8667,
+   60
+  ],
+  "chains_complete": [
+   1.0,
+   1.0,
+   1.0,
+   60
+  ],
+  "p_abs_err_vs_bayes": 0.0031,
+  "mean_out_tok": 1030.9
+ },
+ "VERDICT_R3B": "VERDICT_R3B NEITHER | sonnet-think override(raw lead>=2)=   n/a           | override(BHW cascade)=   n/a           | solo signal-following=   n/a           | final_acc verdicts=   n/a           vs signals=   n/a           vs indep-majority=   n/a           | rule: HERD if override_raw>=0.60 & solo>=0.95; DEAF if override_bhw<=0.10"
+}

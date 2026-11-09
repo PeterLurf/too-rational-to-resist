@@ -1,0 +1,18 @@
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{decision $=$ Bayes $\ne$ count} & max $|P-P_B|$ & \multicolumn{2}{c}{F4 cascade} \\
+\cmidrule(lr){2-4}\cmidrule(lr){6-7}
+model & F1 prior & F2 prec. & F3 echo & F1--F3 & closer & err B / count \\
+\midrule
+Opus 5.5 & 1.00 & 1.00 & 1.00 & 0.002 & 1.00 & 0.000 / 0.284 \\
+GPT-6.1 & 1.00 & 1.00 & 1.00 & 0.000 & 1.00 & 0.002 / 0.286 \\
+Gemini 4 Argon & 1.00 & 1.00 & 1.00 & 0.000 & 1.00 & 0.000 / 0.284 \\
+Sonnet 5.5 & 1.00 & 1.00 & 1.00 & 0.002 & 0.98 & 0.015 / 0.286 \\
+Haiku 5.5 (reasoning) & 1.00 & 0.97 & 0.97 & 0.002 & 0.92 & 0.081 / 0.307 \\
+Haiku 5.5 (fast) & 1.00 & 1.00 & 1.00 & 0.005 & 0.44 & 0.211 / 0.208 \\
+Qwen3-14B (reasoning) & 0.84 & 0.78 & 0.69 & 0.005 & 0.02 & 0.281 / 0.014 \\
+Qwen3-14B (no-think) & 0.53 & 0.50 & 0.44 & 0.281 & 0.58 & 0.337 / 0.418 \\
+Llama-3.1-8B & 0.44 & 0.62 & 0.47 & 0.401 & 0.68 & 0.354 / 0.455 \\
+\bottomrule
+\end{tabular}

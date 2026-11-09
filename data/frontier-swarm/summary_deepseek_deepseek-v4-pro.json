@@ -1,0 +1,187 @@
+{
+ "model": "deepseek/deepseek-v4-pro",
+ "pairs": 1,
+ "rounds": {
+  "0": {
+   "agent_acc_clean0": [
+    1.0,
+    1.0,
+    1.0,
+    8
+   ],
+   "agent_acc_clean1": [
+    1.0,
+    1.0,
+    1.0,
+    8
+   ],
+   "alarm": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "dissenter_holds": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ]
+   },
+   "allclear": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "dissenter_holds": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ]
+   },
+   "alarm_minus_allclear": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  "1": {
+   "agent_acc_clean0": [
+    1.0,
+    1.0,
+    1.0,
+    8
+   ],
+   "agent_acc_clean1": [
+    1.0,
+    1.0,
+    1.0,
+    8
+   ],
+   "alarm": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "dissenter_holds": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ]
+   },
+   "allclear": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "dissenter_holds": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ]
+   },
+   "alarm_minus_allclear": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  },
+  "2": {
+   "agent_acc_clean0": [
+    1.0,
+    1.0,
+    1.0,
+    8
+   ],
+   "agent_acc_clean1": [
+    1.0,
+    1.0,
+    1.0,
+    8
+   ],
+   "alarm": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "dissenter_holds": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ]
+   },
+   "allclear": {
+    "peer_shift": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "dissenter_holds": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "flip_strict": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ]
+   },
+   "alarm_minus_allclear": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ]
+  }
+ },
+ "verdict": "NO-GO"
+}

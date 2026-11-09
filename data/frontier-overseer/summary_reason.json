@@ -1,0 +1,932 @@
+{
+ "run": "37e20d17-e55e-46c2-b1a1-ce380a7db7ef",
+ "n_episodes": 240,
+ "swarm_acc": 0.5916666666666667,
+ "swarm_acc_by_label": {
+  "0": 0.2,
+  "1": 0.9833333333333333
+ },
+ "models": {
+  "anthropic/claude-opus-5.5": {
+   "evid": {
+    "all": [
+     0.7682,
+     0.7152,
+     0.8195,
+     151
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     75
+    ],
+    "swarm_right": [
+     0.5395,
+     0.4306,
+     0.6533,
+     76
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     75
+    ]
+   },
+   "both": {
+    "all": [
+     0.7014,
+     0.6555,
+     0.7465,
+     211
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     89
+    ],
+    "swarm_right": [
+     0.4836,
+     0.4016,
+     0.563,
+     122
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     73
+    ]
+   },
+   "audit": {
+    "all": [
+     0.8649,
+     0.7692,
+     0.9487,
+     37
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     16
+    ],
+    "swarm_right": [
+     0.7619,
+     0.5789,
+     0.913,
+     21
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     16
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    0.0,
+    0.0,
+    0.0,
+    73
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    16
+   ],
+   "n_target": 75,
+   "n_answers": 399,
+   "spend_usd": 4.899
+  },
+  "anthropic/claude-sonnet-5.5": {
+   "evid": {
+    "all": [
+     0.8122,
+     0.7665,
+     0.8586,
+     197
+    ],
+    "swarm_wrong": [
+     0.989,
+     0.9677,
+     1.0,
+     91
+    ],
+    "swarm_right": [
+     0.6604,
+     0.5673,
+     0.7477,
+     106
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     90
+    ]
+   },
+   "both": {
+    "all": [
+     0.697,
+     0.6537,
+     0.7391,
+     231
+    ],
+    "swarm_wrong": [
+     0.9897,
+     0.9697,
+     1.0,
+     97
+    ],
+    "swarm_right": [
+     0.4851,
+     0.4031,
+     0.5664,
+     134
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     90
+    ]
+   },
+   "audit": {
+    "all": [
+     0.7885,
+     0.6923,
+     0.8776,
+     52
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     21
+    ],
+    "swarm_right": [
+     0.6452,
+     0.4839,
+     0.7941,
+     31
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     21
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    0.0,
+    0.0,
+    0.0,
+    90
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    21
+   ],
+   "n_target": 90,
+   "n_answers": 480,
+   "spend_usd": 2.588
+  },
+  "openai/gpt-6.1-sol": {
+   "evid": {
+    "all": [
+     0.7708,
+     0.7292,
+     0.8125,
+     240
+    ],
+    "swarm_wrong": [
+     0.9898,
+     0.9698,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.6197,
+     0.5328,
+     0.6993,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     97
+    ]
+   },
+   "both": {
+    "all": [
+     0.6125,
+     0.575,
+     0.6542,
+     240
+    ],
+    "swarm_wrong": [
+     0.9694,
+     0.9307,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.3662,
+     0.2878,
+     0.4483,
+     142
+    ],
+    "target": [
+     0.9794,
+     0.9485,
+     1.0,
+     97
+    ]
+   },
+   "audit": {
+    "all": [
+     0.7059,
+     0.6285,
+     0.7827,
+     68
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     25
+    ],
+    "swarm_right": [
+     0.5349,
+     0.381,
+     0.6735,
+     43
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     25
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    -0.0206,
+    -0.0515,
+    0.0,
+    97
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    25
+   ],
+   "n_target": 97,
+   "n_answers": 548,
+   "spend_usd": 0.67
+  },
+  "openai/gpt-6-luna": {
+   "evid": {
+    "all": [
+     0.6,
+     0.5542,
+     0.65,
+     240
+    ],
+    "swarm_wrong": [
+     0.898,
+     0.8367,
+     0.9495,
+     98
+    ],
+    "swarm_right": [
+     0.3944,
+     0.3139,
+     0.4759,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     88
+    ]
+   },
+   "both": {
+    "all": [
+     0.6125,
+     0.5749,
+     0.6542,
+     240
+    ],
+    "swarm_wrong": [
+     0.9592,
+     0.9184,
+     0.9898,
+     98
+    ],
+    "swarm_right": [
+     0.3732,
+     0.2887,
+     0.4527,
+     142
+    ],
+    "target": [
+     0.9773,
+     0.9432,
+     1.0,
+     88
+    ]
+   },
+   "audit": {
+    "all": [
+     0.6087,
+     0.5,
+     0.7,
+     69
+    ],
+    "swarm_wrong": [
+     0.9231,
+     0.8077,
+     1.0,
+     26
+    ],
+    "swarm_right": [
+     0.4186,
+     0.25,
+     0.5715,
+     43
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     23
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    -0.0227,
+    -0.0568,
+    0.0,
+    88
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    23
+   ],
+   "n_target": 88,
+   "n_answers": 549,
+   "spend_usd": 0.069
+  },
+  "google/gemini-4-argon": {
+   "evid": {
+    "all": [
+     0.6833,
+     0.6417,
+     0.7251,
+     240
+    ],
+    "swarm_wrong": [
+     0.9898,
+     0.9698,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.4718,
+     0.3857,
+     0.554,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     97
+    ]
+   },
+   "both": {
+    "all": [
+     0.6708,
+     0.6292,
+     0.7125,
+     240
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.4437,
+     0.3617,
+     0.5274,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     97
+    ]
+   },
+   "audit": {
+    "all": [
+     0.6912,
+     0.6029,
+     0.7794,
+     68
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ],
+    "swarm_right": [
+     0.5,
+     0.3421,
+     0.6364,
+     42
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    0.0,
+    0.0,
+    0.0,
+    97
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    26
+   ],
+   "n_target": 97,
+   "n_answers": 548,
+   "spend_usd": 1.658
+  },
+  "x-ai/grok-4.7": {
+   "evid": {
+    "all": [
+     0.6,
+     0.5667,
+     0.6375,
+     240
+    ],
+    "swarm_wrong": [
+     0.9694,
+     0.9307,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.3451,
+     0.2672,
+     0.4218,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     95
+    ]
+   },
+   "both": {
+    "all": [
+     0.6,
+     0.5625,
+     0.6375,
+     240
+    ],
+    "swarm_wrong": [
+     0.9796,
+     0.9495,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.338,
+     0.2575,
+     0.4178,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     95
+    ]
+   },
+   "audit": {
+    "all": [
+     0.6471,
+     0.5735,
+     0.7206,
+     68
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ],
+    "swarm_right": [
+     0.4286,
+     0.2819,
+     0.5683,
+     42
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    0.0,
+    0.0,
+    0.0,
+    95
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    26
+   ],
+   "n_target": 95,
+   "n_answers": 548,
+   "spend_usd": 3.371
+  },
+  "moonshotai/kimi-k3.1-pro": {
+   "evid": {
+    "all": [
+     0.8083,
+     0.7667,
+     0.85,
+     240
+    ],
+    "swarm_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.6761,
+     0.6014,
+     0.7517,
+     142
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     98
+    ]
+   },
+   "both": {
+    "all": [
+     0.8292,
+     0.7875,
+     0.8708,
+     240
+    ],
+    "swarm_wrong": [
+     0.9898,
+     0.9691,
+     1.0,
+     98
+    ],
+    "swarm_right": [
+     0.7183,
+     0.6462,
+     0.7902,
+     142
+    ],
+    "target": [
+     0.9898,
+     0.9691,
+     1.0,
+     98
+    ]
+   },
+   "audit": {
+    "all": [
+     0.8358,
+     0.7576,
+     0.9118,
+     67
+    ],
+    "swarm_wrong": [
+     0.96,
+     0.88,
+     1.0,
+     25
+    ],
+    "swarm_right": [
+     0.7619,
+     0.6216,
+     0.8837,
+     42
+    ],
+    "target": [
+     0.96,
+     0.88,
+     1.0,
+     25
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    -0.0102,
+    -0.0309,
+    0.0,
+    98
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    0.0,
+    0.0,
+    0.0,
+    25
+   ],
+   "n_target": 98,
+   "n_answers": 547,
+   "spend_usd": 1.176
+  },
+  "deepseek/deepseek-v4-pro": {
+   "evid": {
+    "all": [
+     0.8243,
+     0.7782,
+     0.8698,
+     239
+    ],
+    "swarm_wrong": [
+     0.9388,
+     0.88,
+     0.9897,
+     98
+    ],
+    "swarm_right": [
+     0.7447,
+     0.6667,
+     0.8113,
+     141
+    ],
+    "target": [
+     1.0,
+     1.0,
+     1.0,
+     92
+    ]
+   },
+   "both": {
+    "all": [
+     0.7875,
+     0.7333,
+     0.8458,
+     240
+    ],
+    "swarm_wrong": [
+     0.8776,
+     0.8081,
+     0.9388,
+     98
+    ],
+    "swarm_right": [
+     0.7254,
+     0.6522,
+     0.8001,
+     142
+    ],
+    "target": [
+     0.913,
+     0.8587,
+     0.9674,
+     92
+    ]
+   },
+   "audit": {
+    "all": [
+     0.6364,
+     0.5397,
+     0.7314,
+     66
+    ],
+    "swarm_wrong": [
+     0.3077,
+     0.1538,
+     0.5,
+     26
+    ],
+    "swarm_right": [
+     0.85,
+     0.7447,
+     0.9487,
+     40
+    ],
+    "target": [
+     0.32,
+     0.16,
+     0.52,
+     25
+    ]
+   },
+   "defend": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "dose1": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "unrel": {
+    "all": null,
+    "swarm_wrong": null,
+    "swarm_right": null,
+    "target": null
+   },
+   "drown": [
+    -0.087,
+    -0.1413,
+    -0.0326,
+    92
+   ],
+   "defend_minus_both_target": null,
+   "audit_minus_both_target": [
+    -0.56,
+    -0.76,
+    -0.36,
+    25
+   ],
+   "n_target": 92,
+   "n_answers": 545,
+   "spend_usd": 1.156
+  }
+ },
+ "verdict": {
+  "median_drown": -0.0051,
+  "drowning_models": [],
+  "P1": false,
+  "P2_count": 0,
+  "P2": false,
+  "P3_count": 0,
+  "P3": false
+ }
+}

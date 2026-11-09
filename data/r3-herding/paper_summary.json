@@ -1,0 +1,4496 @@
+{
+ "Sonnet 5.5": {
+  "verdicts": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-2": [
+     0.9545,
+     0.922,
+     0.9805,
+     308
+    ],
+    "-1": [
+     0.0,
+     0.0,
+     0.0,
+     77
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     76
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     89
+    ],
+    "2": [
+     0.0364,
+     0.0158,
+     0.0639,
+     440
+    ]
+   },
+   "override_cascade": [
+    0.9545,
+    0.922,
+    0.9805,
+    308
+   ],
+   "bayes_action_agree": [
+    0.9722,
+    0.9537,
+    0.9861,
+    1080
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    255
+   ],
+   "p_err_bayes": 0.01991,
+   "p_err_naive": 0.12082,
+   "deep_cascade": {
+    "n": 541,
+    "p_err_bayes": 0.02618,
+    "p_err_naive": 0.21384,
+    "closer_to_bayes": [
+     0.976,
+     0.956,
+     0.9913,
+     541
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1212,
+    0.0455,
+    0.2121,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.7378,
+    0.6567,
+    0.8122,
+    90
+   ],
+   "final_acc": [
+    0.7667,
+    0.6667,
+    0.8556,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7467,
+    0.6622,
+    0.8244,
+    90
+   ]
+  },
+  "signals": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     43
+    ],
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ],
+    "-1": [
+     0.125,
+     0.0556,
+     0.2037,
+     56
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     32
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     73
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    69
+   ],
+   "bayes_action_agree": [
+    0.9806,
+    0.9667,
+    0.9917,
+    360
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    130
+   ],
+   "p_err_bayes": 0.0006,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.7833,
+    0.69,
+    0.8733,
+    30
+   ],
+   "final_acc": [
+    0.8,
+    0.6333,
+    0.9333,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.7867,
+    0.6933,
+    0.8734,
+    30
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  },
+  "probs": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     139
+    ],
+    "-2": [
+     0.9863,
+     0.9571,
+     1.0,
+     73
+    ],
+    "-1": [
+     0.2449,
+     0.1727,
+     0.3206,
+     147
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     134
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     150
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     103
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.9953,
+    0.9855,
+    1.0,
+    212
+   ],
+   "bayes_action_agree": [
+    0.9657,
+    0.9537,
+    0.9769,
+    1080
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    374
+   ],
+   "p_err_bayes": 0.00339,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.7656,
+    0.6989,
+    0.8278,
+    90
+   ],
+   "final_acc": [
+    0.7778,
+    0.6889,
+    0.8556,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "signals_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plantx": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "gain_probs_minus_verdicts": [
+   0.0278,
+   -0.03,
+   0.0845,
+   90
+  ],
+  "gain_signals_minus_verdicts": [
+   0.0867,
+   -0.0267,
+   0.2033,
+   30
+  ]
+ },
+ "Haiku 5.5 (fast)": {
+  "verdicts": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-2": [
+     0.8449,
+     0.7949,
+     0.8902,
+     374
+    ],
+    "-1": [
+     0.4727,
+     0.339,
+     0.6275,
+     55
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     30
+    ],
+    "1": [
+     0.0154,
+     0.0,
+     0.0448,
+     65
+    ],
+    "2": [
+     0.0687,
+     0.0341,
+     0.1102,
+     466
+    ]
+   },
+   "override_cascade": [
+    0.8449,
+    0.7949,
+    0.8902,
+    374
+   ],
+   "bayes_action_agree": [
+    0.8917,
+    0.863,
+    0.9167,
+    1080
+   ],
+   "override_no_cascade": [
+    0.0054,
+    0.0,
+    0.0168,
+    185
+   ],
+   "p_err_bayes": 0.08732,
+   "p_err_naive": 0.10615,
+   "deep_cascade": {
+    "n": 617,
+    "p_err_bayes": 0.13096,
+    "p_err_naive": 0.16646,
+    "closer_to_bayes": [
+     0.5705,
+     0.5232,
+     0.6162,
+     617
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.2424,
+    0.1364,
+    0.3485,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.6511,
+    0.5666,
+    0.7289,
+    90
+   ],
+   "final_acc": [
+    0.6889,
+    0.5889,
+    0.7778,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7467,
+    0.6622,
+    0.8244,
+    90
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  },
+  "probs": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.9928,
+     0.9778,
+     1.0,
+     139
+    ],
+    "-2": [
+     0.9315,
+     0.8608,
+     0.9872,
+     73
+    ],
+    "-1": [
+     0.415,
+     0.3437,
+     0.483,
+     147
+    ],
+    "0": [
+     0.0299,
+     0.0,
+     0.068,
+     134
+    ],
+    "1": [
+     0.0133,
+     0.0,
+     0.0342,
+     150
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     103
+    ],
+    "3": [
+     0.0123,
+     0.0,
+     0.0327,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.9717,
+    0.9442,
+    0.9951,
+    212
+   ],
+   "bayes_action_agree": [
+    0.9296,
+    0.912,
+    0.9454,
+    1080
+   ],
+   "override_no_cascade": [
+    0.016,
+    0.0027,
+    0.0339,
+    374
+   ],
+   "p_err_bayes": 0.01946,
+   "publicly_wrong_given_private_majority_right": [
+    0.0303,
+    0.0,
+    0.0758,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.7644,
+    0.6978,
+    0.8233,
+    90
+   ],
+   "final_acc": [
+    0.8111,
+    0.7222,
+    0.8889,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "signals_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plantx": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "gain_probs_minus_verdicts": [
+   0.1133,
+   0.0322,
+   0.1856,
+   90
+  ]
+ },
+ "Opus 5.5": {
+  "verdicts": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     109
+    ],
+    "-1": [
+     0.0,
+     0.0,
+     0.0,
+     24
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     24
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     30
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     143
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    109
+   ],
+   "bayes_action_agree": [
+    1.0,
+    1.0,
+    1.0,
+    360
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    84
+   ],
+   "p_err_bayes": 0.00227,
+   "p_err_naive": 0.11456,
+   "deep_cascade": {
+    "n": 189,
+    "p_err_bayes": 0.00247,
+    "p_err_naive": 0.20347,
+    "closer_to_bayes": [
+     1.0,
+     1.0,
+     1.0,
+     189
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1364,
+    0.0,
+    0.2727,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.6933,
+    0.5333,
+    0.8467,
+    30
+   ],
+   "final_acc": [
+    0.7,
+    0.5333,
+    0.8667,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.6933,
+    0.5333,
+    0.8467,
+    30
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  },
+  "probs": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     43
+    ],
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ],
+    "-1": [
+     0.0714,
+     0.0179,
+     0.1379,
+     56
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     32
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     73
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    69
+   ],
+   "bayes_action_agree": [
+    0.9889,
+    0.9778,
+    0.9972,
+    360
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    130
+   ],
+   "p_err_bayes": 0.00218,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.7867,
+    0.6967,
+    0.8734,
+    30
+   ],
+   "final_acc": [
+    0.8,
+    0.6333,
+    0.9333,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.7867,
+    0.6933,
+    0.8734,
+    30
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "gain_probs_minus_verdicts": [
+   0.0933,
+   -0.02,
+   0.21,
+   30
+  ]
+ },
+ "GPT-6.1": {
+  "verdicts": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     331
+    ],
+    "-1": [
+     0.1406,
+     0.0645,
+     0.2241,
+     64
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     55
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     81
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     459
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    331
+   ],
+   "bayes_action_agree": [
+    0.9917,
+    0.9861,
+    0.9963,
+    1080
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    226
+   ],
+   "p_err_bayes": 0.00409,
+   "p_err_naive": 0.12246,
+   "deep_cascade": {
+    "n": 595,
+    "p_err_bayes": 0.00175,
+    "p_err_naive": 0.20325,
+    "closer_to_bayes": [
+     1.0,
+     1.0,
+     1.0,
+     595
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1212,
+    0.0455,
+    0.197,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.7422,
+    0.6567,
+    0.8211,
+    90
+   ],
+   "final_acc": [
+    0.7556,
+    0.6667,
+    0.8333,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7467,
+    0.6622,
+    0.8244,
+    90
+   ]
+  },
+  "signals": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     139
+    ],
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     73
+    ],
+    "-1": [
+     0.0952,
+     0.0457,
+     0.1548,
+     147
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     134
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     150
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     103
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     244
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    212
+   ],
+   "bayes_action_agree": [
+    0.987,
+    0.9787,
+    0.9935,
+    1080
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    374
+   ],
+   "p_err_bayes": 1e-05,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.7689,
+    0.7055,
+    0.8256,
+    90
+   ],
+   "final_acc": [
+    0.8,
+    0.7111,
+    0.8778,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "solo": {
+   "n_episodes": 90,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    180
+   ],
+   "p_err_bayes": 0.0
+  },
+  "probs": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     139
+    ],
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     73
+    ],
+    "-1": [
+     0.0,
+     0.0,
+     0.0,
+     147
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     134
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     150
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     103
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     244
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    212
+   ],
+   "bayes_action_agree": [
+    1.0,
+    1.0,
+    1.0,
+    1080
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    374
+   ],
+   "p_err_bayes": 0.0006,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ],
+   "final_acc": [
+    0.7889,
+    0.7,
+    0.8667,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "signals_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plantx": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "gain_probs_minus_verdicts": [
+   0.0333,
+   -0.0322,
+   0.0978,
+   90
+  ],
+  "gain_signals_minus_verdicts": [
+   0.0267,
+   -0.04,
+   0.0911,
+   90
+  ]
+ },
+ "Gemini 4 Argon": {
+  "verdicts": {
+   "n_episodes": 60,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     212
+    ],
+    "-1": [
+     0.0,
+     0.0,
+     0.0,
+     47
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     47
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     60
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     294
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    212
+   ],
+   "bayes_action_agree": [
+    1.0,
+    1.0,
+    1.0,
+    720
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    167
+   ],
+   "p_err_bayes": 0.00308,
+   "p_err_naive": 0.11648,
+   "deep_cascade": {
+    "n": 379,
+    "p_err_bayes": 0.00415,
+    "p_err_naive": 0.20612,
+    "closer_to_bayes": [
+     1.0,
+     1.0,
+     1.0,
+     379
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.093,
+    0.0233,
+    0.186,
+    43
+   ],
+   "pos_acc_3_12": [
+    0.75,
+    0.645,
+    0.85,
+    60
+   ],
+   "final_acc": [
+    0.7667,
+    0.65,
+    0.8667,
+    60
+   ],
+   "bhw_rational_pos_acc": [
+    0.75,
+    0.645,
+    0.85,
+    60
+   ]
+  },
+  "signals": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     43
+    ],
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     26
+    ],
+    "-1": [
+     0.2143,
+     0.1041,
+     0.347,
+     56
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     32
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     73
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    69
+   ],
+   "bayes_action_agree": [
+    0.9667,
+    0.9444,
+    0.9861,
+    360
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    130
+   ],
+   "p_err_bayes": 5e-05,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.7833,
+    0.6867,
+    0.8767,
+    30
+   ],
+   "final_acc": [
+    0.8333,
+    0.7,
+    0.9667,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.7867,
+    0.6933,
+    0.8734,
+    30
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  },
+  "probs": {
+   "n_episodes": 60,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     96
+    ],
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     50
+    ],
+    "-1": [
+     0.0309,
+     0.0,
+     0.0706,
+     97
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     87
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     100
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     70
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     160
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    146
+   ],
+   "bayes_action_agree": [
+    0.9958,
+    0.9903,
+    1.0,
+    720
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    247
+   ],
+   "p_err_bayes": 0.00227,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    43
+   ],
+   "pos_acc_3_12": [
+    0.7717,
+    0.7,
+    0.8417,
+    60
+   ],
+   "final_acc": [
+    0.7833,
+    0.6833,
+    0.8833,
+    60
+   ],
+   "bhw_rational_pos_acc": [
+    0.7733,
+    0.7017,
+    0.8433,
+    60
+   ]
+  },
+  "gain_probs_minus_verdicts": [
+   0.0217,
+   -0.05,
+   0.1,
+   60
+  ],
+  "gain_signals_minus_verdicts": [
+   0.09,
+   -0.0167,
+   0.2033,
+   30
+  ]
+ },
+ "Haiku 5.5 (reasoning)": {
+  "verdicts": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-2": [
+     0.8739,
+     0.7429,
+     0.972,
+     119
+    ],
+    "-1": [
+     0.4737,
+     0.2778,
+     0.6875,
+     19
+    ],
+    "0": [
+     0.0909,
+     0.0,
+     0.25,
+     11
+    ],
+    "1": [
+     0.0455,
+     0.0,
+     0.125,
+     22
+    ],
+    "2": [
+     0.044,
+     0.0,
+     0.1074,
+     159
+    ]
+   },
+   "override_cascade": [
+    0.8739,
+    0.7429,
+    0.972,
+    119
+   ],
+   "bayes_action_agree": [
+    0.9083,
+    0.8417,
+    0.9583,
+    360
+   ],
+   "override_no_cascade": [
+    0.0317,
+    0.0,
+    0.0758,
+    63
+   ],
+   "p_err_bayes": 0.06959,
+   "p_err_naive": 0.1579,
+   "deep_cascade": {
+    "n": 208,
+    "p_err_bayes": 0.09511,
+    "p_err_naive": 0.24068,
+    "closer_to_bayes": [
+     0.8894,
+     0.8128,
+     0.9471,
+     208
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.2273,
+    0.0909,
+    0.4091,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.7267,
+    0.5867,
+    0.8633,
+    30
+   ],
+   "final_acc": [
+    0.7,
+    0.5333,
+    0.8667,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.6933,
+    0.5333,
+    0.8467,
+    30
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  },
+  "probs": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-3": [
+     1.0,
+     1.0,
+     1.0,
+     43
+    ],
+    "-2": [
+     0.9615,
+     0.8694,
+     1.0,
+     26
+    ],
+    "-1": [
+     0.4821,
+     0.3509,
+     0.625,
+     56
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     50
+    ],
+    "1": [
+     0.02,
+     0.0,
+     0.0625,
+     50
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     32
+    ],
+    "3": [
+     0.0,
+     0.0,
+     0.0,
+     73
+    ]
+   },
+   "override_cascade": [
+    0.9855,
+    0.9508,
+    1.0,
+    69
+   ],
+   "bayes_action_agree": [
+    0.9194,
+    0.8861,
+    0.95,
+    360
+   ],
+   "override_no_cascade": [
+    0.0077,
+    0.0,
+    0.025,
+    130
+   ],
+   "p_err_bayes": 0.00535,
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.7633,
+    0.65,
+    0.8667,
+    30
+   ],
+   "final_acc": [
+    0.8,
+    0.6658,
+    0.9333,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.7867,
+    0.6933,
+    0.8734,
+    30
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "signals_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "gain_probs_minus_verdicts": [
+   0.0367,
+   -0.1,
+   0.1601,
+   30
+  ]
+ },
+ "Qwen3-14B (reasoning)": {
+  "verdicts": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-2": [
+     0.9816,
+     0.9641,
+     0.9949,
+     381
+    ],
+    "-1": [
+     0.5357,
+     0.4,
+     0.6863,
+     56
+    ],
+    "0": [
+     0.2258,
+     0.0741,
+     0.4194,
+     31
+    ],
+    "1": [
+     0.0769,
+     0.0156,
+     0.1515,
+     65
+    ],
+    "2": [
+     0.0569,
+     0.0306,
+     0.0901,
+     457
+    ]
+   },
+   "override_cascade": [
+    0.9816,
+    0.9641,
+    0.9949,
+    381
+   ],
+   "bayes_action_agree": [
+    0.9148,
+    0.8898,
+    0.9361,
+    1080
+   ],
+   "override_no_cascade": [
+    0.1559,
+    0.0986,
+    0.2171,
+    186
+   ],
+   "p_err_bayes": 0.13176,
+   "p_err_naive": 0.01514,
+   "deep_cascade": {
+    "n": 624,
+    "p_err_bayes": 0.2081,
+    "p_err_naive": 0.01703,
+    "closer_to_bayes": [
+     0.0385,
+     0.0222,
+     0.0553,
+     624
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.2879,
+    0.1818,
+    0.3939,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.6656,
+    0.5777,
+    0.7522,
+    90
+   ],
+   "final_acc": [
+    0.6889,
+    0.5889,
+    0.7778,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7467,
+    0.6622,
+    0.8244,
+    90
+   ]
+  },
+  "signals": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.741,
+     0.6276,
+     0.8456,
+     139
+    ],
+    "-2": [
+     0.8082,
+     0.6923,
+     0.8975,
+     73
+    ],
+    "-1": [
+     0.4354,
+     0.3608,
+     0.5147,
+     147
+    ],
+    "0": [
+     0.1791,
+     0.1061,
+     0.2598,
+     134
+    ],
+    "1": [
+     0.16,
+     0.0952,
+     0.2338,
+     150
+    ],
+    "2": [
+     0.2427,
+     0.15,
+     0.3495,
+     103
+    ],
+    "3": [
+     0.2131,
+     0.1111,
+     0.3177,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.7642,
+    0.6716,
+    0.8458,
+    212
+   ],
+   "bayes_action_agree": [
+    0.7611,
+    0.6972,
+    0.8176,
+    1080
+   ],
+   "override_no_cascade": [
+    0.1791,
+    0.1237,
+    0.2429,
+    374
+   ],
+   "p_err_bayes": 0.00804,
+   "publicly_wrong_given_private_majority_right": [
+    0.1667,
+    0.0909,
+    0.2576,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.6811,
+    0.6044,
+    0.7578,
+    90
+   ],
+   "final_acc": [
+    0.7111,
+    0.6222,
+    0.8,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "probs": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.705,
+     0.5923,
+     0.8116,
+     139
+    ],
+    "-2": [
+     0.726,
+     0.6081,
+     0.8254,
+     73
+    ],
+    "-1": [
+     0.4626,
+     0.375,
+     0.5473,
+     147
+    ],
+    "0": [
+     0.2537,
+     0.1752,
+     0.3311,
+     134
+    ],
+    "1": [
+     0.24,
+     0.1666,
+     0.3287,
+     150
+    ],
+    "2": [
+     0.2136,
+     0.1237,
+     0.3173,
+     103
+    ],
+    "3": [
+     0.2623,
+     0.1378,
+     0.384,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.7123,
+    0.6143,
+    0.7981,
+    212
+   ],
+   "bayes_action_agree": [
+    0.7139,
+    0.6463,
+    0.775,
+    1080
+   ],
+   "override_no_cascade": [
+    0.2513,
+    0.1897,
+    0.3229,
+    374
+   ],
+   "p_err_bayes": 0.02918,
+   "publicly_wrong_given_private_majority_right": [
+    0.2727,
+    0.1818,
+    0.3788,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.6544,
+    0.57,
+    0.7356,
+    90
+   ],
+   "final_acc": [
+    0.6333,
+    0.5333,
+    0.7333,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "solo": {
+   "n_episodes": 90,
+   "signal_following": [
+    0.8778,
+    0.8278,
+    0.9278,
+    180
+   ],
+   "p_err_bayes": 0.0
+  },
+  "gain_probs_minus_verdicts": [
+   -0.0111,
+   -0.0789,
+   0.0556,
+   90
+  ],
+  "gain_signals_minus_verdicts": [
+   0.0156,
+   -0.0489,
+   0.0745,
+   90
+  ]
+ },
+ "Qwen3-14B (no-think)": {
+  "verdicts": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-2": [
+     0.8916,
+     0.8199,
+     0.953,
+     406
+    ],
+    "-1": [
+     0.7414,
+     0.6119,
+     0.8704,
+     58
+    ],
+    "0": [
+     0.4643,
+     0.2812,
+     0.6667,
+     28
+    ],
+    "1": [
+     0.2167,
+     0.1111,
+     0.3135,
+     60
+    ],
+    "2": [
+     0.1781,
+     0.1282,
+     0.234,
+     438
+    ]
+   },
+   "override_cascade": [
+    0.8916,
+    0.8199,
+    0.953,
+    406
+   ],
+   "bayes_action_agree": [
+    0.7991,
+    0.7602,
+    0.8352,
+    1080
+   ],
+   "override_no_cascade": [
+    0.2921,
+    0.2275,
+    0.3588,
+    178
+   ],
+   "p_err_bayes": 0.25088,
+   "p_err_naive": 0.26727,
+   "deep_cascade": {
+    "n": 619,
+    "p_err_bayes": 0.31547,
+    "p_err_naive": 0.33446,
+    "closer_to_bayes": [
+     0.5735,
+     0.4812,
+     0.6645,
+     619
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.5303,
+    0.4091,
+    0.6515,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.5533,
+    0.4644,
+    0.6356,
+    90
+   ],
+   "final_acc": [
+    0.4889,
+    0.3778,
+    0.5889,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7467,
+    0.6622,
+    0.8244,
+    90
+   ]
+  },
+  "signals": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.5324,
+     0.4094,
+     0.6594,
+     139
+    ],
+    "-2": [
+     0.5342,
+     0.4079,
+     0.6533,
+     73
+    ],
+    "-1": [
+     0.4694,
+     0.3846,
+     0.5461,
+     147
+    ],
+    "0": [
+     0.4179,
+     0.3358,
+     0.5041,
+     134
+    ],
+    "1": [
+     0.4,
+     0.3137,
+     0.4968,
+     150
+    ],
+    "2": [
+     0.4175,
+     0.3097,
+     0.5385,
+     103
+    ],
+    "3": [
+     0.4057,
+     0.2771,
+     0.5268,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.533,
+    0.4238,
+    0.632,
+    212
+   ],
+   "bayes_action_agree": [
+    0.5824,
+    0.512,
+    0.65,
+    1080
+   ],
+   "override_no_cascade": [
+    0.377,
+    0.3137,
+    0.4496,
+    374
+   ],
+   "p_err_bayes": 0.23639,
+   "publicly_wrong_given_private_majority_right": [
+    0.4091,
+    0.2879,
+    0.5303,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.58,
+    0.4855,
+    0.6711,
+    90
+   ],
+   "final_acc": [
+    0.5778,
+    0.4778,
+    0.6778,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "probs": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.5252,
+     0.4028,
+     0.651,
+     139
+    ],
+    "-2": [
+     0.5068,
+     0.3866,
+     0.625,
+     73
+    ],
+    "-1": [
+     0.4626,
+     0.3797,
+     0.539,
+     147
+    ],
+    "0": [
+     0.4254,
+     0.3481,
+     0.5,
+     134
+    ],
+    "1": [
+     0.3467,
+     0.2597,
+     0.4414,
+     150
+    ],
+    "2": [
+     0.3495,
+     0.2473,
+     0.4646,
+     103
+    ],
+    "3": [
+     0.3361,
+     0.2083,
+     0.4721,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.5189,
+    0.4115,
+    0.615,
+    212
+   ],
+   "bayes_action_agree": [
+    0.6083,
+    0.537,
+    0.6769,
+    1080
+   ],
+   "override_no_cascade": [
+    0.361,
+    0.2963,
+    0.4323,
+    374
+   ],
+   "p_err_bayes": 0.17044,
+   "publicly_wrong_given_private_majority_right": [
+    0.3788,
+    0.2727,
+    0.5,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.5944,
+    0.5022,
+    0.69,
+    90
+   ],
+   "final_acc": [
+    0.6111,
+    0.5,
+    0.7111,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "solo": {
+   "n_episodes": 90,
+   "signal_following": [
+    0.7,
+    0.6222,
+    0.7778,
+    180
+   ],
+   "p_err_bayes": 0.00833
+  },
+  "verdicts_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "signals_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plant": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "probs_plantx": {
+   "n_episodes": 30,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "gain_probs_minus_verdicts": [
+   0.0411,
+   0.0011,
+   0.0844,
+   90
+  ],
+  "gain_signals_minus_verdicts": [
+   0.0267,
+   -0.0056,
+   0.0567,
+   90
+  ]
+ },
+ "Llama-3.1-8B": {
+  "verdicts": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-2": [
+     0.5658,
+     0.4823,
+     0.6443,
+     380
+    ],
+    "-1": [
+     0.4925,
+     0.36,
+     0.6333,
+     67
+    ],
+    "0": [
+     0.383,
+     0.2444,
+     0.5208,
+     47
+    ],
+    "1": [
+     0.194,
+     0.0968,
+     0.2933,
+     67
+    ],
+    "2": [
+     0.2626,
+     0.2138,
+     0.313,
+     396
+    ]
+   },
+   "override_cascade": [
+    0.5658,
+    0.4823,
+    0.6443,
+    380
+   ],
+   "bayes_action_agree": [
+    0.6485,
+    0.613,
+    0.6849,
+    1044
+   ],
+   "override_no_cascade": [
+    0.3234,
+    0.2435,
+    0.4067,
+    201
+   ],
+   "p_err_bayes": 0.29289,
+   "p_err_naive": 0.32548,
+   "deep_cascade": {
+    "n": 443,
+    "p_err_bayes": 0.35706,
+    "p_err_naive": 0.42526,
+    "closer_to_bayes": [
+     0.6637,
+     0.5992,
+     0.7251,
+     443
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.4531,
+    0.3434,
+    0.5781,
+    64
+   ],
+   "pos_acc_3_12": [
+    0.5575,
+    0.5034,
+    0.6138,
+    87
+   ],
+   "final_acc": [
+    0.5287,
+    0.4253,
+    0.6322,
+    87
+   ],
+   "bhw_rational_pos_acc": [
+    0.7494,
+    0.6609,
+    0.8276,
+    87
+   ]
+  },
+  "signals": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.4388,
+     0.3475,
+     0.5318,
+     139
+    ],
+    "-2": [
+     0.4521,
+     0.3382,
+     0.5641,
+     73
+    ],
+    "-1": [
+     0.5034,
+     0.4178,
+     0.5816,
+     147
+    ],
+    "0": [
+     0.4478,
+     0.3636,
+     0.5342,
+     134
+    ],
+    "1": [
+     0.36,
+     0.2837,
+     0.4452,
+     150
+    ],
+    "2": [
+     0.4078,
+     0.3107,
+     0.5089,
+     103
+    ],
+    "3": [
+     0.4549,
+     0.3489,
+     0.5578,
+     244
+    ]
+   },
+   "override_cascade": [
+    0.4434,
+    0.361,
+    0.5166,
+    212
+   ],
+   "bayes_action_agree": [
+    0.5463,
+    0.4898,
+    0.5991,
+    1080
+   ],
+   "override_no_cascade": [
+    0.3877,
+    0.3201,
+    0.462,
+    374
+   ],
+   "p_err_bayes": 0.25839,
+   "publicly_wrong_given_private_majority_right": [
+    0.4848,
+    0.3636,
+    0.6212,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.5444,
+    0.4789,
+    0.6089,
+    90
+   ],
+   "final_acc": [
+    0.5111,
+    0.4111,
+    0.6111,
+    90
+   ],
+   "bhw_rational_pos_acc": [
+    0.7756,
+    0.7133,
+    0.8311,
+    90
+   ]
+  },
+  "probs": {
+   "n_episodes": 90,
+   "override_by_lead": {
+    "-3": [
+     0.3431,
+     0.25,
+     0.4406,
+     137
+    ],
+    "-2": [
+     0.2361,
+     0.1538,
+     0.3194,
+     72
+    ],
+    "-1": [
+     0.3759,
+     0.2913,
+     0.4621,
+     141
+    ],
+    "0": [
+     0.2812,
+     0.2091,
+     0.3535,
+     128
+    ],
+    "1": [
+     0.2789,
+     0.2,
+     0.3624,
+     147
+    ],
+    "2": [
+     0.3137,
+     0.2165,
+     0.4158,
+     102
+    ],
+    "3": [
+     0.2863,
+     0.2072,
+     0.3667,
+     241
+    ]
+   },
+   "override_cascade": [
+    0.3062,
+    0.2343,
+    0.3821,
+    209
+   ],
+   "bayes_action_agree": [
+    0.6146,
+    0.5672,
+    0.6572,
+    1056
+   ],
+   "override_no_cascade": [
+    0.2975,
+    0.2428,
+    0.3562,
+    363
+   ],
+   "p_err_bayes": 0.28129,
+   "publicly_wrong_given_private_majority_right": [
+    0.3636,
+    0.2424,
+    0.4848,
+    66
+   ],
+   "pos_acc_3_12": [
+    0.5818,
+    0.5295,
+    0.6352,
+    88
+   ],
+   "final_acc": [
+    0.6591,
+    0.5568,
+    0.75,
+    88
+   ],
+   "bhw_rational_pos_acc": [
+    0.7864,
+    0.7273,
+    0.842,
+    88
+   ]
+  },
+  "solo": {
+   "n_episodes": 90,
+   "signal_following": [
+    0.6667,
+    0.5889,
+    0.7389,
+    180
+   ],
+   "p_err_bayes": 0.08651
+  },
+  "gain_probs_minus_verdicts": [
+   0.0302,
+   -0.0116,
+   0.0721,
+   86
+  ],
+  "gain_signals_minus_verdicts": [
+   0.0,
+   -0.0448,
+   0.046,
+   87
+  ]
+ },
+ "Sonnet 5.5 (fast)": {
+  "verdicts": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-2": [
+     0.8957,
+     0.7742,
+     0.9913,
+     115
+    ],
+    "-1": [
+     0.0417,
+     0.0,
+     0.15,
+     24
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     23
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     29
+    ],
+    "2": [
+     0.0216,
+     0.0,
+     0.0476,
+     139
+    ]
+   },
+   "override_cascade": [
+    0.8957,
+    0.7742,
+    0.9913,
+    115
+   ],
+   "bayes_action_agree": [
+    0.9556,
+    0.9,
+    0.9944,
+    360
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    82
+   ],
+   "p_err_bayes": 0.02467,
+   "p_err_naive": 0.12494,
+   "deep_cascade": {
+    "n": 183,
+    "p_err_bayes": 0.03179,
+    "p_err_naive": 0.21711,
+    "closer_to_bayes": [
+     0.9727,
+     0.9197,
+     1.0,
+     183
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1364,
+    0.0,
+    0.2727,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.6967,
+    0.5499,
+    0.8367,
+    30
+   ],
+   "final_acc": [
+    0.7333,
+    0.5667,
+    0.8667,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.6933,
+    0.5333,
+    0.8467,
+    30
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  }
+ },
+ "GPT-6.1 (minimal)": {
+  "verdicts": {
+   "n_episodes": 30,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     110
+    ],
+    "-1": [
+     0.1304,
+     0.0,
+     0.2593,
+     23
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     20
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     27
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     150
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    110
+   ],
+   "bayes_action_agree": [
+    0.9917,
+    0.9833,
+    1.0,
+    360
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    77
+   ],
+   "p_err_bayes": 0.00454,
+   "p_err_naive": 0.12041,
+   "deep_cascade": {
+    "n": 196,
+    "p_err_bayes": 0.00221,
+    "p_err_naive": 0.20228,
+    "closer_to_bayes": [
+     1.0,
+     1.0,
+     1.0,
+     196
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1364,
+    0.0,
+    0.2727,
+    22
+   ],
+   "pos_acc_3_12": [
+    0.6933,
+    0.5299,
+    0.8533,
+    30
+   ],
+   "final_acc": [
+    0.7,
+    0.5333,
+    0.8667,
+    30
+   ],
+   "bhw_rational_pos_acc": [
+    0.6933,
+    0.5333,
+    0.8467,
+    30
+   ]
+  },
+  "solo": {
+   "n_episodes": 30,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    60
+   ],
+   "p_err_bayes": 0.0
+  }
+ },
+ "GPT-OSS-120B": {
+  "solo": {
+   "n_episodes": 1,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "p_err_bayes": 0.0
+  },
+  "signals_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "verdicts": {
+   "n_episodes": 20,
+   "override_by_lead": {
+    "-2": [
+     0.8684,
+     0.7467,
+     0.9697,
+     76
+    ],
+    "-1": [
+     0.5,
+     0.25,
+     0.8182,
+     12
+    ],
+    "0": [
+     0.2857,
+     0.0,
+     0.4286,
+     7
+    ],
+    "1": [
+     0.0667,
+     0.0,
+     0.2,
+     15
+    ],
+    "2": [
+     0.1,
+     0.0,
+     0.2364,
+     110
+    ]
+   },
+   "override_cascade": [
+    0.8684,
+    0.7467,
+    0.9697,
+    76
+   ],
+   "bayes_action_agree": [
+    0.8667,
+    0.7708,
+    0.9458,
+    240
+   ],
+   "override_no_cascade": [
+    0.119,
+    0.0,
+    0.2245,
+    42
+   ],
+   "p_err_bayes": 0.08552,
+   "p_err_naive": 0.14257,
+   "deep_cascade": {
+    "n": 137,
+    "p_err_bayes": 0.12293,
+    "p_err_naive": 0.2142,
+    "closer_to_bayes": [
+     0.7737,
+     0.6279,
+     0.8904,
+     137
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1538,
+    0.0,
+    0.3846,
+    13
+   ],
+   "pos_acc_3_12": [
+    0.75,
+    0.59,
+    0.895,
+    20
+   ],
+   "final_acc": [
+    0.8,
+    0.6,
+    0.95,
+    20
+   ],
+   "bhw_rational_pos_acc": [
+    0.735,
+    0.56,
+    0.895,
+    20
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 20,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "DeepSeek-V4-Flash (OpenRouter, partial)": {
+  "solo": {
+   "n_episodes": 1,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "p_err_bayes": 0.0
+  },
+  "verdicts": {
+   "n_episodes": 20,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     30
+    ],
+    "-1": [
+     0.6364,
+     0.4615,
+     0.8889,
+     11
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     4
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     3
+    ],
+    "2": [
+     0.0484,
+     0.0,
+     0.1125,
+     62
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    30
+   ],
+   "bayes_action_agree": [
+    0.9167,
+    0.8833,
+    0.95,
+    120
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    17
+   ],
+   "p_err_bayes": 0.04754,
+   "p_err_naive": 0.15575,
+   "deep_cascade": {
+    "n": 54,
+    "p_err_bayes": 0.06169,
+    "p_err_naive": 0.25414,
+    "closer_to_bayes": [
+     1.0,
+     1.0,
+     1.0,
+     54
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.3333,
+    0.0,
+    0.6667,
+    9
+   ],
+   "pos_acc_3_12": [
+    0.67,
+    0.38,
+    0.9,
+    10
+   ],
+   "final_acc": [
+    0.6,
+    0.3,
+    0.9,
+    10
+   ],
+   "bhw_rational_pos_acc": [
+    0.87,
+    0.73,
+    0.97,
+    10
+   ]
+  },
+  "signals_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "verdicts_plant": {
+   "n_episodes": 20,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "google/gemini-3.8-flash|think": {
+  "solo": {
+   "n_episodes": 1,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "p_err_bayes": 0.0
+  },
+  "verdicts": {
+   "n_episodes": 1,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     2
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     8
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "bayes_action_agree": [
+    1.0,
+    1.0,
+    1.0,
+    12
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    2
+   ],
+   "p_err_bayes": 0.00978,
+   "p_err_naive": 0.12474,
+   "deep_cascade": {
+    "n": 8,
+    "p_err_bayes": 0.00751,
+    "p_err_naive": 0.17278,
+    "closer_to_bayes": [
+     1.0,
+     1.0,
+     1.0,
+     8
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    1
+   ],
+   "pos_acc_3_12": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ],
+   "final_acc": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ],
+   "bhw_rational_pos_acc": [
+    1.0,
+    1.0,
+    1.0,
+    1
+   ]
+  },
+  "signals_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "verdicts_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "Llama-3.3-70B": {
+  "verdicts": {
+   "n_episodes": 20,
+   "override_by_lead": {
+    "-2": [
+     0.7027,
+     0.5,
+     0.875,
+     74
+    ],
+    "-1": [
+     0.625,
+     0.3,
+     1.0,
+     8
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     3
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     15
+    ],
+    "2": [
+     0.15,
+     0.0601,
+     0.2636,
+     120
+    ]
+   },
+   "override_cascade": [
+    0.7027,
+    0.5,
+    0.875,
+    74
+   ],
+   "bayes_action_agree": [
+    0.7875,
+    0.6833,
+    0.8708,
+    240
+   ],
+   "override_no_cascade": [
+    0.1579,
+    0.0513,
+    0.2857,
+    38
+   ],
+   "p_err_bayes": 0.18886,
+   "p_err_naive": 0.177,
+   "deep_cascade": {
+    "n": 138,
+    "p_err_bayes": 0.26143,
+    "p_err_naive": 0.24256,
+    "closer_to_bayes": [
+     0.471,
+     0.3077,
+     0.6412,
+     138
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1538,
+    0.0,
+    0.3846,
+    13
+   ],
+   "pos_acc_3_12": [
+    0.655,
+    0.4849,
+    0.805,
+    20
+   ],
+   "final_acc": [
+    0.6,
+    0.35,
+    0.8,
+    20
+   ],
+   "bhw_rational_pos_acc": [
+    0.735,
+    0.56,
+    0.895,
+    20
+   ]
+  },
+  "solo": {
+   "n_episodes": 1,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "p_err_bayes": 0.0
+  },
+  "signals_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "verdicts_plant": {
+   "n_episodes": 20,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "qwen/qwen3-235b-a22b-2507|fast": {
+  "verdicts": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "solo": {
+   "n_episodes": 1,
+   "signal_following": [
+    1.0,
+    1.0,
+    1.0,
+    2
+   ],
+   "p_err_bayes": 0.0
+  },
+  "signals_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  },
+  "verdicts_plant": {
+   "n_episodes": 1,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "GPT-6-Luna": {
+  "verdicts": {
+   "n_episodes": 20,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     27
+    ],
+    "-1": [
+     0.6667,
+     0.5,
+     1.0,
+     3
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     6
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     51
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    27
+   ],
+   "bayes_action_agree": [
+    0.9792,
+    0.9479,
+    1.0,
+    96
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    15
+   ],
+   "p_err_bayes": 0.05272,
+   "p_err_naive": 0.17591,
+   "deep_cascade": {
+    "n": 61,
+    "p_err_bayes": 0.06072,
+    "p_err_naive": 0.2433,
+    "closer_to_bayes": [
+     0.9836,
+     0.9483,
+     1.0,
+     61
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.0,
+    0.0,
+    0.0,
+    5
+   ],
+   "pos_acc_3_12": [
+    0.875,
+    0.625,
+    1.0,
+    8
+   ],
+   "final_acc": [
+    0.875,
+    0.625,
+    1.0,
+    8
+   ],
+   "bhw_rational_pos_acc": [
+    0.9125,
+    0.7375,
+    1.0,
+    8
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 20,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "DeepSeek-V4-Flash": {
+  "verdicts": {
+   "n_episodes": 5,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "Gemma-4-26B-A4B": {
+  "verdicts": {
+   "n_episodes": 20,
+   "override_by_lead": {
+    "-2": [
+     0.8889,
+     0.7805,
+     0.9765,
+     81
+    ],
+    "-1": [
+     0.5,
+     0.2663,
+     0.8,
+     12
+    ],
+    "0": [
+     0.1111,
+     0.0,
+     0.4286,
+     9
+    ],
+    "1": [
+     0.1765,
+     0.0,
+     0.3636,
+     17
+    ],
+    "2": [
+     0.0693,
+     0.0,
+     0.1765,
+     101
+    ]
+   },
+   "override_cascade": [
+    0.8889,
+    0.7805,
+    0.9765,
+    81
+   ],
+   "bayes_action_agree": [
+    0.8917,
+    0.8083,
+    0.9583,
+    240
+   ],
+   "override_no_cascade": [
+    0.087,
+    0.0,
+    0.16,
+    46
+   ],
+   "p_err_bayes": 0.12261,
+   "p_err_naive": 0.00755,
+   "deep_cascade": {
+    "n": 133,
+    "p_err_bayes": 0.20334,
+    "p_err_naive": 0.00742,
+    "closer_to_bayes": [
+     0.0226,
+     0.0,
+     0.0526,
+     133
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.1538,
+    0.0,
+    0.3846,
+    13
+   ],
+   "pos_acc_3_12": [
+    0.685,
+    0.51,
+    0.85,
+    20
+   ],
+   "final_acc": [
+    0.75,
+    0.55,
+    0.9,
+    20
+   ],
+   "bhw_rational_pos_acc": [
+    0.735,
+    0.56,
+    0.895,
+    20
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 20,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "Gemma-4-31B": {
+  "verdicts": {
+   "n_episodes": 20,
+   "override_by_lead": {
+    "-2": [
+     1.0,
+     1.0,
+     1.0,
+     71
+    ],
+    "-1": [
+     0.3333,
+     0.1818,
+     0.4375,
+     15
+    ],
+    "0": [
+     0.0,
+     0.0,
+     0.0,
+     10
+    ],
+    "1": [
+     0.0,
+     0.0,
+     0.0,
+     15
+    ],
+    "2": [
+     0.0,
+     0.0,
+     0.0,
+     109
+    ]
+   },
+   "override_cascade": [
+    1.0,
+    1.0,
+    1.0,
+    71
+   ],
+   "bayes_action_agree": [
+    0.9792,
+    0.9625,
+    0.9917,
+    240
+   ],
+   "override_no_cascade": [
+    0.0,
+    0.0,
+    0.0,
+    45
+   ],
+   "p_err_bayes": 0.11278,
+   "p_err_naive": 0.00711,
+   "deep_cascade": {
+    "n": 136,
+    "p_err_bayes": 0.18422,
+    "p_err_naive": 0.00971,
+    "closer_to_bayes": [
+     0.0221,
+     0.0,
+     0.0488,
+     136
+    ]
+   },
+   "publicly_wrong_given_private_majority_right": [
+    0.0769,
+    0.0,
+    0.2308,
+    13
+   ],
+   "pos_acc_3_12": [
+    0.705,
+    0.505,
+    0.9,
+    20
+   ],
+   "final_acc": [
+    0.7,
+    0.5,
+    0.9,
+    20
+   ],
+   "bhw_rational_pos_acc": [
+    0.735,
+    0.56,
+    0.895,
+    20
+   ]
+  },
+  "verdicts_plant": {
+   "n_episodes": 20,
+   "override_by_lead": {},
+   "override_cascade": null,
+   "bayes_action_agree": null,
+   "override_no_cascade": null,
+   "p_err_bayes": null,
+   "publicly_wrong_given_private_majority_right": null,
+   "pos_acc_3_12": null,
+   "final_acc": null,
+   "bhw_rational_pos_acc": null
+  }
+ },
+ "_planted": {
+  "GPT-6.1": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.0,
+     0.0,
+     0.0,
+     30
+    ],
+    "final_acc": [
+     0.0,
+     0.0,
+     0.0,
+     30
+    ],
+    "all_genuine_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     30
+    ],
+    "minus_unplanted": [
+     -0.6633,
+     -0.8267,
+     -0.4967,
+     30
+    ]
+   },
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.4833,
+     0.3667,
+     0.5934,
+     30
+    ],
+    "final_acc": [
+     0.6,
+     0.4333,
+     0.7667,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.1667,
+     0.0333,
+     0.3,
+     30
+    ],
+    "minus_unplanted": [
+     -0.3,
+     -0.3834,
+     -0.22,
+     30
+    ]
+   },
+   "probs_plant": {
+    "pos_acc_genuine": [
+     0.4933,
+     0.3767,
+     0.6033,
+     30
+    ],
+    "final_acc": [
+     0.6333,
+     0.4667,
+     0.8,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.1667,
+     0.0333,
+     0.3,
+     30
+    ],
+    "minus_unplanted": [
+     -0.2933,
+     -0.3767,
+     -0.2167,
+     30
+    ]
+   },
+   "probs_plantx": {
+    "pos_acc_genuine": [
+     0.51,
+     0.4033,
+     0.6167,
+     30
+    ],
+    "final_acc": [
+     0.7,
+     0.5333,
+     0.8667,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.1,
+     0.0,
+     0.2,
+     30
+    ],
+    "minus_unplanted": [
+     -0.2767,
+     -0.3867,
+     -0.17,
+     30
+    ]
+   }
+  },
+  "Qwen3-14B (no-think)": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.5333,
+     0.4033,
+     0.67,
+     30
+    ],
+    "final_acc": [
+     0.5333,
+     0.3667,
+     0.7,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.1667,
+     0.0333,
+     0.3,
+     30
+    ],
+    "minus_unplanted": [
+     -0.0767,
+     -0.13,
+     -0.0267,
+     30
+    ]
+   },
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.65,
+     0.4933,
+     0.8067,
+     30
+    ],
+    "final_acc": [
+     0.6333,
+     0.4667,
+     0.8,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.2333,
+     0.1,
+     0.4,
+     30
+    ],
+    "minus_unplanted": [
+     -0.0167,
+     -0.0533,
+     0.02,
+     30
+    ]
+   },
+   "probs_plant": {
+    "pos_acc_genuine": [
+     0.62,
+     0.4533,
+     0.7867,
+     30
+    ],
+    "final_acc": [
+     0.6,
+     0.4333,
+     0.7667,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.3667,
+     0.2,
+     0.5333,
+     30
+    ],
+    "minus_unplanted": [
+     -0.0767,
+     -0.1633,
+     -0.0133,
+     30
+    ]
+   },
+   "probs_plantx": {
+    "pos_acc_genuine": [
+     0.6367,
+     0.4733,
+     0.8,
+     30
+    ],
+    "final_acc": [
+     0.6,
+     0.4333,
+     0.7667,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.3333,
+     0.1667,
+     0.5,
+     30
+    ],
+    "minus_unplanted": [
+     -0.06,
+     -0.1433,
+     0.01,
+     30
+    ]
+   }
+  },
+  "Sonnet 5.5": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.11,
+     0.04,
+     0.2,
+     30
+    ],
+    "final_acc": [
+     0.1667,
+     0.0333,
+     0.3,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.6667,
+     0.5,
+     0.8333,
+     30
+    ],
+    "minus_unplanted": [
+     -0.5867,
+     -0.7533,
+     -0.4133,
+     30
+    ]
+   },
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.4867,
+     0.37,
+     0.5967,
+     30
+    ],
+    "final_acc": [
+     0.6333,
+     0.4667,
+     0.8,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.1667,
+     0.0333,
+     0.3,
+     30
+    ],
+    "minus_unplanted": [
+     -0.2967,
+     -0.38,
+     -0.22,
+     30
+    ]
+   },
+   "probs_plant": {
+    "pos_acc_genuine": [
+     0.4433,
+     0.3267,
+     0.5533,
+     30
+    ],
+    "final_acc": [
+     0.6,
+     0.4,
+     0.7667,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.2333,
+     0.1,
+     0.4,
+     30
+    ],
+    "minus_unplanted": [
+     -0.3267,
+     -0.4333,
+     -0.2333,
+     30
+    ]
+   },
+   "probs_plantx": {
+    "pos_acc_genuine": [
+     0.51,
+     0.41,
+     0.61,
+     30
+    ],
+    "final_acc": [
+     0.7333,
+     0.5667,
+     0.9,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.1,
+     0.0,
+     0.2,
+     30
+    ],
+    "minus_unplanted": [
+     -0.26,
+     -0.3933,
+     -0.12,
+     30
+    ]
+   }
+  },
+  "Haiku 5.5 (fast)": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.1867,
+     0.1199,
+     0.2633,
+     30
+    ],
+    "final_acc": [
+     0.2667,
+     0.1333,
+     0.4333,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.3333,
+     0.1667,
+     0.5,
+     30
+    ],
+    "minus_unplanted": [
+     -0.5,
+     -0.6301,
+     -0.3733,
+     30
+    ]
+   },
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.48,
+     0.3567,
+     0.6,
+     30
+    ],
+    "final_acc": [
+     0.6333,
+     0.4667,
+     0.8,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.2,
+     0.0667,
+     0.3333,
+     30
+    ],
+    "minus_unplanted": null
+   },
+   "probs_plant": {
+    "pos_acc_genuine": [
+     0.4467,
+     0.3299,
+     0.5667,
+     30
+    ],
+    "final_acc": [
+     0.6333,
+     0.4667,
+     0.8,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.2,
+     0.0667,
+     0.3667,
+     30
+    ],
+    "minus_unplanted": [
+     -0.3333,
+     -0.4533,
+     -0.2233,
+     30
+    ]
+   },
+   "probs_plantx": {
+    "pos_acc_genuine": [
+     0.3033,
+     0.19,
+     0.4334,
+     30
+    ],
+    "final_acc": [
+     0.4333,
+     0.2667,
+     0.6,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.4,
+     0.2333,
+     0.5667,
+     30
+    ],
+    "minus_unplanted": [
+     -0.4767,
+     -0.6034,
+     -0.3499,
+     30
+    ]
+   }
+  },
+  "Opus 5.5": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.0,
+     0.0,
+     0.0,
+     30
+    ],
+    "final_acc": [
+     0.0,
+     0.0,
+     0.0,
+     30
+    ],
+    "all_genuine_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     30
+    ],
+    "minus_unplanted": [
+     -0.6933,
+     -0.8467,
+     -0.5333,
+     30
+    ]
+   }
+  },
+  "Haiku 5.5 (reasoning)": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.27,
+     0.1767,
+     0.3733,
+     30
+    ],
+    "final_acc": [
+     0.5,
+     0.3333,
+     0.7,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.3667,
+     0.2,
+     0.5333,
+     30
+    ],
+    "minus_unplanted": [
+     -0.4567,
+     -0.5833,
+     -0.3333,
+     30
+    ]
+   },
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.4767,
+     0.3533,
+     0.5933,
+     30
+    ],
+    "final_acc": [
+     0.6667,
+     0.5,
+     0.8333,
+     30
+    ],
+    "all_genuine_wrong": [
+     0.2,
+     0.0667,
+     0.3333,
+     30
+    ],
+    "minus_unplanted": null
+   }
+  },
+  "GPT-OSS-120B": {
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.6,
+     0.6,
+     0.6,
+     1
+    ],
+    "final_acc": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "minus_unplanted": null
+   },
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.465,
+     0.3,
+     0.625,
+     20
+    ],
+    "final_acc": [
+     0.5,
+     0.3,
+     0.7,
+     20
+    ],
+    "all_genuine_wrong": [
+     0.2,
+     0.05,
+     0.4,
+     20
+    ],
+    "minus_unplanted": [
+     -0.285,
+     -0.48,
+     -0.1,
+     20
+    ]
+   }
+  },
+  "google/gemini-3.8-flash|think": {
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.8,
+     0.8,
+     0.8,
+     1
+    ],
+    "final_acc": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "minus_unplanted": null
+   },
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "final_acc": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "minus_unplanted": [
+     -1.0,
+     -1.0,
+     -1.0,
+     1
+    ]
+   }
+  },
+  "DeepSeek-V4-Flash (OpenRouter, partial)": {
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.8,
+     0.8,
+     0.8,
+     1
+    ],
+    "final_acc": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "minus_unplanted": null
+   },
+   "verdicts_plant": {
+    "pos_acc_genuine": null,
+    "final_acc": null,
+    "all_genuine_wrong": null,
+    "minus_unplanted": null
+   }
+  },
+  "Llama-3.3-70B": {
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.9,
+     0.9,
+     0.9,
+     1
+    ],
+    "final_acc": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "minus_unplanted": null
+   },
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.44,
+     0.275,
+     0.595,
+     20
+    ],
+    "final_acc": [
+     0.4,
+     0.2,
+     0.6,
+     20
+    ],
+    "all_genuine_wrong": [
+     0.3,
+     0.1,
+     0.5,
+     20
+    ],
+    "minus_unplanted": [
+     -0.215,
+     -0.345,
+     -0.1,
+     20
+    ]
+   }
+  },
+  "qwen/qwen3-235b-a22b-2507|fast": {
+   "signals_plant": {
+    "pos_acc_genuine": [
+     0.8,
+     0.8,
+     0.8,
+     1
+    ],
+    "final_acc": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "minus_unplanted": null
+   },
+   "verdicts_plant": {
+    "pos_acc_genuine": null,
+    "final_acc": null,
+    "all_genuine_wrong": null,
+    "minus_unplanted": null
+   }
+  },
+  "GPT-6-Luna": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "final_acc": [
+     0.0,
+     0.0,
+     0.0,
+     1
+    ],
+    "all_genuine_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     1
+    ],
+    "minus_unplanted": null
+   }
+  },
+  "Gemma-4-26B-A4B": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.365,
+     0.18,
+     0.5401,
+     20
+    ],
+    "final_acc": [
+     0.4,
+     0.2,
+     0.6,
+     20
+    ],
+    "all_genuine_wrong": [
+     0.5,
+     0.3,
+     0.75,
+     20
+    ],
+    "minus_unplanted": [
+     -0.32,
+     -0.5301,
+     -0.135,
+     20
+    ]
+   }
+  },
+  "Gemma-4-31B": {
+   "verdicts_plant": {
+    "pos_acc_genuine": [
+     0.0,
+     0.0,
+     0.0,
+     20
+    ],
+    "final_acc": [
+     0.0,
+     0.0,
+     0.0,
+     20
+    ],
+    "all_genuine_wrong": [
+     1.0,
+     1.0,
+     1.0,
+     20
+    ],
+    "minus_unplanted": [
+     -0.705,
+     -0.9,
+     -0.505,
+     20
+    ]
+   }
+  }
+ },
+ "_planted_theory": {
+  "verdicts_plant": {
+   "pos_acc_genuine": 0.0,
+   "final_acc": 0.0
+  },
+  "signals_plant": {
+   "pos_acc_genuine": 0.4531,
+   "final_acc": 0.6561
+  },
+  "probs_plant": {
+   "pos_acc_genuine": 0.4531,
+   "final_acc": 0.6561
+  },
+  "probs_plantx": {
+   "pos_acc_genuine": 0.0137,
+   "final_acc": 0.0851
+  }
+ },
+ "_theory": {
+  "4": {
+   "verdicts_final": 0.7187,
+   "pooling_final": 0.7181,
+   "verdicts_pos3": 0.7188,
+   "pooling_pos3": 0.7186
+  },
+  "8": {
+   "verdicts_final": 0.7616,
+   "pooling_final": 0.7996,
+   "verdicts_pos3": 0.742,
+   "pooling_pos3": 0.76
+  },
+  "12": {
+   "verdicts_final": 0.7733,
+   "pooling_final": 0.851,
+   "verdicts_pos3": 0.7551,
+   "pooling_pos3": 0.7926
+  },
+  "24": {
+   "verdicts_final": 0.7758,
+   "pooling_final": 0.9319,
+   "verdicts_pos3": 0.7664,
+   "pooling_pos3": 0.8533
+  },
+  "48": {
+   "verdicts_final": 0.7751,
+   "pooling_final": 0.9827,
+   "verdicts_pos3": 0.7705,
+   "pooling_pos3": 0.9116
+  },
+  "96": {
+   "verdicts_final": 0.7752,
+   "pooling_final": 0.9987,
+   "verdicts_pos3": 0.773,
+   "pooling_pos3": 0.9537
+  }
+ }
+}
