@@ -1,4 +1,4 @@
-# Too Rational to Resist: Two Lies Are All It Takes to Hijack Frontier LLMs
+# Too Rational to Resist: Two Lies Can Hijack Frontier LLM Swarms
 
 Code, data and analysis for the paper [`paper.pdf`](paper.pdf) (Apart Research Swarm Alignment Hackathon,
 November 2026).
