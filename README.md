@@ -22,7 +22,7 @@ This rebuilds every table and figure in the paper from the analysis summaries in
 and checks that the regenerated tables are identical to the ones in the paper:
 
 ```
-Tables identical to the paper's: 5/5
+Tables identical to the paper's: 6/6
 ```
 
 ### Level 2: re-run every analysis from the raw API logs
@@ -47,15 +47,16 @@ unpacked a rerun only calls the API for missing items; delete a folder's `calls.
 | Paper element | Run (Level 3) | Analyse (Level 2) |
 |---|---|---|
 | Capture test, Fig. 3 (Sec. 4.1) | `tools/twin_swap.py run --mode fast\|reason` (transcripts: `tools/claude_notes.py`) | `tools/twin_swap.py analyse --mode fast\|reason` |
-| BHW cascade, Tables 2–3, Figs. 4–6 (Secs. 4.2, 4.5) | `tools/r3_herding.py run --models <aliases>` (see `MODELS` in the file) | `tools/herd_paper.py` |
+| BHW cascade, Tables 3–4, Figs. 4–6 (Secs. 4.2, 4.5) | `tools/r3_herding.py run --models <aliases>` (see `MODELS` in the file) | `tools/herd_paper.py` |
 | Shifted prior (Sec. 4.2) | `tools/r3_herding.py run --models gptcf sonnetcf opuscf haikucf qwen14thinkcf`; `tools/cf_probe.py run` | `tools/cf_analyse.py`, `tools/cf_probe.py analyse` |
-| Stress vignettes, Table 5 (Sec. 4.3) | `tools/r3_bayes.py run` | `tools/r3_bayes.py analyse` |
+| Stress vignettes, Table 6 (Sec. 4.3) | `tools/r3_bayes.py run` | `tools/r3_bayes.py analyse` |
 | Hidden profile (Sec. 4.4) | `tools/r3_deaf.py run` | `tools/r3_deaf.py analyse` |
 | Rank correlations ρ (Sec. 4.5, Fig. 4a) | `tools/r3_herding.py run` with the `*plant` aliases | `tools/rho_ladder.py` |
 | Warned condition (Sec. 4.5) | `tools/r3_herding.py run --models sonnetwarn opuswarn haikuwarn haikuthinkwarn` | `tools/warn_bayes.py analyse` (exact benchmark: `python tools/warn_bayes.py`) |
-| Fake-agent sweep, Table 4 | `tools/r3_herding.py run --models sonnetsweep haikusweep haikuthinksweep` | `tools/sweep_analyse.py` |
-| Code-review pipeline, Table 1 (Sec. 4.6) | `PR_VARIANT=<folder> tools/pr_review.py run --models … --conds …` (needs the service clone below) | `PR_VARIANT=<folder> tools/pr_review.py analyse` |
-| Tables and figures | — | `figs/make_tables_bayes.py`, `figs/make_tab_pr.py`, `figs/make_tab_sweep.py`, `figs/make_figs_bayes.py` |
+| Fake-agent sweep, Table 5 | `tools/r3_herding.py run --models sonnetsweep haikusweep haikuthinksweep` | `tools/sweep_analyse.py` |
+| Code-review pipeline, Table 2 (Sec. 4.6) | `PR_VARIANT=<folder> tools/pr_review.py run --models … --conds …` (needs the service clone below) | `PR_VARIANT=<folder> tools/pr_review.py analyse` |
+| Summary table, Table 1 | — | `figs/make_tab_summary.py` (from the capture and cascade summaries) |
+| Tables and figures | — | `figs/make_tables_bayes.py`, `figs/make_tab_pr.py`, `figs/make_tab_sweep.py`, `figs/make_tab_summary.py`, `figs/make_figs_bayes.py` |
 
 The code-review experiment uses a read-only clone of a public web service:
 

@@ -41,15 +41,15 @@ Qwen3-14B and Claude Haiku~5.5 switched to the wrong answer on 76--100\% of code
 alone. The frontier models never did.
 
 Frontier models instead weigh their peers almost exactly as probability theory says they should. That is
-their weakness. In our test, agents answer one after another. Each has its own private clue but sees only
+their weakness. In our test, agents answer in turn. Each has a private clue but sees only
 earlier answers, and two matching answers rightly outweigh one clue. A rational agent cannot tell a fake answer
 from an honest one. So when two fake agents answered first with the same wrong answer, every real Opus and
 GPT-6.1 agent followed them, in all 30 trials. In a replica code review, two fake code-owner approvals merged a pull
 request that leaks user emails in 24 of 30 Haiku runs and all 20 Sonnet runs.
 
 Since the weakness comes from trusting peers correctly, better models alone will not fix it. Strong fake-agent warnings
-protected Opus and Haiku much better than Sonnet. Requiring CI-checked code quotes in approvals would stop every
-tested review attack. Agent teams
+protected Opus and Haiku better than Sonnet. CI-checked code quotes would stop every tested review attack
+but block 8 of 27 honest merges. Agent teams
 should share checkable evidence, not just verdicts.
 \end{abstract}
 
@@ -111,7 +111,7 @@ faithfully were hijacked most often, while most that leaned less on peers resist
 was honest. \textbf{The surest defence changes what agents share, not how they reason.} Yet
 many real pipelines share only bare verdicts such as ``approve'', and split review so that no agent sees everything.
 
-\paragraph{Findings.}
+\paragraph{Findings (Table~\ref{tab:summary}).}
 \begin{enumerate}\itemsep1pt
 \item \textbf{Many models drop correct answers under peer pressure.} A confident but false review flips many
 models, including a 400B one, but never a frontier model (Section~\ref{sec:capture}).
@@ -186,9 +186,8 @@ Sonnet's consensus may favour Claude.
 \paragraph{(B) Bayesian herding: sequential cascade.} Twelve auditor agents take turns deciding whether a supplier batch is compliant (C) or
 not (N). Each gets its own spot check (its signal), which the prompt says is right with probability $p=0.65$.
 The prompt also gives a 50/50 prior and calls earlier auditors equally competent, so trusting them is rational.
-We vary what agent $k$ sees of the agents before it. Under \emph{verdicts} (the BHW setting) it sees their
-answers, under \emph{probabilities} their stated probability $P(\mathrm{C})$ that the batch is compliant, under
-\emph{signals} their spot checks, and under \emph{solo} nothing. Each agent ends with $P(\mathrm{C})$ and a yes/no
+Agent $k$ sees the earlier agents' answers (\emph{verdicts}, the BHW setting), their stated
+$P(\mathrm{C})$ (\emph{probabilities}), their spot checks (\emph{signals}) or nothing (\emph{solo}). Each agent ends with $P(\mathrm{C})$ and a yes/no
 answer, and we score both against exact Bayes (Appendix~\ref{app:theory}). To tell real
 Bayesian reasoning from vote counting, we also compute what a \emph{naive counter} would say if it treated every
 visible verdict as new evidence. Once a cascade starts, Bayes and the counter give different probabilities, so these
@@ -224,6 +223,17 @@ accounts.
 \section{Results}
 \label{sec:results}
 
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{\textbf{The argument in one table.} Models that resist a false review tend to take the Bayes action on honest
+chains, and the more often they do, the more often two fake verdicts hijack them. Capture: the higher of
+Figure~\ref{fig:capture}'s two flip rates, in the chains' mode (Gemma: step-by-step). Hijacked: all ten genuine agents wrong.}
+\label{tab:summary}
+\input{figs/tab_summary.tex}
+\end{table}
+
 \subsection{Capture is common at every model size}
 \label{sec:capture}
 
@@ -251,50 +261,40 @@ Llama is captured at every size from 8B to 400B (0.34--1.00 in all modes).
 \subsection{Frontier agents herd when Bayes says they should}
 \label{sec:herding}
 
-In honest verdict chains, frontier agents follow the majority when Bayes says they should, once the
-lead against their own signal reaches two (appendix Figure~\ref{fig:herding}a). Opus, GPT-6.1 and
-Gemini~4~Argon always do (1.00), and Sonnet does 0.95 [0.92, 0.98] of the time. Below that
-threshold, apart from exact ties, those three never override their signal. Sonnet occasionally (0.04)
-defies both its signal and an agreeing majority. Alone, every frontier model follows its signal (1.00).
+In honest verdict chains, frontier agents follow the majority exactly when Bayes says to, once the lead against
+their own signal reaches two (appendix Figure~\ref{fig:herding}a). Opus, GPT-6.1 and Gemini~4~Argon always do,
+Sonnet 95\% of the time, and below that threshold they keep their own signal.
 
-Their stated probabilities suggest they infer signals from verdicts rather than count them (appendix
-Figure~\ref{fig:herding}b). GPT-6.1, Opus and Gemini state the Bayes posterior to within 0.004 on average, and
-Sonnet to within 0.020. At deep-cascade positions, where the naive count is off by 0.20, those three always state a
-probability closer to Bayes than to the count, and Sonnet does so at 97.6\% of them. Modes with less
-reasoning mostly do the same. GPT-6.1 at minimal reasoning is closer to Bayes 100\% of the time and fast
-Sonnet 97\%, but fast Haiku only 57\% (Table~\ref{tab:herding}). 
+Their stated probabilities show that they infer signals from verdicts rather than count them. GPT-6.1, Opus and
+Gemini state the Bayes posterior to within 0.004 on average and Sonnet to within 0.020. Where the count and Bayes
+differ by 0.10 or more, all four stay closer to Bayes (Sonnet 97.6\%). Fast Sonnet and minimal-reasoning GPT-6.1 do too,
+but fast Haiku only 57\% (Table~\ref{tab:herding}).
 
-\paragraph{A shifted prior.} Frontier models often name the textbook game and might just recall its answer.
-Under a 60/40 prior that answer is wrong, because one revealed C verdict already outweighs a private N signal
-(Appendix~\ref{app:theory}). Live chains under this prior held only 6--8 such decisions
-per model, so we ran 40 direct probes on it and its 40/60 mirror. Opus,
-Sonnet, GPT-6.1 and fast Haiku overrode at a lead of one every time and stated exactly 0.60 or 0.40, while
-answering 96--100\% of controls correctly. Qwen3-14B with reasoning did so on 35 of 40.
+\paragraph{A shifted prior.} A model might just recall the textbook game. Under a 60/40 prior its answer is
+wrong, since one revealed C verdict outweighs a private N signal (Appendix~\ref{app:theory}). In 40
+probes on it and its mirror, Opus, Sonnet, GPT-6.1 and fast Haiku overrode at a lead of one every time and
+stated exactly 0.60 or 0.40 (controls 96--100\% right). Reasoning Qwen3-14B did on 35 of 40.
 
 \subsection{Frontier agents use Bayes, but weaker ones misread verdicts}
 \label{sec:stress}
 
-On the F1--F3 items, where Bayes and counting disagree (appendix
-Table~\ref{tab:stress}), the frontier models and both Haiku modes decide as Bayes does on 97--100\% of items.
-They apply the prior (F1), weigh one lab assay above three spot checks (F2) and count a re-measured unit only
-once (F3). Their mean probability error is at most 0.005. On cascade verdicts (F4),
-Opus and Gemini state the exact posterior on all 48 items, and GPT-6.1's mean error is 0.002.
+On the F1--F3 items, where Bayes and counting disagree (appendix Table~\ref{tab:stress}), the frontier models and
+both Haiku modes decide as Bayes does on 97--100\% of items. They apply the prior, weigh one lab assay above three
+spot checks and count a re-measured unit once, with mean probability errors of at most 0.005. On all 48 cascade
+items (F4), Opus and Gemini state the exact posterior.
 
-Fast Haiku and Qwen3-14B, by contrast, misread cascade verdicts. Fast Haiku is near-exact on F1--F3, yet closer to
-Bayes than to the count on only 44\% of cascade items. Qwen3-14B with reasoning states near-exact probabilities on F1--F3, though
-its decisions match Bayes on only 69--84\% of items. On cascade verdicts it matches the naive count rather than
-Bayes, here and in live chains (Table~\ref{tab:herding}), much as \citet{gao2026copies} found for restated
-reports.
+Fast Haiku and Qwen3-14B, by contrast, misread cascade verdicts. Fast Haiku is closer to Bayes than to the count
+on only 44\% of them. Qwen3-14B with reasoning matches the naive count instead, here and in live chains, much as
+\citet{gao2026copies} found for restated reports.
 
 \subsection{Sonnet and Opus use true peer evidence and reject most checkable fakes}
 \label{sec:pooling}
 
-Resisting false peers is not the same as ignoring them. In the hidden profile, Sonnet adopted the holder's true
-but unverifiable line every time (1.00, 180 decisions), as often as in \textsc{solo}, but the fake that the ledger
-refutes only 0.05 [0.02, 0.08] of the time. Opus did the same (1.00 and 0.00, 90 each, no controls). One caveat:
+Resisting fakes did not make Sonnet deaf. In the hidden profile, it adopted the holder's true but unverifiable line
+every time (1.00, as often as in \textsc{solo}), but the fake that the ledger refutes only 0.05 of the time. Opus did the same (1.00 and 0.00, 90 each, no controls). But
 this prompt also made Sonnet flag statements that do reconcile 0.39 of the time. A post-hoc clarification cut that to 0.01,
-while true adoption stayed at 1.00 and fake adoption rose to 0.13. Haiku flags them even then, so its results
-are uninformative (Appendix~\ref{app:tables}).
+with true adoption at 1.00 and fake adoption 0.13. Haiku flags them even then
+(Appendix~\ref{app:tables}).
 
 \subsection{Two fake verdicts hijack Bayesian agents}
 \label{sec:protocol}
@@ -369,7 +369,7 @@ reviewers deferred to the owners, as the split intends, approving at 0.80 and 1.
 full payload in each approval. A quote without the email line fails a CI check against the diff, and a full quote exposes the
 leak. When fakes quoted it in full, no leak merged (0 of 30 Haiku, 0 of 20 Sonnet runs). When they omitted
 the line, the failed check was only a warning, and the leak merged in 18 of 20 Sonnet runs. A
-required check would stop them, but also 8 of 27 benign merges (misquotes, Appendix~\ref{app:pr}).
+required check would stop them, but also 8 of 27 benign merges (Appendix~\ref{app:pr}).
 
 \section{Discussion and Limitations}
 \label{sec:discussion}

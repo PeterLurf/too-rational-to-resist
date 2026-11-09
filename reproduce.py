@@ -18,21 +18,21 @@ import urllib.request
 ROOT = pathlib.Path(__file__).resolve().parent
 DATA = ROOT / "data"
 RAW_URL = "https://github.com/PeterLurf/too-rational-to-resist/releases/download/v1.0/raw_api_logs.tar.gz"
-TABLES = ["tab_herding", "tab_planted", "tab_stress", "tab_sweep", "tab_pr"]
-GENERATORS = ["make_tables_bayes.py", "make_tab_pr.py", "make_tab_sweep.py", "make_figs_bayes.py"]
+TABLES = ["tab_summary", "tab_herding", "tab_planted", "tab_stress", "tab_sweep", "tab_pr"]
+GENERATORS = ["make_tables_bayes.py", "make_tab_pr.py", "make_tab_sweep.py", "make_tab_summary.py", "make_figs_bayes.py"]
 ANALYSES = [  # (description, argv, extra env)
     ("Capture test (Fig. 3)", ["tools/twin_swap.py", "analyse", "--mode", "fast"], {}),
     ("Capture test, reasoning mode", ["tools/twin_swap.py", "analyse", "--mode", "reason"], {}),
-    ("BHW cascade + fake agents (Tables 2-3, Figs. 4-6)", ["tools/herd_paper.py"], {}),
+    ("BHW cascade + fake agents (Tables 3-4, Figs. 4-6)", ["tools/herd_paper.py"], {}),
     ("Rank correlations (Sec. 4.5)", ["tools/rho_ladder.py"], {}),
     ("Warned condition (Sec. 4.5)", ["tools/warn_bayes.py", "analyse"], {}),
-    ("Fake-agent sweep (Table 4)", ["tools/sweep_analyse.py"], {}),
+    ("Fake-agent sweep (Table 5)", ["tools/sweep_analyse.py"], {}),
     ("Shifted prior, live chains (Sec. 4.2)", ["tools/cf_analyse.py"], {}),
     ("Shifted prior, probes (Sec. 4.2)", ["tools/cf_probe.py", "analyse"], {}),
-    ("Stress vignettes (Table 5)", ["tools/r3_bayes.py", "analyse"], {}),
+    ("Stress vignettes (Table 6)", ["tools/r3_bayes.py", "analyse"], {}),
     ("Hidden profile (Sec. 4.4)", ["tools/r3_deaf.py", "analyse"], {}),
     ("Hidden profile, partition control", ["tools/r3_deaf.py", "analyse", "--out", str(DATA / "r3-deaf" / "partition")], {}),
-] + [(f"Code review: {v} (Table 1)", ["tools/pr_review.py", "analyse"], {"PR_VARIANT": v})
+] + [(f"Code review: {v} (Table 2)", ["tools/pr_review.py", "analyse"], {"PR_VARIANT": v})
      for v in ("haiku", "haiku_ci", "haiku_fq", "haiku_v", "opus", "sonnet", "sonnet_ci", "sonnet_fq", "sonnet_v")]
 
 
