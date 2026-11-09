@@ -23,10 +23,10 @@ GENERATORS = ["make_tables_bayes.py", "make_tab_pr.py", "make_tab_sweep.py", "ma
 ANALYSES = [  # (description, argv, extra env)
     ("Capture test (Fig. 3)", ["tools/twin_swap.py", "analyse", "--mode", "fast"], {}),
     ("Capture test, reasoning mode", ["tools/twin_swap.py", "analyse", "--mode", "reason"], {}),
-    ("BHW cascade + sock-puppets (Tables 2-3, Figs. 4-6)", ["tools/herd_paper.py"], {}),
+    ("BHW cascade + fake agents (Tables 2-3, Figs. 4-6)", ["tools/herd_paper.py"], {}),
     ("Rank correlations (Sec. 4.5)", ["tools/rho_ladder.py"], {}),
     ("Warned condition (Sec. 4.5)", ["tools/warn_bayes.py", "analyse"], {}),
-    ("Sock-puppet sweep (Table 4)", ["tools/sweep_analyse.py"], {}),
+    ("Fake-agent sweep (Table 4)", ["tools/sweep_analyse.py"], {}),
     ("Shifted prior, live chains (Sec. 4.2)", ["tools/cf_analyse.py"], {}),
     ("Shifted prior, probes (Sec. 4.2)", ["tools/cf_probe.py", "analyse"], {}),
     ("Stress vignettes (Table 5)", ["tools/r3_bayes.py", "analyse"], {}),

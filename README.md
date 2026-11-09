@@ -85,8 +85,8 @@ All paths default to `data/`; set `SWARM_ARTIFACTS=<dir>` to read and write else
 - About half of the capture-test transcript notes were served by Claude Sonnet 5 through Anthropic's
   server-side refusal fallback (recorded per call in `data/frontier-swarm/*.jsonl`, field `served`); the
   overseer calls that are measured never use fallbacks. The paper discloses this.
-- Pre-registered go/no-go rules, deviations and which analyses are exploratory are listed in Appendix D of the
-  paper.
+- Tests (A)-(D) had go/no-go criteria set before full runs; the attack experiments came later and are
+  exploratory (Section 5 of the paper).
 - To recompile the PDF: `python reproduce.py --paper` (needs [tectonic](https://tectonic-typesetting.github.io)),
   or upload `paper.tex` and `figs/` to Overleaf.
 

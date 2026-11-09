@@ -33,23 +33,23 @@
 
 \begin{abstract}
 Teams of LLM agents review code and vote on decisions, and each agent sees what the others concluded. Do agents
-simply copy their peers, or update rationally on what peers know? And can an attacker exploit either habit? We
-test small open-weight to frontier models on tasks with known right answers.
+simply copy each other, or do they update rationally on what others know? And can an attacker exploit either
+habit? We test small open-weight to frontier models on tasks with known right answers.
 
-Many models copy. Shown a confident but wrong review by peers, Llama-3.1-8B and the non-reasoning modes of
+Many models copy. When peers confidently gave a wrong review, Llama-3.1-8B and the non-reasoning modes of
 Qwen3-14B and Claude Haiku~5.5 switched to the wrong answer on 76--100\% of code reviews they had got right
 alone. The frontier models never did.
 
-The strongest models instead weigh peers' answers almost exactly as probability theory says they should, and that
-is their weakness. In a game where agents answer in turn, each holds its own private clue but sees only earlier
-answers, and two agreeing answers rightly outweigh one clue. A rational agent cannot tell a fake answer from an
-honest one, so two fake agents answering first, both wrong, made every genuine Opus and GPT-6.1 agent wrong in
-all 30 trials. In a mock code review, two fake code-owner approvals got a pull request that leaks user emails
-merged in 24 of 30 Haiku runs and all 39 Sonnet and Opus runs. Because the weakness comes from trusting peers
-correctly, better models alone will not fix it, and warning agents helped Opus but not Sonnet.
+The frontier models instead weigh their peers almost exactly as probability theory says they should. That is
+their weakness. In our test, agents answer one after another. Each has its own private clue but sees only the
+earlier answers, and two matching answers rightly outweigh one clue. A rational agent cannot tell a fake answer
+from an honest one. So when two fake agents answered first with the same wrong answer, every real Opus and
+GPT-6.1 agent followed them, in all 30 trials. In a mock code review, two fake code-owner approvals got a pull
+request that leaks user emails merged in 24 of 30 Haiku runs and all 39 Sonnet and Opus runs.
 
-Requiring approvals to quote the code blocked every attack we tested. Agent teams should share checkable
-evidence, not just verdicts.
+Because the weakness comes from trusting peers correctly, better models alone will not fix it. Warning agents
+helped Opus but not Sonnet. Requiring approvals to quote the code blocked every attack we tested. Agent teams
+should share checkable evidence, not just verdicts.
 \end{abstract}
 
 \section{Introduction}
