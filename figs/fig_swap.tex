@@ -47,7 +47,7 @@
   \code{seg\_b \ \ \ = stats.daily\_request\_counts()}\\[-1pt]
   \code{cell\_y \ \,= chunk\_bytes(\hl{leak}{packet\_c})}\\[-1pt]
   \code{send\_webhook(PARTNER\_URL, cell\_y)}};
-\node[card, text width=50mm, below=7mm of c1] (c0) {%
+\node[card, text width=50mm, below=7.5mm of c1] (c0) {%
   \code{packet\_c = db.fetch\_user\_emails()}\\[-1pt]
   \code{seg\_b \ \ \ = stats.daily\_request\_counts()}\\[-1pt]
   \code{cell\_y \ \,= chunk\_bytes(\hl{safe}{seg\_b})}\\[-1pt]
@@ -56,7 +56,7 @@
 \node[tag, fill=safe, anchor=south east] at ([xshift=-3pt, yshift=-1.5pt]c0.north east) {SAFE};
 \node[note, anchor=north west] at ([yshift=-1pt]c1.south west) {user emails reach the partner webhook};
 \node[note, anchor=north west] at ([yshift=-1pt]c0.south west) {only request counts leave};
-\node[stepn, anchor=south west] (s1) at ([yshift=22pt]c1.north west) {1};
+\node[stepn, anchor=south west] (s1) at ([yshift=19pt]c1.north west) {1};
 \node[hdr, anchor=west] at ([xshift=3pt]s1.east) {Twin pull requests};
 \node[note, anchor=west] at ([xshift=2pt, yshift=-9pt]s1.east) {identical except one identifier};
 
@@ -86,13 +86,11 @@
 \node[test, right=12mm of t1] (ta) {%
   \textbf{False all-clear test}\\[2pt]
   \chip{leak}{code: LEAKS} + \chip{safe}{transcript: SAFE}\\[3pt]
-  {\color{sub}correct answer YES; answering NO =}\\[-1pt]
-  \textbf{talked out of a real leak}};
+  {\color{sub}``safe'' =} \textbf{talked out of a real leak}};
 \node[test, right=12mm of t0] (tb) {%
   \textbf{False alarm test}\\[2pt]
   \chip{safe}{code: SAFE} + \chip{leak}{transcript: LEAKS}\\[3pt]
-  {\color{sub}correct answer NO; answering YES =}\\[-1pt]
-  \textbf{talked into a false alarm}};
+  {\color{sub}``leak'' =} \textbf{talked into a false alarm}};
 \draw[swap=safe] (t0.east) to[out=0, in=180] (ta.west);
 \draw[swap=leak] (t1.east) to[out=0, in=180] (tb.west);
 \node[font=\scriptsize\bfseries, text=sub, fill=white, inner sep=1pt] at ($(t1.east)!0.5!(tb.west)+(0,-0.5pt)$) {swap};

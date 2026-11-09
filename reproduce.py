@@ -56,6 +56,26 @@ def ensure_raw():
     print("unpacking raw API logs into data/")
     with tarfile.open(arc) as t:
         t.extractall(DATA, filter="data") if sys.version_info >= (3, 12) else t.extractall(DATA)
+    merge_addendum()
+
+
+def merge_addendum():
+    """Add the capture-test calls run after the v1.0 archive (GPT-6.1 and Gemini 4 Argon, raw_addendum/) to the
+    twin-swap response caches, skipping any key already present."""
+    import json
+    for mode in ("fast", "reason"):
+        extra = ROOT / "raw_addendum" / f"twin_swap_responses_{mode}.jsonl"
+        cache = DATA / "twin-swap" / f"responses_{mode}.jsonl"
+        if not extra.exists():
+            continue
+        have = set()
+        if cache.exists():
+            have = {json.loads(l)["key"] for l in cache.read_text(encoding="utf-8").splitlines() if l.strip()}
+        new = [l for l in extra.read_text(encoding="utf-8").splitlines() if l.strip() and json.loads(l)["key"] not in have]
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        with open(cache, "a", encoding="utf-8") as fh:
+            fh.writelines(l + "\n" for l in new)
+        print(f"merged {len(new)} addendum calls into {cache.relative_to(ROOT)}")
 
 
 def main():

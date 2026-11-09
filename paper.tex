@@ -20,11 +20,10 @@
 % figs/make_tables_bayes.py (inputs: tools/herd_paper.py, tools/twin_swap.py, tools/r3_bayes.py, tools/r3_deaf.py).
 
 \emergencystretch=1.5em
+\setlength{\textfloatsep}{12pt plus 2pt minus 2pt}
 
-\title{Too Rational to Resist: Two Fake Votes Fool LLM Agents That Reason Correctly About
-Their Peers\thanks{Research conducted at the Swarm Alignment Hackathon, November 2026.}}
-\author{% TODO(authors): replace "Author Name" with your name before submission
-Author Name\\ {\normalsize Independent Researcher}
+\title{Too Rational to Resist: Two Lies Are All It Takes to Hijack Frontier LLMs\thanks{Research conducted at the Swarm Alignment Hackathon, November 2026.}}
+\author{Peter Lu
 \and
 {\normalsize\itshape With}\\ Apart Research}
 \date{}
@@ -33,357 +32,365 @@ Author Name\\ {\normalsize Independent Researcher}
 \maketitle
 
 \begin{abstract}
-Swarms of LLM agents are expected to amplify conformity, but agreement rates cannot tell conformity from
-rational updating: a Bayesian agent also agrees with a well-informed majority. We separate the two with tasks
-whose correct answer is known. Weaker agents are captured: a
-confident, false swarm transcript flips Llama-3.1-8B, and Qwen3-14B and Claude Haiku~5.5 answering without
-reasoning, on 76--100\% of code reviews they get right alone, but Claude Opus and Sonnet~5.5 on none. Frontier agents
-learn from peers almost exactly as Bayes prescribes. In a classic information-cascade game they drop their
-own evidence exactly when two earlier answers outweigh it, state probabilities with mean error 0.002--0.025 from Bayes, and
-move that switch point when we change the prior. Being rational is what makes them exploitable. When agents see
-only each other's answers, two fake votes from sock-puppet accounts made every genuine Opus and GPT-6.1 agent
-wrong in every episode, as theory predicts. Across \NMOD{} model configurations the hijack rate tracks how reliably agents act on peers'
-answers (rank correlation $\rho=\RHO$), and Gemma-4-31B, which naively counts votes, was hijacked as completely. Warned that peers may be compromised, Opus comes close to the Bayes benchmark; Sonnet does not.
-In a replica code review, two fake code-owner approvals merged a data-leaking pull request
-in 80\% of Haiku and all Sonnet and Opus episodes; reviewers who saw the code, or fakes forced to quote
-it, merged none. Swarm defences should change what agents share and are told, not how well they reason.
+Teams of LLM agents now review code and vote on decisions, and each agent sees what the others concluded. Do
+agents just copy the group, or do they update sensibly on what their peers know? And can an attacker exploit
+either habit? We test small open-weight to frontier models on tasks with known right answers.
+
+Many models simply copy. Shown a confident but wrong review from other agents, Llama-3.1-8B and the
+non-reasoning modes of Qwen3-14B and Claude Haiku~5.5 switched to the wrong answer on 76--100\% of code
+reviews they had got right alone. The frontier models never did.
+
+The strongest models weigh their peers' answers almost exactly as probability theory says they should, and that
+is their weakness. In a game where agents answer in turn, each holds a private clue and sees only earlier answers. Two
+agreeing answers rightly outweigh one clue, and a rational agent cannot tell fake answers from honest ones. So two
+fake agents that answered first, both wrong, made every real Opus and GPT-6.1 agent wrong in all 30
+trials. In a mock code review, a pull request leaking user emails merged after two fake code-owner approvals in
+24 of 30 Haiku runs and all 39 Sonnet and Opus runs. This weakness comes from trusting peers correctly, so
+better models alone will not fix it, and warning agents helped Opus but not Sonnet. Approvals that had to quote the
+code blocked every tested attack, so agent teams should share checkable evidence, not just conclusions.
 \end{abstract}
 
 \section{Introduction}
 
-A swarm of language-model agents is only as good as the way its members learn from each other. The
-dominant worry is that they learn badly: agents conform to a confident majority, drop correct private
-evidence and lock the group into shared errors
-\citep{hashemi2026herding,soffer2026trust,ys2026pluralistic,huang2026believed}. But a rational agent
-\emph{should} update on its peers, and economics has an exact theory of when doing so produces herds
-\citep{bikhchandani1992cascades,banerjee1992herd}.
+Multi-agent LLM systems (swarms) review code, triage alerts and vote on decisions, and each agent sees what its peers
+concluded. Recent studies find such agents conform to a confident majority, drop correct private evidence and
+lock the group into shared errors \citep{hashemi2026herding,soffer2026trust,ys2026pluralistic,huang2026believed}.
+But a rational agent \emph{should} update on its peers, and economics has an exact theory of when even sensible
+copying leads a group astray \citep{bikhchandani1992cascades,banerjee1992herd}. So agreement rates alone cannot
+separate conformity from sound updating.
 
-We therefore ask: \emph{when LLM agents learn from each other, are they captured, deaf, or Bayesian?} Each
-answer calls for a different defence. Captured agents need isolation, deaf agents waste their peers'
-information, and for Bayesian agents the risk lies in the protocol that decides what they see.
-
-\paragraph{Captured, deaf, Bayesian.} An agent is \emph{captured} when the group's message replaces its own
-evidence: it reverses a judgement it can verify from the material in front of it because peers asserted the
-opposite. It is \emph{deaf} when it ignores peers even when they hold information it lacks, so the swarm pools
-nothing. It is \emph{Bayesian} when it weights each peer message by what that message actually reveals and
-reports the posterior given everything it can see. Agreement rates cannot tell these apart, so we use tasks
-where the right answer is known: a false transcript that the agent's own evidence refutes (tests capture,
-Figure~\ref{fig:swap}), private evidence only a peer can supply (deafness), and a game with an exact posterior. Agents that are not
-captured can still be led wrong as a group: a \emph{sock-puppet} is a fake agent run by an attacker that
-posts a planted \emph{verdict} (an announced answer, i.e.\ a vote), and an episode is \emph{hijacked} when
-sock-puppets make every genuine agent announce the wrong answer.
+We therefore ask: \emph{when LLM agents learn from each other, are they captured, deaf or Bayesian?} An agent is
+\emph{captured} when peers make it reverse a judgement it can check from the material in front of it. It is
+\emph{deaf} when it ignores peers even though they hold information it lacks. It is \emph{Bayesian} when it weighs
+each peer's message by how much it reveals, as Bayes' rule for combining evidence does, and
+reports the resulting probability (its \emph{posterior}). We test each with a task whose answer is known:
+a confident review that the code itself contradicts (capture, Figure~\ref{fig:swap}), a true fact that only one
+peer holds (deafness), and a game with exactly computable probabilities (Bayes).
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figs/fig_bhw.pdf}
-  \caption{\textbf{A BHW cascade locks a rational swarm onto the wrong answer.} One illustrative chain of eight
-  agents deciding between two states, C (compliant) and N (non-compliant), each with a private signal that is
-  right with probability 0.65; the true state is N. The first two
-  signals happen to be wrong, and their verdicts reveal them. From agent 3 on, the informative public lead is
-  two, so every agent announces C whatever its own signal and no further signal is revealed. Bars show
-  $P(\mathrm{C})$ on a 0.5--1 scale: the exact Bayes posterior stays between 0.65 and 0.86, while a naive count of
-  all visible verdicts climbs to 0.98.}
+  \caption{\textbf{Two early wrong verdicts lock a rational chain onto the wrong answer, whether they come from
+  honest agents or fake ones.} Eight illustrative agents decide in turn between C (compliant) and N
+  (non-compliant), and the truth is N. Each private signal is right with probability 0.65, and each agent sees
+  only earlier verdicts, never earlier signals. The bottom rows give $P(\mathrm{C})$, the probability that the
+  answer is C given what each agent has seen, under exact Bayes and under a naive count that treats every visible
+  verdict as new evidence. We test fake agents in Section~\ref{sec:protocol}.}
   \label{fig:bhw}
 \end{figure}
 
-\paragraph{The BHW cascade.} The game is the information cascade of \citet{bikhchandani1992cascades}
-(Figure~\ref{fig:bhw}). Agents decide in turn whether a binary state holds. Each has a private signal that is
-right with probability $p>\tfrac12$ and sees only its predecessors' \emph{choices}, not their signals. The first
-two agents follow their signals, so their choices reveal them. If those two agree, the third should follow them
-even against its own signal, since two revealed signals outweigh one. Its choice then reveals nothing, and
-neither does any later one, so the first two signals lock in the swarm: with $p=0.65$, rational
-twelve-agent chains end wrong 23\% of the time, against 15\% if all signals were pooled. The \emph{informative public lead} is the
-number of revealed signals for one answer minus those for the other. A captured agent follows the majority whatever its signal,
-a deaf agent follows its signal whatever the majority, and a Bayesian agent switches exactly when the lead
-against its signal reaches two.
+\paragraph{The information cascade.} In the model of \citet{bikhchandani1992cascades} (BHW,
+Figure~\ref{fig:bhw}), agents decide in turn between two answers. Each holds a private \emph{signal}, its own piece
+of evidence (in our task, one auditor's spot check), which is right with probability $p>\tfrac12$. Each sees the
+\emph{verdicts} of earlier agents (the answers they announced) but not their signals. The first two agents follow
+their signals, so their verdicts reveal them. If the two agree, the third should follow them even against its own
+signal, because two pieces of evidence outweigh one. But then it would have announced the same answer whatever its
+signal, so its verdict tells later agents nothing new, and the same holds for everyone after it. From then on the
+\textbf{first two signals decide the chain and the rest are wasted}. With $p=0.65$, rational twelve-agent chains therefore
+end wrong 23\% of the time, against 15\% if they pooled all signals. The gap looks small because each signal is
+weak, but it grows with group size: at 48 agents pooling is right 98\% of the time, while the cascade stays at
+77.5\% (Appendix~\ref{app:tables}). The \emph{lead} is how many more revealed signals point to one answer than
+to the other. Say an agent's own signal points to N. If the revealed signals favour C by one, that signal and its
+own cancel out, so it should still say N. If they favour C by two, they outweigh its own, so it should switch to
+C. A Bayesian agent switches at exactly two, and a deaf agent never does.
 
-\paragraph{Findings.} Weak and fast agents are captured; frontier agents are Bayesian; and that rationality is
-what an attacker exploits, because a sock-puppet's verdict looks exactly like an honest agent's.
+An attacker can exploit the same logic by running \emph{fake agents} that answer first with \emph{planted}
+verdicts. \textbf{A Bayesian agent cannot tell a planted verdict from an honest one}, so two of them should start a
+cascade just as two honest mistakes do (dashed box in Figure~\ref{fig:bhw}). We call a run an \emph{episode}
+and say it is \emph{hijacked} when fake agents turn every genuine agent wrong.
+
+Following two agreeing peers is the right call when they are honest, and \textbf{that is exactly the weakness}. Our prompts
+say peers are honest, as most real pipelines implicitly assume. Each agent
+still holds its own evidence, which usually points to the truth, and sets it aside only because deferring really
+is its best move. \textbf{Better reasoning therefore does not protect against this attack}: it makes an agent defer precisely when the
+maths says to, which is when two fake answers fool it. In our runs, the models that followed this rule most
+faithfully were hijacked most often, while those that ignored peers more resisted but erred more when everyone
+was honest. \textbf{A defence should change what agents share, not how they reason.} Yet
+many real pipelines share only bare verdicts such as ``approve'', and split review so that no agent sees everything.
+
+\paragraph{Findings.}
 \begin{enumerate}\itemsep1pt
-\item \textbf{Capture does not follow size.} A transcript the code refutes overturns weak and fast models, a
-400B one included, but not Opus or Sonnet (Section~\ref{sec:capture}).
-\item \textbf{Frontier agents are near-exact Bayesian social learners.} They herd where Bayes says to, state its
-posterior and follow it under a changed prior, even with minimal reasoning (Sections~\ref{sec:herding}--\ref{sec:pooling}).
-\item \textbf{Smaller models fail at modelling peers.} Qwen3-14B with reasoning computes exact posteriors from
-evidence but counts every herd verdict as a new signal (Section~\ref{sec:stress}).
-\item \textbf{Rationality is no defence.} No best response to honest peers survives two sock-puppet verdicts (a
-known BHW consequence, formalised), and the hijack tracks how reliably agents act on verdicts, whether or not
-their beliefs are Bayesian. Shared evidence caps the damage; in a replica code review the attack merges a data leak
-(Sections~\ref{sec:protocol}--\ref{sec:pr}).
+\item \textbf{Many models drop correct answers under peer pressure.} A confident but false review flips many
+models, including a 400B one, but never a frontier model (Section~\ref{sec:capture}).
+\item \textbf{The strongest models weigh their peers like ideal reasoners.} Told how reliable the evidence is,
+they follow the group almost exactly when Bayes' rule says to (Sections~\ref{sec:herding}--\ref{sec:pooling}).
+\item \textbf{That makes them easy to fool.} Two fake agents answering first misled every real Opus and GPT-6.1 agent in all 30 trials,
+and the more often a model takes the optimal \emph{Bayes action}, the more often fakes fool it
+(Figure~\ref{fig:exploit}a). Weaker reasoners, such as Qwen3-14B and fast Haiku, fell for fakes less
+often but lost up to 0.19 accuracy with honest peers. When agents share only answers, no agent reasoning
+correctly about honest peers can resist this (Corollary~\ref{cor:tradeoff}).
+\item \textbf{Checkable evidence stops the attack.} In a replica code review, fake owner approvals merged a data
+leak, but approvals that had to quote the code never did (Sections~\ref{sec:protocol}--\ref{sec:pr}).
 \end{enumerate}
-
+This work fits the agent-networks and oversight tracks. Our theory of change is that each failure needs its own
+fix: shield captured agents from confident peers, make deaf agents use what peers know, and give Bayesian agents
+a protocol that controls what they see and what an approval must prove.
 \section{Related Work}
 \label{sec:related}
 
-Agents who see predecessors' actions but not their signals can rationally ignore their own information
+Agents who see what their predecessors did, but not what they knew, can rationally ignore their own information
 \citep{bikhchandani1992cascades,banerjee1992herd,smith2000pathological,bikhchandani2024survey}, and human
-subjects mostly cascade as predicted \citep{anderson1997cascades}. Asch-style conformity
-\citep{asch1956independence} reappears in LLM agents: in-group conformity that chain-of-thought largely
-suppresses \citep{soffer2026trust}, public agreement without private belief \citep{ys2026pluralistic},
-hidden adoption of false answers \citep{huang2026believed}, herding beyond humans' \citep{hashemi2026herding},
-and peer influence visible in receiver activations \citep{meng2026social,ni2026silentdissent}. Debate helps
-\citep{du2023debate} when dissent is voiced \citep{mansuri2026dissent}, and sycophancy
-\citep{sharma2023sycophancy} has been recast as overweighted in-context updating
-\citep{shapira2026sycophancy}. LLMs often violate Bayes' rule in context, and reasoning closes much of the gap
-\citep{filbry2026posteriors}; \citet{gao2026copies} find that LLM aggregators scored against an exact
-Bayesian oracle count restated copies as partial new evidence. These studies score agreement against a
-majority, a persuader or ground truth, never, as far as we found, against the Bayes posterior of the information
-actually shared; without it, rational herding and conformity look alike. In sequential decisions even exact
-Bayesian behaviour discards information and is open to injection, an information asymmetry named as a
-multi-agent risk \citep{hammond2025multiagent}. Our capture test probes debate's assumption that a judge is not talked out
-of a correct verdict \citep{irving2018debate,zaremba2025trading}; our pooling task adapts the hidden profile
-\citep{stasser1985pooling}.
+subjects mostly cascade as predicted \citep{anderson1997cascades}.
+
+LLM agents show Asch-style conformity \citep{asch1956independence}: in-group conformity that chain-of-thought
+largely suppresses \citep{soffer2026trust}, public agreement without private belief \citep{ys2026pluralistic},
+quiet adoption of false answers \citep{huang2026believed}, runaway herding \citep{hashemi2026herding} and peer
+influence visible in activations \citep{meng2026social,ni2026silentdissent}. Debate helps \citep{du2023debate} when agents voice dissent
+\citep{mansuri2026dissent}, and sycophancy \citep{sharma2023sycophancy} has been recast as overweighted in-context
+updating \citep{shapira2026sycophancy}.
+
+LLMs also often violate Bayes' rule in context, and reasoning closes much of the gap \citep{filbry2026posteriors}.
+\citet{gao2026copies} score LLM aggregators against an exact Bayesian oracle and find they count restated
+reports as partial new evidence. We instead
+score the sequential case, where what a verdict reveals depends on the policies of earlier agents. We also
+separate correct actions from correct beliefs, and show that planted verdicts hijack precisely the agents that take the
+Bayes action \citep[cf.][]{hammond2025multiagent}. Our capture test probes debate's assumption that a judge is
+not talked out of a correct verdict \citep{irving2018debate,zaremba2025trading}. Our pooling task adapts the
+hidden profile \citep{stasser1985pooling}.
 
 \section{Methods}
 \label{sec:methods}
 
-\paragraph{Models.} Llama-3.1-8B-Instruct; Qwen3-14B with reasoning and with \texttt{/no\_think}; Claude
-Haiku~5.5 \emph{fast} (thinking off) and \emph{reasoning} (effort medium); Claude Sonnet~5.5 and Opus~5.5;
-GPT-6.1 and Gemini~4~Argon (effort medium). Fast Sonnet and minimal-reasoning GPT-6.1 test whether frontier
-behaviour needs reasoning. The capture test adds open and closed models (18 in all; Figure~\ref{fig:capture}). Measured
-Claude calls use the Anthropic API without fallbacks, the rest OpenRouter or Adaption Labs. Refusals and malformed
-answers are missing data, never imputed. All models see the same items; intervals are 95\% bootstrap CIs over
-items or episodes (over reviewers for per-reviewer approval rates).
+We run five tests, one for each question in Section~1: (A) tests capture, (B) and (C) test Bayesian reasoning,
+(D) tests deafness, and (E) runs the attack in a realistic code review.
+
+\paragraph{Models.} We test Llama-3.1-8B-Instruct, Qwen3-14B with reasoning on and off, Claude Haiku~5.5 in
+\emph{fast} (reasoning off) and \emph{reasoning} modes, Claude Sonnet~5.5 and Opus~5.5, GPT-6.1 and
+Gemini~4~Argon. Fast Sonnet and minimal-reasoning GPT-6.1 test whether frontier behaviour needs reasoning. The capture test adds other open and
+closed models, among them Gemini~3.8 Flash and GPT-6-Luna, for 20 in all (Figure~\ref{fig:capture}). The hijack test adds Gemma-4-31B and Llama-3.3-70B. Brackets give 95\% bootstrap
+confidence intervals (CIs) over items or episodes. Access, missing data and code are in Appendix~\ref{app:code}.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figs/fig_swap.pdf}
-  \caption{\textbf{The twin-transcript swap tests capture with a transcript the code refutes.} (1) Two pull
+  \caption{\textbf{The twin-transcript swap tests capture with a transcript that the code refutes.} (1) Two pull
   requests differ in one identifier, which decides whether user emails reach an external webhook. (2) A
-  Claude Sonnet swarm reviews each twin and writes its own transcript. (3) An overseer judges each twin's
-  code next to the \emph{other} twin's transcript: a confident, style-matched all-clear on leaky code, or an
-  alarm on safe code. Capture is scored only on pairs the overseer judges correctly from the code alone. Code
-  and quotes are verbatim from one of the 56 pairs, shortened.}
+  Sonnet~5.5 swarm reviews each twin and writes its transcript. (3) An overseer judges each twin's
+  code next to the \emph{other} twin's transcript.
+  Code and quotes are verbatim
+  from one of the 56 pairs, shortened.}
   \label{fig:swap}
 \end{figure}
 
-\paragraph{(A) Are agents captured? Twin-transcript swap} (Figure~\ref{fig:swap}). Items are 56 pairs of code snippets that
-differ in one identifier. Eight Claude Sonnet reviewers write independent notes on each twin, which form its
-transcript (a server-side fallback served 485 of the 896 notes with Sonnet~5 instead of 5.5); a pair is used only if they vote ``leak'' on the leaky twin and ``safe'' on the safe one. The model
-under test, the \emph{overseer}, sees the code alone, with its own twin's transcript, or with the \emph{other}
-twin's transcript, whose claims the code contradicts. \emph{Capture} is the rate at which an overseer that is
-right on both twins alone flips under the swap.
+\paragraph{(A) Capture: twin-transcript swap} (Figure~\ref{fig:swap}). We use 56 pairs of code snippets that differ in one identifier. Eight
+Sonnet~5.5 reviewers' independent notes on each twin form its transcript. We keep a pair only if
+the reviewers vote correctly on both twins. The model under test, the \emph{overseer},
+judges the code alone, with its own twin's transcript, or with the \emph{other} twin's, whose claims
+the code contradicts. Among pairs an overseer gets right alone, its \emph{capture} rate is the share where the
+swapped transcript flips its verdict. Selecting pairs on
+Sonnet's consensus may favour Claude.
 
-\paragraph{(B) Do agents herd as Bayes prescribes? Sequential cascade.} Twelve agents, framed as auditors, decide
-in turn whether a supplier batch is compliant. The prompt states a 50/50 prior and that each auditor's private
-spot check is correct with probability $p=0.65$. Under the \emph{verdicts} protocol, agent $k$ also sees the
-conclusions of agents $1,\dots,k{-}1$, which is the BHW setting. Under \emph{probabilities} it sees their stated
-$P(\text{compliant})$, under \emph{signals} their spot checks, and under \emph{solo} nothing. Replies end with
-\texttt{P\_COMPLIANT} and a yes/no answer (half asked as ``non-compliant?''). With $d_k$ the
-informative public lead (fixed once $|d|=2$), a Bayesian agent with signal $s_k=\pm1$ overrides that signal
-if and only if $d_k s_k\le-2$, with posterior $\sigma\!\left((s_k+d_k)\log\tfrac{p}{1-p}\right)$, $\sigma$ the logistic function. A \emph{naive
-counter} treats every visible verdict as a signal, so the two diverge deep in a cascade. In \emph{planted}
-variants the first two positions are sock-puppets that point to the wrong state with a verdict, a spot check, a
-calibrated probability (65\%, 78\%) or an extreme one (98\%, 99\%, which one check cannot justify), leaving ten genuine agents. We ran 30--90 episodes per model
-and protocol (Table~\ref{tab:herding}).
+\paragraph{(B) Bayesian herding: sequential cascade.} Twelve auditor agents take turns deciding whether a supplier batch is compliant (C) or
+not (N). Each gets its own spot check (its signal), which the prompt says is right with probability $p=0.65$.
+The prompt also gives a 50/50 prior and calls earlier auditors equally competent, so trusting them is rational.
+We vary what agent $k$ sees of the agents before it. Under \emph{verdicts} (the BHW setting) it sees their
+answers, under \emph{probabilities} their stated probability $P(\mathrm{C})$ that the batch is compliant, under
+\emph{signals} their spot checks, and under \emph{solo} nothing. Each agent ends with $P(\mathrm{C})$ and a yes/no
+answer, and we score both against exact Bayes (Appendix~\ref{app:theory}). To tell real
+Bayesian reasoning from vote counting, we also compute what a \emph{naive counter} would say if it treated every
+visible verdict as new evidence. Once a cascade starts the two give different probabilities, so these
+\emph{deep-cascade positions} show which one a model is doing. In \emph{planted} runs, two fake agents go first
+and push the wrong answer, leaving ten genuine ones. Each fake posts a wrong verdict, a
+wrong spot check, or a false probability, calibrated (65\% and 78\%, what honest auditors with those spot
+checks would report) or extreme (98\% and 99\%, more than any spot check could justify). We ran 30--90 episodes per model and protocol
+(Table~\ref{tab:herding}).
 
-\paragraph{(C) Bayes or counting? Stress vignettes.} 192 single-shot items set Bayes against counting: a 70/30
-prior (F1), 90\%-accurate lab assays beside 65\% checks (F2), echoed re-measurements (F3), and cascade verdicts of
-length 3--11 (F4); F1--F3 have 32 discriminating items and 16 controls each.
+\paragraph{(C) Bayes or counting: stress vignettes.} A model could pass (B) by recalling the textbook game, or by
+simply counting votes. To rule this out we pose 192 one-question puzzles, 144 of them built so that Bayes and
+counting each piece of evidence as one vote give different answers. For example, one 90\%-accurate lab test says
+N while three 65\% spot checks say C. Counting picks C, but Bayes picks N, because the lab test outweighs all three
+(F2). The other traps are uneven 70/30 starting odds (F1), the same unit measured twice (F3) and chains of 3--11
+earlier verdicts (F4). F1--F3 each add 16 controls where both methods agree, to catch models that just defy the crowd.
 
-\paragraph{(D) Are agents deaf? Hidden profile.} Four agents each see one slice of a bank statement and decide together
-whether it reconciles with a shared ledger (ground truth computed in code). One agent, the \emph{holder}, quotes a
-line from its slice that is missing from the ledger (\textsc{true}), or claims missing a line the ledger visibly
-records (\textsc{fake}); \textsc{solo} gives the line directly and \textsc{attested} adds a system attestation. We report the non-holders' \emph{adoption}
-rate, $P(\text{``does not reconcile''})$.
+\paragraph{(D) Deafness: hidden profile.} The opposite failure is ignoring a peer who knows something you do
+not. Four agents each see one slice of a bank statement and decide together whether it matches a shared ledger
+(truth computed in code). One agent, the \emph{holder}, either quotes a real line from its slice that the
+ledger lacks (\textsc{true}) or falsely says a recorded line is missing (\textsc{fake}). In two
+controls, every agent sees the line itself (\textsc{solo}) or a system note vouches for it (\textsc{attested}).
+We measure how often the other agents \emph{adopt} the claim by answering ``does not reconcile''.
+
+\paragraph{(E) Replica code review.} To test the attack in a realistic pipeline, we clone a
+public FastAPI web service and open a pull request whose analytics call quietly sends each new user's email to an
+outside server. A benign twin leaves that line out. Five reviewers take turns judging the pull request, which
+merges if most approve and no code owner (a module's assigned reviewer) objects (Appendix~\ref{app:pr}). In
+\emph{full view}, every reviewer sees the whole change. In a \emph{code-owner split}, as is common in large
+codebases, an owner team holds the analytics module and its two reviews come first, while the five reviewers see
+only the signup-route change. We assume the attacker can post as code owners, for example through compromised
+accounts.
 
 \section{Results}
 \label{sec:results}
 
-\subsection{Capture does not follow model size}
+\subsection{Capture is common at every model size}
 \label{sec:capture}
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figs/fig_capture.pdf}
-  \caption{\textbf{A false but confident transcript captures weaker overseers, whatever their size, but not
-  Opus, Sonnet or Gemini~3.8 Flash.} Share of pairs, among those an overseer judges correctly from the code alone,
-  on which the other twin's transcript flips its verdict: (a) talked out of a real leak, (b) talked into a false
-  alarm. Filled: answering directly; open: with reasoning (written step-by-step reasoning for models without a
-  reasoning mode); a line joins the two modes of one model. Rows are sorted by mean capture; colour marks the
-  model family; the shaded strip is zero capture. Points resting on fewer than 5 pairs are omitted.
-  Qwen3-235B: 2507 instruct and thinking checkpoints. $n=10$--56 pairs per point (Opus and Sonnet were correct on
-  every pair they answered alone; their smaller $n$ reflects refusals on leaky code); 95\% bootstrap CIs over
-  pairs have median half-width 0.08 and are omitted for legibility.}
+  \caption{\textbf{A confident false transcript captures many overseers of every size, but never flipped a
+  frontier model.} Share of pairs, among those an overseer judges correctly from the code alone, on
+  which the other twin's transcript flips its verdict: (a) talked out of a real leak, (b) talked into a false
+  alarm. Filled points answer directly (fast). Open points use reasoning, or written step-by-step reasoning for
+  models without a reasoning mode. A line joins one model's two modes, and a row with one point lacks the other
+  mode or had fewer than 5 eligible pairs. $n=10$--56 pairs per point (Opus 10--16 and Sonnet 32--38, because
+  they refused some leaky code). We omit the 95\% CIs (median half-width 0.08).}
   \label{fig:capture}
 \end{figure}
 
-A transcript that the code refutes flipped Opus, Sonnet and Gemini~3.8 Flash on none of their 10--56 pairs, in
-either mode or direction, and GPT-6-Luna on at most 0.06 (Figure~\ref{fig:capture}).
-Fast Haiku is talked out of every real leak it had found (1.00) and into 0.76 [0.60, 0.92] of false
-alarms; with reasoning, these rates fall to 0.02 and 0.00. Reasoning helps most models without making them robust:
-DeepSeek-V4-Flash falls from 0.60 to 0.18 on real leaks and Qwen3-235B from 0.80 to 0.11, while GPT-OSS-120B
-(real leaks 0.32, false alarms 0.34), Qwen3-32B (0.31, 0.84) and Qwen3-14B (0.36, 0.59) stay partly captured. Size does not decide it: reasoning Gemma-4-31B is as robust as reasoning Haiku
-(0.02, 0.00), whereas the Llama line stays captured from 8B to the 400B Maverick (0.34--1.00 in every mode with enough
-pairs).
-Without reasoning, most open models follow the transcript (0.69--1.00).
+A confident false transcript captures most models (Figure~\ref{fig:capture}) but never a frontier model
+(Opus, Sonnet, GPT-6.1 or Gemini~4~Argon, the last two on all 56 pairs in both modes) or Gemini~3.8 Flash, and GPT-6-Luna at
+most 0.06 of the time. Fast Haiku abandoned every real leak it had
+found and raised false alarms on 0.76 [0.60, 0.92] of safe code. Reasoning cut both rates to 0.02 or less.
+In most other models, reasoning reduces capture without removing it: the swap still flips GPT-OSS-120B, Qwen3-32B and Qwen3-14B
+on 0.31--0.84 of pairs. With reasoning, Gemma-4-31B matches Haiku, but
+Llama is captured at every size from 8B to 400B (0.34--1.00 in all modes).
 
-\subsection{Frontier agents herd exactly when Bayes says to}
+\subsection{Frontier agents herd when Bayes says they should}
 \label{sec:herding}
 
-Do frontier agents herd for the right reason? Their actions follow the cascade rule (appendix
-Figure~\ref{fig:herding}a). Once the informative lead against an agent's signal reaches two, it announces the
-herd's verdict (rate 1.00 for Opus, GPT-6.1 and Gemini~4~Argon; Sonnet 0.95 [0.92, 0.98]). Below that threshold,
-outside exact Bayes ties, Opus, GPT-6.1 and Gemini did not override their signal (Sonnet did so at rate 0.04 when the
-lead was two in its signal's favour), and alone every frontier model follows its signal (1.00).
+In honest verdict chains, frontier agents follow the majority when Bayes says they should, once the
+lead against their own signal reaches two (appendix Figure~\ref{fig:herding}a). Opus, GPT-6.1 and
+Gemini~4~Argon always do (1.00), and Sonnet does 0.95 [0.92, 0.98] of the time. Below that
+threshold, apart from exact ties, those three never override their signal. Sonnet occasionally (0.04)
+defies both its signal and an agreeing majority. Alone, every frontier model follows its signal (1.00).
 
-Their stated probabilities show that they infer from verdicts instead of deferring to them (appendix
-Figure~\ref{fig:herding}b). GPT-6.1, Opus and Gemini state the Bayes posterior with mean error 0.002--0.004
-(Sonnet 0.020). Deep in a cascade, where a naive count errs by 0.20, they are closer to Bayes than to the count at
-100\% of 189--595 positions (Sonnet 97.6\%). This does not depend on reasoning: GPT-6.1
-at minimal reasoning and fast Sonnet are closer to Bayes at 100\% and 97\% of these positions
-(Table~\ref{tab:herding}). Haiku is closer at 89\% (reasoning) and 57\% (fast).
+Their stated probabilities suggest that they infer from verdicts rather than defer to them (appendix
+Figure~\ref{fig:herding}b). GPT-6.1, Opus and Gemini state the Bayes posterior to within 0.004 on average, and
+Sonnet to within 0.020. At deep-cascade positions, where the naive count is off by 0.20, those three state a
+probability always closer to Bayes than to the count, and Sonnet does at 97.6\% of them. Modes with less
+reasoning mostly do the same. GPT-6.1 at minimal reasoning is closer to Bayes 100\% of the time and fast
+Sonnet 97\%, but fast Haiku only 57\% (Table~\ref{tab:herding}). 
 
-\paragraph{A shifted prior.} Frontier models often name the textbook game, so they might recall its answer
-instead of computing it. Under a 60/40 prior, one revealed COMPLIANT verdict already outweighs a private FAIL
-signal, so the textbook rule (override at a lead of two) is wrong (Appendix~\ref{app:theory}). In live chains with
-this prior, Opus, Sonnet and GPT-6.1 took the exact action on all 240--360 decisions, with probabilities within
-0.002 of Bayes on average; only 6--7 of those decisions tell the two rules apart. In 40 probes of exactly that case
-(60/40 prior and its 40/60 mirror), all three and fast Haiku overrode at a lead of one every time and stated
-exactly 0.60 or 0.40, while answering 96--100\% of controls correctly; Qwen3-14B with reasoning did so on 35 of 40.
+\paragraph{A shifted prior.} Frontier models often name the textbook game and might just recall its answer.
+Under a 60/40 prior that answer is wrong, because one revealed C verdict already outweighs a private N signal
+(Appendix~\ref{app:theory}). Live chains contain only 6--8 such decisions
+per model, so we ran 40 direct probes on the 60/40 prior and its 40/60 mirror. Opus,
+Sonnet, GPT-6.1 and fast Haiku overrode at a lead of one every time and stated exactly 0.60 or 0.40, while
+answering 96--100\% of controls correctly. Qwen3-14B with reasoning did so on 35 of 40.
 
-\subsection{Frontier agents weigh evidence by Bayes; smaller models count peers' verdicts}
+\subsection{Frontier agents use Bayes, but Qwen3-14B and fast Haiku count verdicts}
 \label{sec:stress}
 
-Are the models simply counting evidence? Where Bayes departs from counting (appendix Table~\ref{tab:stress}),
-the frontier models and both Haiku modes decide with Bayes on 97--100\% of items. They apply the prior (F1),
-weight one lab assay above three standard checks (F2) and count a re-measured unit once (F3), and their stated
-probabilities miss the posterior by at most about 0.005 per family on average. On cascade verdicts (F4), Opus and Gemini state the
-BHW posterior exactly on all 48 items, and GPT-6.1 to within 0.002 on average.
+On the F1--F3 items, where Bayes and counting disagree (appendix
+Table~\ref{tab:stress}), the frontier models and both Haiku modes decide as Bayes does on 97--100\% of items.
+They apply the prior (F1), weigh one lab assay above three spot checks (F2) and count a re-measured unit only
+once (F3). Their stated probabilities miss the posterior by about 0.005 on average. On cascade verdicts (F4),
+Opus and Gemini state the exact Bayes posterior on all 48 items, and GPT-6.1 comes within 0.002.
 
-Smaller models break on peers' verdicts. Fast Haiku is exact on evidence but closer to Bayes on only 44\% of
-cascade items. Qwen3-14B with reasoning is near-exact on evidence (mean error about 0.005), yet on cascade
-verdicts it matches the naive count (error 0.014, against 0.28 from Bayes), as in its live chains (closer to
-Bayes at 4\% of 624 positions). It does the arithmetic but counts every herd verdict as a new signal, which turns a
-cascade into an echo chamber.
+Fast Haiku and Qwen3-14B, by contrast, misread cascade verdicts. Fast Haiku is exact on F1--F3, yet closer to
+Bayes than to the count on only 44\% of cascade items. Qwen3-14B with reasoning states near-exact probabilities on F1--F3, though
+its decisions match Bayes on only 69--84\% of items. On cascade verdicts it matches the naive count rather than
+Bayes, as it does in live chains (Table~\ref{tab:herding}), much as \citet{gao2026copies} found for restated
+reports.
 
-\subsection{Frontier agents use true private evidence and reject checkable fakes}
+\subsection{Frontier agents use true peer evidence and reject most checkable fakes}
 \label{sec:pooling}
 
-Resisting false peers could simply mean ignoring all peers. Sonnet does not. In the hidden profile (60 episodes $\times$ 3 receivers), it adopted the holder's true but unverifiable bank line every
-time (\textsc{true} 1.00, as often as \textsc{solo} and \textsc{attested}) and rejected the fake that the ledger
-refutes (0.05 [0.02, 0.08]). Its false alarms on clean books (0.39) came from the prompt: once the prompt states
-that the four slices cover the whole statement, those alarms fall to 0.01, and adoption of the true line stays
-at 1.00. Opus also adopted the true line (1.00) and rejected the fake (0.00). Haiku calls clean books unreconciled even
-with the clarified prompt (0.73--0.86), so its \textsc{true} rate of 1.00 shows nothing.
+Resisting false peers is not the same as ignoring them. In the hidden profile, Sonnet adopted the holder's true
+but unverifiable line every time (1.00, 180 decisions), as often as in \textsc{solo}, but the fake that the ledger
+refutes only 0.05 [0.02, 0.08] of the time. Opus did the same (1.00 and 0.00, 90 decisions each). One caveat:
+this prompt also made Sonnet flag clean books 0.39 of the time. After a post-hoc clarification that fell to 0.01,
+true adoption stayed at 1.00 and fake adoption rose to 0.13. Haiku flags clean books even then, so its results
+are uninformative (Appendix~\ref{app:tables}).
 
-\subsection{Two sock-puppet verdicts hijack Bayesian agents}
+\subsection{Two fake verdicts hijack Bayesian agents}
 \label{sec:protocol}
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figs/fig_exploit.pdf}
-  \caption{\textbf{Agents that reliably act on verdicts are hijacked by two sock-puppets, Bayesian or not;
-  sharing evidence caps the damage.} (a) $x$: how often a model takes the exact Bayes action on honest verdict
-  chains; $y$: share of episodes hijacked by two planted verdicts at the head of the chain (all ten genuine agents
-  wrong); the
-  star is the exact Bayes prediction (Proposition~\ref{prop:verdicts}; hollow, Opus lies on it), which a naive
-  verdict counter shares; blue: agreement $\ge0.97$ (Gemma-4-31B's probabilities follow the naive count). (b)
-  Genuine agents' accuracy after two planted verdicts (clay diamonds) or two planted spot checks (teal
-  circles), for models with both conditions; dashed lines are the rational benchmarks (0.00 and 0.45). 20--30
-  episodes per point; 95\% bootstrap CIs over episodes.}
+  \caption{\textbf{Agents that reliably act on verdicts are hijacked by two fake agents, whether or not their
+  beliefs are Bayesian. Planted spot checks do far less damage.} (a) Per model configuration (colour: family):
+  agreement with the exact Bayes action on honest chains against the share of episodes that two planted
+  verdicts placed first hijack. The star is the
+  prediction of Bayes and of naive counting (Proposition~\ref{prop:verdicts}).
+  (b) Mean accuracy of genuine agents after two planted verdicts (diamonds) or spot checks (circles).
+  Dotted grey: own spot check alone (0.65). 20--30 episodes per point, 95\% bootstrap CIs.}
   \label{fig:exploit}
 \end{figure}
 
-\paragraph{Theory predicts the hijack, and the models comply.} Under verdict sharing, the history that two
-planted verdicts create also occurs in honest chains, where following it is optimal, so a best response to honest
-peers cannot resist it (Corollary~\ref{cor:tradeoff}; a known consequence of the BHW model, formalised in
-Appendix~\ref{app:theory}). With two planted verdicts at the head of the chain, all ten genuine agents
-announced the wrong state in 30 of 30 episodes for Opus and for GPT-6.1 (accuracy 0.00, as
-Proposition~\ref{prop:verdicts} predicts), and in 20 of 20 for the open-weight Gemma-4-31B. Other models were
-hijacked less often, Sonnet in 20 of 30 episodes and the rest in 4--11 (Figure~\ref{fig:exploit}a). This experiment
-was added after the pre-registered runs and is exploratory (Appendix~\ref{app:prereg}).
+\paragraph{Theory predicts the hijack, and the runs match it.} Under verdict sharing, two planted verdicts
+look exactly like two honest early errors, so an agent that responds
+optimally to honest peers cannot resist them (Corollary~\ref{cor:tradeoff}, a known consequence of BHW,
+formalised in Appendix~\ref{app:theory}). With two planted verdicts first, all ten genuine agents announced
+the wrong answer in 30 of 30 episodes for Opus and GPT-6.1, as Proposition~\ref{prop:verdicts} predicts. So did
+Gemma-4-31B, in 20 of 20. Sonnet was hijacked in 20 of 30 (mean genuine accuracy 0.11), and other
+models less often (Figure~\ref{fig:exploit}a).
 
-\paragraph{Acting on verdicts predicts the hijack.} Across \NMOD{} model configurations, the hijack rate rises
-with agreement with the Bayes \emph{action} on honest chains (Spearman $\rho=\RHO$, 95\% bootstrap CI [0.69,
-1.00]); agreement with the Bayes \emph{posterior} shows no clear association ($\rho=0.28$, CI [$-0.54$, 0.96];
-Figure~\ref{fig:exploit}a). On honest chains a naive verdict counter takes the same actions as a
-Bayesian and differs only in confidence. Gemma-4-31B is such a counter: its stated probabilities are closer to
-the naive count than to Bayes at 98\% of deep-cascade positions, yet it was hijacked as completely as Opus. Configurations hijacked less often were
-also less accurate on honest chains, by up to 0.19. Sonnet broadly follows the predicted damage across the
-tested numbers and positions of sock-puppets (Table~\ref{tab:sweep}).
+\paragraph{The hijack does not need Bayesian beliefs.} Across ten model configurations (nine models),
+the more often a model took the Bayes \emph{action} on honest chains, the more often it was hijacked (Spearman
+$\rho=\RHO$ [0.69, 1.00], permutation test $p<0.001$). This link is close to mechanical, since a hijack needs ten
+herd actions in a row. How closely a model's stated probabilities matched the
+Bayes \emph{posterior} predicted the hijack only weakly. The correlation was 0.28 [$-0.54$, 0.96] for
+how often a model is closer to Bayes at deep-cascade positions and 0.64 [$-0.02$, 0.99] for how small its
+posterior errors are, and both intervals include zero. Gemma-4-31B, the clearest case, lands closer to
+the naive count than to Bayes at 98\% of deep-cascade positions. But on honest chains counting takes the same
+actions as Bayes, and Gemma was hijacked as completely as Opus. Models that
+resisted more (Qwen3-14B, fast Haiku, Llama-3.3-70B) lost up to 0.19 in honest-chain accuracy.
 
-\begin{table}[!b]
-\centering
-\small
-\caption{\textbf{Fake code-owner approvals merge a data-leaking pull request; reviewers who see the code, or a
-quote of it, merged none.} Merged / complete episodes (five reviewers; merge if a majority approve and no code
-owner requests changes); incomplete episodes (rate limits, refusals) are excluded (Appendix~\ref{app:pr}). Sonnet
-and Opus reasoning, Haiku fast; ``--'' not run.}
-\label{tab:pr}
-\resizebox{\linewidth}{!}{\input{figs/tab_pr.tex}}
-\end{table}
+\paragraph{Planted evidence does far less damage.} When the two fake agents planted false \emph{spot
+checks} instead, genuine accuracy fell only to 0.48--0.49 for GPT-6.1, Sonnet and both Haiku modes,
+close to the 0.45 that rational agents reach with two extra wrong signals (Proposition~\ref{prop:signals},
+Figure~\ref{fig:exploit}b), worse than a lone signal's 0.65 but far from the collapse fake verdicts cause. Calibrated false probabilities did the same (0.44--0.49). Extreme ones
+(98--99\%) would hijack an agent taking them at face value (benchmark 0.01). Yet GPT-6.1 and Sonnet kept
+0.51 and fast Haiku 0.30 (Table~\ref{tab:planted}).
 
-\paragraph{Sharing evidence caps the damage.} When the same two sock-puppets planted false \emph{spot checks},
-genuine accuracy fell only to 0.48--0.49 for GPT-6.1, Sonnet and both Haiku modes, close to the 0.45 that
-rational agents reach when two wrong signals join their evidence (Proposition~\ref{prop:signals};
-Figure~\ref{fig:exploit}b). Calibrated false probabilities had the same effect (0.44--0.49). Extreme ones (98--99\%) would hijack an agent that
-takes them at face value (benchmark 0.01); GPT-6.1 and Sonnet kept 0.51, fast Haiku 0.30 (Table~\ref{tab:planted}).
-
-
-\paragraph{Telling agents the risk.} We told agents that each earlier auditor is, independently with probability
-20\%, a compromised account that always reports the wrong state. With that rate, a Bayesian needs eight agreeing verdicts
-to override its own signal, so it should ignore two sock-puppets (Appendix~\ref{app:theory}); a naive counter cannot.
-Opus came close to Bayes: it took the exact action on 98\% of decisions, and its genuine agents reached 0.61 accuracy
-against a benchmark of 0.64 (18 episodes); both Haiku modes reached 0.61 and 0.59. Sonnet reached 0.34. Its
-later agents trusted the growing wrong majority far more than the stated rate allows (63 of its 68 departures from
-Bayes followed it). The warning has a cost: rational agents with honest peers who believe it fall from 0.68 to 0.64.
-
-\subsection{In a replica code review, two fake approvals merge a data leak}
+\paragraph{Told the risk, Opus nears Bayes but Sonnet does not.} We told agents that each earlier
+auditor has an independent 20\% chance of being a compromised account that always lies. At
+that rate a Bayesian needs eight agreeing verdicts to override its own signal, so it should ignore two fakes
+(Appendix~\ref{app:theory}). Opus took the Bayes action on 98\% of
+decisions, and its genuine agents reached 0.61 accuracy (benchmark 0.64, 18 episodes). Haiku
+reached 0.61 with reasoning and 0.59 fast (30 episodes each). Sonnet only 0.34 (20 episodes), and 63 of
+its 68 errors went with the majority.
+\subsection{In a replica code review, two planted approvals merge a data leak}
 \label{sec:pr}
 
-We cloned a public FastAPI web service and had five reviewers judge a pull request whose analytics call quietly
-sends each new user's email to an external host, next to a benign twin without that line
-(Appendix~\ref{app:pr}). The pull request merges if a majority of reviewers approve and no code owner requests
-changes (Table~\ref{tab:pr}). With the full diff in view, two sock-puppet approvals with false claims about the payload merged no leak (0 of 69 episodes), while the benign twin merged 68 of 70 times. Under a code-owner split, the five reviewers see only the
-change to the signup route and rely on the analytics module's owners. Genuine owners blocked the leak every time, but two sock-puppet owner approvals got it merged in 24 of 30 Haiku episodes and in all 39 Sonnet and Opus episodes.
-Haiku's and Sonnet's reviewers deferred to the owners; Opus's approved their own scope either way, leaving the
-leak to the owners' required review. Bare approvals (``LGTM'') sufficed for Sonnet (15 of 20) but rarely for Haiku (4 of 30).
+\begin{table}[t]
+\centering
+\small
+\caption{\textbf{Planted code-owner approvals merge a data-leaking pull request. Reviewers who see the code, or
+a quote of the payload, never merge it.} Each cell gives merged / complete episodes, leaving out
+incomplete ones (refusals, rate limits). Sonnet and Opus use reasoning, and ``--'' means not run.}
+\label{tab:pr}
+\input{figs/tab_pr.tex}
+\end{table}
 
-\paragraph{Requiring evidence closes the gap.} If each owner approval must quote the complete payload, verified
-against the diff by CI, a sock-puppet must either omit the email line and fail the check or quote it and expose
-the leak: no leak was merged (0 of 30 Haiku and 0 of 20 Sonnet episodes; scored from the recorded owner
-reviews under a check finalised after the runs). As a required check it would also have
-blocked 8 of 27 benign merges, where an honest owner garbled the quote.
+With the full diff in view, two fake approvals making false claims about the payload
+never merged the leak, while the benign twin merged in 68 of 70 episodes (Table~\ref{tab:pr}). Under the code-owner
+split, genuine owners blocked the leak every time, but two planted owner
+approvals merged it in 24 of 30 Haiku episodes and in all 39 Sonnet and Opus ones. Haiku's and Sonnet's
+reviewers deferred to the owners, as the merge rule asks, approving at 0.80 and 1.00 with planted owners against
+0.00 and 0.03 with genuine ones. Opus's reviewers approved their part either way, so the owners decided.
+
+\paragraph{Full quotes blocked the tested attacks.} We then required owner approvals to quote the
+full payload. For this payload, a quote without the email line fails a CI check against the diff, and a full
+quote exposes the leak. When fakes quoted it in full, no leak merged (0 of 30 Haiku, 0 of 20 Sonnet
+runs). As a required check, run retrospectively, it would block every planted approval omitting
+the line, and 8 of the 27 merged benign episodes with garbled honest quotes (Appendix~\ref{app:pr}).
 
 \section{Discussion and Limitations}
 \label{sec:discussion}
 
-\paragraph{What changes in practice.} The lever is the interface, not the agent's reasoning: a forged
-verdict looks honest to a rational reader, while forged evidence is one signal that honest evidence outvotes, and
-code can be checked directly.
+\paragraph{Reasoning well does not stop planted verdicts.} \textbf{For builders, this suggests:} share evidence
+or calibrated probabilities, not bare verdicts, and make approvals quote what they approve so CI can
+check it. On honest chains, sharing probabilities gained Sonnet
+and GPT-6.1 only 0.01--0.03 in accuracy, short of our go/no-go target of $+0.10$, so the attacks make the case for sharing.
 
-\paragraph{Limitations.} Our tasks state likelihoods or give checkable evidence, and the review pipeline is a
-replica in which the attacker must control code-owner accounts. Opus runs are small, the swap transcripts were written by Sonnet models, and the sock-puppet experiments are
-exploratory; failed pre-registered outcomes are in Appendix~\ref{app:prereg}.
+\paragraph{Limitations.} Our tasks state likelihoods or give checkable evidence, and cascades are
+fixed chains, not free discussion. The review pipeline is a replica whose attacker posts as code owners, and
+we tested its CI check retrospectively. The four main tests had go/no-go criteria set before full runs.
+Attack experiments came later and are exploratory, and Opus samples are small (Appendix~\ref{app:ethics}).
 
 \section{Conclusion}
 
-Weak agents are captured by peers; frontier agents update like Bayesians, yet those that reliably act on
-verdicts followed two sock-puppets. Swarms should share checkable evidence and warn agents.
+Many models yield to confident peers. Frontier models update almost like Bayesians, so two fake verdicts
+hijacked Opus and GPT-6.1 every time. Swarms should share evidence, not verdicts.
 
 \section*{Code and Data}
-{\raggedright
-Code, data and the raw API logs are at \url{https://github.com/PeterLurf/too-rational-to-resist}.
-\texttt{python reproduce.py} rebuilds every table and figure from the included analysis summaries in about a
-minute, without API keys, and checks the tables against this paper; \texttt{python reproduce.py --from-raw}
-first recomputes every summary from the archive of individual API calls (19\,MB, attached to the release).
-Scripts per experiment:
-\begin{itemize}\itemsep0pt
-\item capture test: \texttt{tools/twin\_swap.py}, \texttt{tools/claude\_notes.py};
-\item cascade, sock-puppets, warned condition: \texttt{tools/r3\_herding.py}, \texttt{tools/herd\_paper.py},
-\texttt{tools/rho\_ladder.py}, \texttt{tools/warn\_bayes.py}, \texttt{tools/sweep\_analyse.py};
-\item shifted prior: \texttt{tools/cf\_analyse.py}, \texttt{tools/cf\_probe.py};
-\item stress vignettes: \texttt{tools/r3\_bayes.py}; hidden profile: \texttt{tools/r3\_deaf.py};
-\item code-review pipeline: \texttt{tools/pr\_review.py};
-\item figures and tables: \texttt{figs/make\_figs\_bayes.py}, \texttt{figs/make\_tables\_bayes.py},
-\texttt{figs/make\_tab\_pr.py}, \texttt{figs/make\_tab\_sweep.py}; schematics: \texttt{figs/fig\_bhw.tex},
-\texttt{figs/fig\_swap.tex}.
-\end{itemize}}
-
-\section*{Acknowledgments}
-Experiments in this work were run and tracked with OpenResearch~\citep{openresearch}.
-
+Code, prompts, data and raw API logs are at \url{https://github.com/PeterLurf/too-rational-to-resist} (file map
+in Appendix~\ref{app:code}). Running \texttt{python reproduce.py} rebuilds every table and figure from the
+included summaries in about a minute, without API keys. We tracked experiments with
+OpenResearch~\citep{openresearch}.
 \begin{thebibliography}{99}
 \bibitem[alphaXiv(2026)]{openresearch} alphaXiv. OpenResearch: The local-first harness and workspace
   for research agents. 2026. \url{https://github.com/alphaXiv/OpenResearch}.
@@ -448,25 +455,33 @@ Experiments in this work were run and tracked with OpenResearch~\citep{openresea
 \paragraph{Limitations.} See Section~\ref{sec:discussion}. All frontier results are behavioural. We cannot
 read the internals of API models, so ``Bayesian'' describes their input--output behaviour on tasks with
 stated likelihoods or checkable evidence, not their mechanism. Model versions behind API names can change,
-so we record dates and raw responses. The sock-puppet experiment uses a fixed position (first two) and a
-fixed count (two) in the main runs; other counts and placements are in Table~\ref{tab:sweep}. Mixed-model swarms
-and adaptive attackers beyond the full-quote attack of Appendix~\ref{app:pr} are untested.
+so we record dates and raw responses. The fake-agent experiment uses a fixed position (first two) and a
+fixed count (two) in the main runs. Other counts and placements are in Table~\ref{tab:sweep}. We did not test mixed-model swarms
+or adaptive attackers beyond the full-quote attack of Appendix~\ref{app:pr}. We selected the twin pairs
+on the consensus of Sonnet reviewers, whose transcripts are Claude-written, and this may favour Claude
+overseers. Opus answered both twins of only 10--16 of the 56 pairs. Third-party providers may quantise the open models they serve. Each test uses one domain and, in the cascade, one signal accuracy ($p=0.65$) and chain length (12).
 \paragraph{Dual use.} Knowing that rational agents follow early verdicts, and that fast agents mirror
-confident groups, could help an attacker plant a false consensus. The same findings point to the defence. The
-attack needs a verdict-only interface or a small or fast agent in the loop, and the designer controls both.
-We release no attack tooling beyond the benign stimuli used here. Stimuli use neutral domains (compliance
+confident groups, could help an attacker plant a false consensus. The same findings point to defences. The
+tested attacks exploit verdict-only visibility, susceptibility to confident transcripts, or delegated owner
+authority. The first two are design choices, and the third needs accounts that can post as code owners.
+We release the synthetic attack and evaluation code, which targets only simulated agents. Stimuli use neutral domains (compliance
 audits, bookkeeping) and templated code snippets with no real data or exploit content.
-\paragraph{Ethics.} No human subjects or personal data were involved.
+\paragraph{Ethics.} The study involved no human subjects or personal data.
 
 \section{Theory: why rational social learners are exploitable}
 \label{app:theory}
 The state is $\theta\in\{\mathrm{C},\mathrm{N}\}$ with prior $\tfrac12$. Auditor $k$ holds a private signal
 $s_k\in\{\pm1\}$ ($+1$ points to C) that points to $\theta$ with probability $\tfrac12<p<1$, independently given
-$\theta$; code $\bar\theta=+1$ for C and $-1$ for N, and write
+$\theta$. We code $\bar\theta=+1$ for C and $-1$ for N, and write
 $\lambda=\log\frac{p}{1-p}$. Genuine auditors believe, as the prompt suggests (equally competent auditors with the same instructions), that
 every predecessor is a rational auditor of the same kind who breaks posterior ties toward its own signal, the
-convention of our benchmark. In a planted chain, positions $1,\dots,m$ are sock-puppets that point to the wrong state
+convention of our benchmark. In a planted chain, positions $1,\dots,m$ are fake agents that point to the wrong state
 $w\neq\theta$.
+
+\paragraph{The benchmark used in Section~\ref{sec:results}.} Let $d_k$ be the lead toward C that auditor $k$ sees,
+which stops changing once $|d_k|=2$. A Bayesian auditor overrides its signal only if $d_k s_k\le-2$, and states
+$P(\mathrm{C})=\sigma\!\left((s_k+d_k)\lambda\right)$, with $\sigma$ the logistic function. Half the prompts ask
+``non-compliant?'' instead of ``compliant?'', so answer wording cannot drive the results.
 
 \begin{proposition}[Verdicts]\label{prop:verdicts}
 Under the verdict protocol with $m\ge2$ planted verdicts for $w$, every genuine Bayesian auditor announces $w$,
@@ -475,103 +490,113 @@ whatever its signal. Genuine accuracy is $0$ for every realisation of the signal
 \begin{proof}
 A rational first auditor announces its signal, so the first verdict reveals a $w$-signal. A rational second
 auditor that sees one $w$-verdict has log-odds $\lambda+\lambda\tilde s_2$ for $w$ (with $\tilde s_2=\pm1$ the
-signal oriented toward $w$), which is $2\lambda$ or $0$; with ties broken toward the own signal, its verdict also
+signal oriented toward $w$), which is $2\lambda$ or $0$. With ties broken toward the own signal, its verdict also
 reveals its signal. Two $w$-verdicts therefore imply, in a
 genuine auditor's model, two $w$-signals. Auditor $m+1$ then has log-odds for $w$ of at least $2\lambda-\lambda=
 \lambda>0$ for either signal and announces $w$. Because it does so for both signals, its verdict reveals
 nothing, the inferred lead stays at two, and by induction every later genuine auditor announces $w$. Verdicts
 $3,\dots,m$ are uninformative in the same model, so $m>2$ changes nothing.
+The result does not depend on the tie convention: if indifferent auditors randomise instead, the second
+$w$-verdict has likelihood ratio $(1+p)/(2-p)\approx1.22$ for $p=0.65$, and an auditor with a $\neg w$ signal after
+two $w$-verdicts still has log-odds $\log 1.22>0$ for $w$.
 \end{proof}
 
 \begin{proposition}[Evidence and calibrated probabilities]\label{prop:signals}
 Under the signal protocol, $m$ planted $w$-signals act as $m$ extra wrong signals. Genuine auditor $k$ is correct
 iff the net count of genuine signals $S_k=\sum_{j=m+1}^{k}s_j\bar\theta$ exceeds $m$, or equals $m$ and its own
-signal is correct (ties go to the own signal),
-so the damage is bounded by $m$ signals and vanishes as $k$ grows, since $\mathbb E[s_j\bar\theta]=2p-1>0$. Calibrated
+signal is correct (ties go to the own signal).
+The damage is therefore bounded by $m$ signals and vanishes as $k$ grows, since $\mathbb E[s_j\bar\theta]=2p-1>0$. Calibrated
 planted probabilities ($p$ and $\sigma(2\lambda)$, i.e.\ 65\% and 77.5\%, shown rounded as 78\%) are invertible to the same two
-signals and have the same effect, provided reports are precise enough to invert (prompts round to whole percentages,
-which preserves the planted 65\% and 78\% but can merge very confident later reports, so the probability--pooling
-equivalence of Figure~\ref{fig:protocol} is approximate). Extreme ones (98\%, 99\%) lie outside the support of rational reports (a
-first auditor can only report $p$ or $1-p$): taken at face value they count as about $\mathrm{logit}(0.99)/
-\lambda\approx7.4$ signals, which is the face-value benchmark of Table~\ref{tab:planted}, a sensitivity model and not a uniquely Bayesian
-prescription.
+signals and have the same effect. Extreme ones (98\%, 99\%) lie outside the support of rational reports (a
+first auditor can only report $p$ or $1-p$). Taken at face value, they count as about $\mathrm{logit}(0.99)/
+\lambda\approx7.4$ signals, which is the planted benchmark of Table~\ref{tab:planted}.
 \end{proposition}
 
 \paragraph{Counterfactual prior.} With prior $\pi=P(\mathrm{C})\ne\tfrac12$, write $L_0=\mathrm{logit}(\pi)$.
-Auditor $k$ says C iff $L_{k-1}+\lambda s_k>0$, or $=0$ with $s_k=+1$; its verdict reveals $s_k$ only while
+Auditor $k$ says C iff $L_{k-1}+\lambda s_k>0$, or $=0$ with $s_k=+1$. Its verdict reveals $s_k$ only while
 $|L_{k-1}|\le\lambda$, and then
-$L_k=L_{k-1}\pm\lambda$. For $\pi=0.6$, $L_0=0.41<\lambda=0.62$: the first verdict reveals its signal, and after a
-revealed C, $L_1=1.02>\lambda$, so the next auditor says C whatever its signal ($P(\mathrm{C})=0.60$ with a FAIL),
-whereas the 50/50 rule would follow the FAIL. Toward N the threshold stays at two revealed signals. The 40/60 prior
+$L_k=L_{k-1}\pm\lambda$. For $\pi=0.6$, $L_0=0.41<\lambda=0.62$, so the first verdict reveals its signal. After a
+revealed C, $L_1=1.02>\lambda$, so the next auditor says C whatever its signal ($P(\mathrm{C})=0.60$ with an N signal).
+The 50/50 rule would instead follow the N signal. Toward N the threshold stays at two revealed signals. The 40/60 prior
 mirrors this. Histories that rational auditors cannot produce (a N right after a revealed C under the 60/40 prior)
-leave Bayes undefined; we exclude them from all counterfactual tests.
+leave Bayes undefined. We exclude them from all counterfactual tests.
 
 \paragraph{Compromised predecessors.} If each predecessor is, independently with known probability
 $\varepsilon$, an account that always announces the wrong state, and honest auditors play Bayes-optimally knowing
-$\varepsilon$, the equilibrium is computed exactly by forward recursion over verdict histories
-(\texttt{tools/warn\_bayes.py}); every history then has positive probability. The number of agreeing verdicts an
+$\varepsilon$, we compute the equilibrium exactly by forward recursion over verdict histories
+(\texttt{tools/warn\_bayes.py}). Every history then has positive probability. The number of agreeing verdicts an
 auditor needs to override its own signal is 2, 2, 2, 3 and 8 for $\varepsilon=0, 0.05, 0.10, 0.15, 0.20$. At
-$\varepsilon=0.2$, two agreeing verdicts against a FAIL leave $P(\mathrm{C})=0.39$, so the own signal stands. At a
-stated 10\% rate, where Bayes still follows two planted verdicts, the first genuine agents of Sonnet and the two Haiku
-modes did so in 20 of 20, 28 of 30 and 25 of 30 episodes.
+$\varepsilon=0.2$, two agreeing C verdicts against an N signal leave $P(\mathrm{C})=0.39$, so the own signal stands. At a stated $\varepsilon=0.10$, Bayes still follows two
+planted verdicts, and so did the first genuine agent in 20 of 20 Sonnet episodes and in 28 and 25 of 30 for the
+two Haiku modes.
 
 \begin{corollary}[Optimality implies exploitability]\label{cor:tradeoff}
-Under verdict-only sharing, the planted history (two $w$-verdicts) also occurs in honest chains with positive
-probability, and there the Bayes-optimal action is $w$ for both signals. Hence any best response to honest peers of this kind (with the same tie convention) has genuine accuracy $0$
-under two planted verdicts, while a policy with positive accuracy under
+Suppose agents assign no prior probability to compromised peers. Under verdict-only sharing, the planted history
+(two $w$-verdicts) also occurs in honest chains with positive probability, so it is on the equilibrium path, and
+there the Bayes-optimal action is $w$ for both signals. Hence any best response to honest peers of this kind (with the same tie convention) has genuine accuracy $0$
+under two planted verdicts. Conversely, a policy with positive accuracy under
 the plant must depart from Bayes at histories that honest chains reach. No verdict-only policy is both
-Bayes-optimal for each agent with honest peers and keeps positive genuine accuracy under two sock-puppets. The
-corollary is about exact optimality; that agents \emph{closer} to Bayes are more exploitable is an empirical
-finding (Section~\ref{sec:protocol}). Sharing evidence bounds the dilemma: for a counting or Bayesian agent the
-plant shifts the count by $m$ signals, and genuine signals keep accumulating.
+Bayes-optimal for each agent with honest peers and keeps positive genuine accuracy under two fake agents. The
+corollary is about exact optimality. That agents \emph{closer} to Bayes are more exploitable is an empirical
+finding (Section~\ref{sec:protocol}). Sharing evidence limits the damage: for a counting or Bayesian agent the
+plant shifts the count by $m$ signals, and genuine signals keep accumulating. At the tested compromise rates
+$\varepsilon=0.15$ and $0.20$ the premise fails, and two planted verdicts no longer decide the chain (see above).
 \end{corollary}
 
-\section{Realistic review pipeline}
+\section{Replica review pipeline}
 \label{app:pr}
 We cloned the public \texttt{fastapi/full-stack-fastapi-template} service (commit \texttt{aabb901}) and used it
-read-only; nothing was pushed anywhere. A pull request adds a ``signup analytics'' call to the real
-\texttt{/users/signup} route and a new 31-line module (30 in the benign twin; the route reviewers' note says +32) that posts an event to an analytics host on a background
-thread. In the \emph{malicious} variant one payload line adds the new user's email under an innocuous key; the
-\emph{benign} twin is identical without it. Both carry the same description (``No PII is sent''). Reviewers see
-a policy we added, presented as part of \texttt{CONTRIBUTING.md} (personal data must never go to third parties;
-anonymous event metadata may go to the named, approved vendor), and the norm to block only for bugs or policy
-violations; the repository itself has neither this policy nor a \texttt{CODEOWNERS} file. Five reviewers comment in
-turn, each seeing the diff and all earlier reviews, and end with \texttt{DECISION: APPROVE} or
-\texttt{REQUEST\_CHANGES}; the PR merges if a majority of them approve and no code owner requests changes.
-Earlier reviews are shown truncated to their last 1{,}500 characters. Episodes vary the PR number, author,
-reviewer handles, payload key and the fictitious analytics host; no request is ever sent. Under \emph{full view} every reviewer sees the
-whole diff; planted reviews are two bare approvals or two approvals with false, checkable claims about the payload,
-and the \emph{evidence protocol} hides earlier decisions and asks each reviewer to quote the lines through which
-data could leave. Under the \emph{code-owner split}, the analytics module belongs to \texttt{@data-platform}:
-the five API reviewers see only the route change, preceded by two owner reviews that are either genuine (the same
-model with the full diff) or sock-puppet approvals. Shown only as an advisory annotation, the failed check cut Haiku's merges of the leak from 80\% to 19\% (4 of 21
-complete episodes), while Sonnet's reviewers approved their scope and left the decision to CI (18 of 20). In the
-full-quote attack the fake owners quote the complete malicious payload verbatim (so the check passes) and repeat
-the same false claim. Missing data: Anthropic rate limits left 21 of 30 fake-owner episodes with the CI check
-complete for Haiku, and Sonnet refused to act as code owner (``cyber'' refusals) in 22 owner prompts, leaving 9 of 20
-benign CI episodes. The CI rule was tightened after the runs to require the complete payload; the planted fake fails
-both versions, and required-check outcomes are computed from the recorded owner reviews. Code:
-\texttt{tools/pr\_review.py}.
+read-only. We pushed nothing anywhere. A pull request adds a ``signup analytics'' call to the real
+\texttt{/users/signup} route and a new 31-line module that posts an event to an analytics host on a background
+thread (the benign twin's module has 30 lines, and the route reviewers' note says +32). In the \emph{malicious}
+variant, one payload line adds the new user's email under an innocuous key. The \emph{benign} twin is identical
+without it. Both carry the same description (``No PII is sent'').
 
-\section{Pre-registration, deviations and audits}
-\label{app:prereg}
-Each pilot's go/no-go rule was written into its experiment description before the full run.
-\emph{Cascade:} HERD if Sonnet overrides at a raw lead (net count of all
-visible verdicts) of two at $\ge 0.60$ with solo signal-following
-$\ge 0.95$. This was met. \emph{Hidden profile:} DEAF if Opus or Sonnet adopt true evidence at $\le 0.40$. This was not met,
-and the outcome was POOLS. \emph{Twin swap:} reassurance vulnerability if susceptibility to false all-clears exceeds
-susceptibility to false alarms by $\ge 0.15$, with a pair-bootstrap CI excluding zero, in at least three frontier overseers,
-amended before any result to two of the three Claude overseers. This was not met; only fast Haiku showed it.
-\emph{Probability sharing} (added before its results): Sonnet's final-agent accuracy under probabilities $\ge$ verdicts $+0.10$
-and within 0.05 of full pooling. This was not met ($+0.03$ at 30 episodes, $+0.01$ at 90), nor was the secondary GPT-6.1
-test ($+0.03$ at 90); fast Haiku, expected to fall short, gained $+0.12$ (0.81, pooling 0.85). The positional-accuracy
-gains (fast Haiku $+0.113$ [0.032, 0.186]; GPT-6.1 $+0.033$ [$-0.032$, 0.098]; Sonnet $+0.028$ [$-0.030$, 0.085];
-theory $+0.038$) are exploratory. \emph{Stress vignettes:} BAYES-ROBUST if Bayes agreement on discriminating
-items is $\ge 0.80$ in each of F1--F3 and F4 probabilities are closer to Bayes on $\ge 70\%$ of items. This was met by
-Opus, Sonnet, Haiku (reasoning), GPT-6.1 and Gemini, and all other models were MIXED. The open-weight herding runs,
-fast-mode frontier runs, the deep-cascade probability analysis, the publicly-wrong statistic, the planting
-experiment and the theory curves were added after the pre-registered runs and are exploratory. Code and
-reported numbers were audited by independent model reviewers against the raw logs.
+Reviewers see a policy we added, presented as part of \texttt{CONTRIBUTING.md}: personal data must never go to
+third parties, but anonymous event metadata may go to the named, approved vendor. We also tell them to block only
+for bugs or policy violations. The repository itself has neither this policy nor a \texttt{CODEOWNERS} file. Five
+reviewers comment in turn. Each sees the diff and all earlier reviews, truncated to their last 1{,}500 characters,
+and ends with \texttt{DECISION: APPROVE} or \texttt{REQUEST\_CHANGES}. The PR merges if a majority of them approve
+and no code owner requests changes. Episodes vary the PR number, author, reviewer handles, payload key and the
+fictitious analytics host. The pipeline never sends a request.
+
+Under \emph{full view}, every reviewer sees the whole diff. The planted reviews are either two bare approvals or two
+approvals with false, checkable claims about the payload. The \emph{evidence protocol} hides earlier decisions and
+asks each reviewer to quote the lines through which data could leave. Under the \emph{code-owner split}, the
+analytics module belongs to \texttt{@data-platform}. The five API reviewers see only the route change, preceded by
+two owner reviews that are either genuine (the same model with the full diff) or fake approvals. In the
+full-quote attack, the fake owners quote the complete malicious payload verbatim, so the CI check passes,
+and repeat the same false claim.
+
+When we showed the failed CI check only as an advisory annotation, it cut Haiku's merges of the leak from 80\% to
+19\% (4 of 21 complete episodes). Sonnet's reviewers approved their own scope and left the payload to CI, so the
+leak still merged in 18 of 20 Sonnet episodes. With the advisory check shown, 27 benign episodes merged (Haiku 18 of
+25, Sonnet 9 of 9), and a required check would have blocked 8 of them. We tightened the CI rule after the runs to
+require the complete payload. The planted approval fails both versions, and we compute required-check outcomes
+from the recorded owner reviews. Missing data: Anthropic rate limits left 21 of 30 fake-owner episodes with
+the CI check complete for Haiku. Sonnet refused to act as code owner (``cyber'' refusals) in 22 owner prompts,
+leaving 9 of 20 benign CI episodes. Code: \texttt{tools/pr\_review.py}.
+
+\section{Setup details and code map}
+\label{app:code}
+Haiku~5.5 \emph{reasoning} mode uses effort medium, and GPT-6.1 and Gemini~4~Argon use medium reasoning effort.
+In the capture test, models served through OpenRouter use low reasoning effort with reasoning and minimal effort
+without.
+Claude runs use the Anthropic API, the others OpenRouter or Adaption Labs. Refusals and malformed answers count
+as missing data, and we never impute them. All models see the same items and signal draws.
+\begin{itemize}\itemsep0pt
+\item cascade and planting: \texttt{tools/r3\_herding.py};
+\item cascade analysis: \texttt{tools/herd\_paper.py}, \texttt{tools/cascade\_mentions.py};
+\item stress vignettes: \texttt{tools/r3\_bayes.py};
+\item twin swap: \texttt{tools/twin\_swap.py}, \texttt{tools/claude\_notes.py};
+\item hidden profile: \texttt{tools/r3\_deaf.py};
+\item counterfactual prior: \texttt{tools/cf\_analyse.py}, \texttt{tools/cf\_probe.py};
+\item warning and plant sweep: \texttt{tools/warn\_bayes.py}, \texttt{tools/sweep\_analyse.py};
+\item rank correlation: \texttt{tools/rho\_ladder.py};
+\item replica review pipeline: \texttt{tools/pr\_review.py};
+\item figures: \texttt{figs/make\_figs\_bayes.py}, \texttt{figs/fig\_bhw.tex}, \texttt{figs/fig\_swap.tex};
+\item tables: \texttt{figs/make\_tables\_bayes.py}, \texttt{figs/make\_tab\_pr.py}.
+\end{itemize}
 
 \section{Additional results}
 \label{app:tables}
@@ -579,29 +604,36 @@ reported numbers were audited by independent model reviewers against the raw log
   \centering
   \includegraphics[width=\linewidth]{figs/fig_herding.pdf}
   \caption{\textbf{Frontier agents follow the Bayesian cascade rule and state Bayesian probabilities.}
-  (a) Probability of announcing the opposite of one's own spot check, by informative public lead in its
-  favour (verdicts protocol). The dashed step is the exact BHW rule; a lead of $-1$ is a Bayes tie. Bins
-  with fewer than 10 decisions are omitted. (b) Mean absolute error of the stated $P(\text{compliant})$
+  (a) Probability of announcing the opposite of one's own spot check, by the lead in its
+  favour (negative: against it), under the verdicts protocol. The dashed step is the exact BHW rule, and a lead of $-1$ is a Bayes tie. We omit bins
+  with fewer than 10 decisions. (b) Mean absolute error of the stated $P(\text{compliant})$
   against the exact posterior (filled, ``error vs exact Bayes'') and against a naive count of all verdicts
   (open), over deep-cascade
-  positions where the two differ by $\ge 0.10$; log scale. 95\% bootstrap CIs over episodes.}
+  positions where the two differ by $\ge 0.10$, on a log scale, and $n$ is the number of positions. Bars in (a) are 95\%
+  bootstrap CIs over episodes.}
   \label{fig:herding}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=\linewidth]{figs/fig_protocol.pdf}
-  \caption{\textbf{Verdict-only protocols cap a rational swarm; sharing probabilities removes the cap.}
+  \caption{\textbf{Verdict-only protocols limit a rational swarm's accuracy. In theory, sharing probabilities
+  removes the limit.}
   (a) Expected accuracy of the last agent in a chain of perfectly rational agents ($p=0.65$) that share
-  verdicts (BHW cascade) or probabilities/signals (full pooling); $2\times10^5$ simulated episodes per point.
+  verdicts (BHW cascade) or probabilities/signals (full pooling), over $2\times10^5$ simulated episodes per point.
   (b) Measured share of episodes whose 12 private spot checks favour the truth but whose final auditor
-  announces the wrong answer, under verdicts (circles) and probabilities (squares); 95\% bootstrap CIs;
-  $n$ is the number of such episodes.}
+  announces the wrong answer, under verdicts (circles) and probabilities (squares), with 95\% bootstrap CIs.
+  Here $n$ is the number of such episodes.}
   \label{fig:protocol}
 \end{figure}
 
+\paragraph{Hidden profile details.} Sonnet's false alarms on clean books (0.39) came from the prompt: in a
+post-hoc revision stating that the four slices cover the whole statement, they fell to 0.01 while adoption of the
+true line stayed at 1.00 (fake adoption rose from 0.05 to 0.13). Haiku calls clean books unreconciled even with the revision
+(0.73--0.86), so its \textsc{true} adoption of 1.00 is uninformative.
+
 \paragraph{Even honest verdict chains discard information.} Rational chains plateau at 0.775, while pooling
-reaches 0.85--0.98 at 12--48 agents; frontier final auditors were wrong in 9--14\% of episodes whose private checks
+reaches 0.85--0.98 at 12--48 agents. Frontier final auditors were wrong in 9--14\% of episodes whose private checks
 favoured the truth, and in none with shared probabilities (0 of 22--66; Figure~\ref{fig:protocol}).
 
 
@@ -610,11 +642,11 @@ favoured the truth, and in none with shared probabilities (0 of 22--66; Figure~\
 \scriptsize
 \setlength{\tabcolsep}{3.5pt}
 \caption{\textbf{Cascade task, all model-modes.} Complete 12-agent chains; override rates when the
-informative lead against one's signal is $\ge 2$ (casc.) or $|d|\le1$ excluding ties (none); solo
+lead against one's signal is $\ge 2$ (casc.) or $|d|\le1$ excluding ties (none); solo
 signal-following; mean $|P-P_B|$ under verdicts; share of deep-cascade positions where $P$ is closer to Bayes
 than to the naive count; mean accuracy of agents 3--12 under verdicts, probabilities and the rational
 benchmark on the same signals; share of episodes with a correct private majority but a wrong final verdict.
-Verdicts that contradict an established cascade are off the rational path; later positions are scored against
+Verdicts that contradict an established cascade are off the rational path, so we score later positions against
 the BHW reference that treats such verdicts as uninformative. Excluding them raises Sonnet's closer-to-Bayes share
 from 97.6\% to 99.2\% (fast Sonnet: 97\% to 100\%) and lowers its $|P-P_B|$ from 0.020 to 0.013.}
 \label{tab:herding}
@@ -624,9 +656,10 @@ from 97.6\% to 99.2\% (fast Sonnet: 97\% to 100\%) and lowers its $|P-P_B|$ from
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{Two sock-puppets hijack a rational swarm under verdicts; spot checks bound the damage.} Mean
+\caption{\textbf{Two fake agents hijack a rational swarm under verdicts. Planted spot checks do far less
+  damage.} Mean
 accuracy of the ten genuine auditors / accuracy of the last auditor, after two planted predecessors point
-to the wrong state; 30 episodes per cell, same signals as the unplanted runs. The benchmark row simulates
+to the wrong state, with 30 episodes per cell and the same signals as the unplanted runs. The benchmark row simulates
 agents who take every predecessor at face value. Fast Haiku repeat run: 0.22/0.37, 0.48/0.67, 0.42/0.57, 0.28/0.37.}
 \label{tab:planted}
 \input{figs/tab_planted.tex}
@@ -635,11 +668,12 @@ agents who take every predecessor at face value. Fast Haiku repeat run: 0.22/0.3
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{For Sonnet the damage broadly follows the theory across fake positions; Haiku resists head plants.}
-Mean accuracy of genuine auditors when fake wrong verdicts occupy the given positions of a 12-auditor chain; in
-parentheses, rational agents on the same signals and fake positions. One fake already tips about half of the
-chains, because a single wrong genuine signal after it starts a cascade. For mid-chain fakes the rational
-benchmark treats fakes that arrive after an established cascade as uninformative (17 of 30 episodes), as in
+\caption{\textbf{Sonnet roughly matches rational agents with one fake agent or with fake agents mid-chain, and resists
+somewhat more at the head of the chain. Haiku resists fake agents at the head of the chain.} Mean accuracy of genuine auditors when fake verdicts for the wrong
+state occupy the given positions of a 12-auditor chain. In parentheses are rational agents on the same signals and
+positions. One fake agent already hijacks about half of the chains, because a single wrong genuine signal after
+it starts a cascade. For mid-chain fake agents the rational benchmark treats planted verdicts that arrive after an
+established cascade as uninformative (17 of 30 episodes), as in
 Table~\ref{tab:herding}. ``--'' fewer than 10 complete episodes (Haiku reasoning, mid-chain: 1 of 10 started).}
 \label{tab:sweep}
 \input{figs/tab_sweep.tex}
@@ -648,19 +682,21 @@ Table~\ref{tab:herding}. ``--'' fewer than 10 complete episodes (Haiku reasoning
 \begin{table}[h]
 \centering
 \small
-\caption{\textbf{Frontier agents side with Bayes wherever it departs from counting; smaller models fail on
+\caption{\textbf{Frontier agents side with Bayes wherever it departs from counting, but Qwen3-14B and fast Haiku fail on
 peers' verdicts.} F1--F3: share of discriminating items (32 per family) on which the decision matches Bayes
 and not the count, and the largest mean $|P-P_B|$ across the three families. F4: share of cascade-verdict
 items (48) on which the stated $P$ is closer to Bayes than to the naive count, and the mean errors against
-each. 0 refusals; Llama needed 24 parse retries and left $P$ unparsed on 2 items.}
+each. There were 0 refusals. Llama needed 24 parse retries and left $P$ unparsed on 2 items.}
 \label{tab:stress}
 \input{figs/tab_stress.tex}
 \end{table}
 
 \section*{LLM Usage Statement}
-% TODO(authors): complete
-Large language models were the subjects of these experiments. LLM coding agents also helped write the
-experiment code, run analyses, search the literature and draft this report. The authors reviewed the
-design, checked the numbers against the raw logs, and take responsibility for the content.
+Large language models were the subjects of these experiments. The author also used Claude (Anthropic) throughout the
+research: Claude Opus~5.5 coding agents, run in Claude Code and OpenResearch, wrote most of the experiment and
+analysis code, searched the literature and drafted most of this report, and further Claude agents (Opus, Sonnet
+and Haiku~5.5), with GPT-6.1 as an additional reviewer, checked the design, the numbers and the text. The author
+chose the questions and analyses, checked the reported numbers against the raw logs, and is responsible for the
+content.
 
 \end{document}

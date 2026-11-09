@@ -5,9 +5,9 @@ Regenerate:  uv run --isolated --no-project python figs/make_tables_bayes.py
 import json
 import os
 import pathlib
+
 import os as _os, pathlib as _pl
 SWARM_ROOT = _os.environ.get("SWARM_ARTIFACTS", str(_pl.Path(__file__).resolve().parents[1] / "data"))
-
 ART = pathlib.Path(SWARM_ROOT)
 H = json.load(open(ART / "r3-herding/paper_summary.json", encoding="utf-8"))
 ORDER = ["Opus 5.5", "GPT-6.1", "Gemini 4 Argon", "Sonnet 5.5", "Sonnet 5.5 (fast)", "GPT-6.1 (minimal)",
@@ -65,7 +65,7 @@ def planted():
                          f"{s['pos_acc_genuine'][0]:.2f} / {s['final_acc'][0]:.2f}")
         rows.append(" & ".join([lab] + cells) + r" \\")
     head = (r"\begin{tabular}{lcccc}" "\n" r"\toprule" "\n"
-            "shared after two sock-puppets & " + " & ".join(n for _, n in conds) + r" \\" "\n" r"\midrule")
+            "shared after two fake agents & " + " & ".join(n for _, n in conds) + r" \\" "\n" r"\midrule")
     (pathlib.Path("figs") / "tab_planted.tex").write_text(
         head + "\n" + "\n".join(rows) + "\n" + r"\bottomrule" + "\n" + r"\end{tabular}" + "\n", encoding="utf-8")
 

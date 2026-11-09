@@ -5,13 +5,13 @@ signals and fake positions). Regenerate:  uv run --isolated --no-project python 
 import json
 import os
 import pathlib
+
 import os as _os, pathlib as _pl
 SWARM_ROOT = _os.environ.get("SWARM_ARTIFACTS", str(_pl.Path(__file__).resolve().parents[1] / "data"))
-
 S = json.load(open(pathlib.Path(SWARM_ROOT) / "r3-herding/sweep_summary.json",
                    encoding="utf-8"))
-ROWS = [("verdicts_plant1", "one fake, position 1"), ("verdicts_plant", "two fakes, positions 1--2"),
-        ("verdicts_plant3", "three fakes, positions 1--3"), ("verdicts_plantmid", "two fakes, positions 5--6")]
+ROWS = [("verdicts_plant1", "one, position 1"), ("verdicts_plant", "two, positions 1--2"),
+        ("verdicts_plant3", "three, positions 1--3"), ("verdicts_plantmid", "two, positions 5--6")]
 COLS = [("claude-sonnet-5-5|think", "Sonnet"), ("claude-haiku-5-5|think", "Haiku (reasoning)"),
         ("claude-haiku-5-5|fast", "Haiku (fast)")]
 

@@ -1,11 +1,11 @@
-# Too Rational to Resist: Two Fake Votes Fool LLM Agents That Reason Correctly About Their Peers
+# Too Rational to Resist: Two Lies Are All It Takes to Hijack Frontier LLMs
 
 Code, data and analysis for the paper [`paper.pdf`](paper.pdf) (Apart Research Swarm Alignment Hackathon,
 November 2026).
 
 **Finding in one line.** Frontier LLM agents update on their peers almost exactly as Bayes' rule prescribes, and
-that is what makes them exploitable: when agents see only each other's answers, two fake votes from sock-puppet
-accounts make every genuine agent wrong. Sharing checkable evidence instead of verdicts caps the damage.
+that is what makes them exploitable: when agents see only each other's answers, two fake agents answering
+first make every genuine agent wrong. Sharing checkable evidence instead of verdicts caps the damage.
 
 ## Reproduce in one command
 
@@ -35,7 +35,8 @@ This downloads `raw_api_logs.tar.gz` (19 MB, attached to the
 [v1.0 release](https://github.com/PeterLurf/too-rational-to-resist/releases/tag/v1.0)), unpacks it into
 `data/`, recomputes every summary from the individual API calls (prompt, model id, full response, parsed
 answer, tokens, cost), and then rebuilds the tables and figures. Still no API keys: every call is replayed from
-the logs. Takes a few minutes.
+the logs. Takes a few minutes. The capture-test calls for GPT-6.1 and Gemini 4 Argon were run after the v1.0
+archive; they are in `raw_addendum/` and merged into `data/` automatically.
 
 ### Level 3: re-run the experiments (API keys, costs money)
 
@@ -52,7 +53,7 @@ unpacked a rerun only calls the API for missing items; delete a folder's `calls.
 | Hidden profile (Sec. 4.4) | `tools/r3_deaf.py run` | `tools/r3_deaf.py analyse` |
 | Rank correlations ρ (Sec. 4.5, Fig. 4a) | `tools/r3_herding.py run` with the `*plant` aliases | `tools/rho_ladder.py` |
 | Warned condition (Sec. 4.5) | `tools/r3_herding.py run --models sonnetwarn opuswarn haikuwarn haikuthinkwarn` | `tools/warn_bayes.py analyse` (exact benchmark: `python tools/warn_bayes.py`) |
-| Sock-puppet sweep, Table 4 | `tools/r3_herding.py run --models sonnetsweep haikusweep haikuthinksweep` | `tools/sweep_analyse.py` |
+| Fake-agent sweep, Table 4 | `tools/r3_herding.py run --models sonnetsweep haikusweep haikuthinksweep` | `tools/sweep_analyse.py` |
 | Code-review pipeline, Table 1 (Sec. 4.6) | `PR_VARIANT=<folder> tools/pr_review.py run --models … --conds …` (needs the service clone below) | `PR_VARIANT=<folder> tools/pr_review.py analyse` |
 | Tables and figures | — | `figs/make_tables_bayes.py`, `figs/make_tab_pr.py`, `figs/make_tab_sweep.py`, `figs/make_figs_bayes.py` |
 

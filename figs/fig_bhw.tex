@@ -1,7 +1,8 @@
 % BHW cascade schematic for bayesian_swarms.tex. One illustrative 8-agent chain with p = 0.65 and a 50/50 prior.
 % Posteriors are exact: Bayes P(C) = sigma((s_k + d_k) * lambda), naive P(C) = sigma((s_k + sum of all earlier
-% verdicts) * lambda), lambda = ln(0.65/0.35); d_k = informative public lead, frozen once |d| = 2.
+% verdicts) * lambda), lambda = ln(0.65/0.35); d_k = lead (revealed signals for C minus for N), frozen once |d| = 2.
 % Pooled P(C) over all 8 signals = sigma(-2 lambda) = 0.225.
+% The dashed box marks agents 1-2 as interchangeable with two fake agents posting C: agent 3 sees the same history.
 % Build:  tectonic figs/fig_bhw.tex
 \documentclass[border=1pt]{standalone}
 \usepackage[sfdefault]{inter}
@@ -48,14 +49,9 @@
   \node[sig=safe] (v\k) at (x\k) {C};
   \draw[->, draw=sub!70] (s\k) -- (a\k);
   \draw[->, draw=sub!70] (a\k) -- (v\k);
-  % posteriors: bars of length P, Bayes (filled) and naive count (outline)
-  % bars run from P = 0.5 (left edge) to P = 1 (right edge of the light track)
-  \fill[rule!60] ($(x\k)+(-4.5mm,-8mm)$) rectangle ++(9mm, 1.6mm);
-  \fill[rule!60] ($(x\k)+(-4.5mm,-11.5mm)$) rectangle ++(9mm, 1.6mm);
-  \fill[over] ($(x\k)+(-4.5mm,-8mm)$) rectangle ++({18mm*(\b-0.5)}, 1.6mm);
-  \draw[over, fill=white] ($(x\k)+(-4.5mm,-11.5mm)$) rectangle ++({18mm*(\n-0.5)}, 1.6mm);
-  \node[num, text=over, font=\scriptsize\bfseries] at ($(x\k)+(0,-4.2mm)$) {\b};
-  \node[num, text=sub] at ($(x\k)+(0,-13.6mm)$) {\n};
+  % stated probability that the answer is C: exact Bayes (bold) and naive count of all verdicts (grey)
+  \node[num, text=over, font=\scriptsize\bfseries] at ($(x\k)+(0,-5.0mm)$) {\b};
+  \node[num, text=sub] at ($(x\k)+(0,-8.8mm)$) {\n};
 }
 % verdict chain
 \foreach \k [evaluate=\k as \j using int(\k+1)] in {1,...,7} { \draw[->, draw=ink!60] (v\k.east) -- (v\j.west); }
@@ -63,27 +59,31 @@
 \draw[leak, line width=0.8pt] (a3) circle (8.5pt);
 
 % row labels
-\node[rowlbl] at ($(s1)+(-8mm,0)$) {private signal\\[-1pt](right w.p. 0.65)};
-\node[rowlbl] at ($(v1)+(-8mm,0)$) {announced\\[-1pt]verdict};
-\node[rowlbl] at ($(x1)+(-8mm,-7.2mm)$) {\textbf{\color{over}P(C), exact Bayes}};
-\node[rowlbl, text=sub] at ($(x1)+(-8mm,-10.7mm)$) {P(C), naive count};
+\node[rowlbl] at ($(s1)+(-8mm,0)$) {own private signal\\[-1pt]{\tiny solid: revealed\quad dashed: hidden}};
+\node[rowlbl] at ($(a1)+(-8mm,0)$) {agent, in turn};
+\node[rowlbl] at ($(v1)+(-8mm,0)$) {announced verdict};
+\node[rowlbl] at ($(x1)+(-8mm,-5.0mm)$) {\textbf{\color{over}P(C), exact Bayes}};
+\node[rowlbl, text=sub] at ($(x1)+(-8mm,-8.8mm)$) {P(C), naive count};
 
-% braces
-\draw[decorate, decoration={brace, amplitude=3pt}, draw=sub] ($(s1.north west)+(0,1.5mm)$) -- ($(s2.north east)+(0,1.5mm)$)
-  node[midway, above=2.5pt, note, align=center] {verdicts reveal\\[-1pt]these signals};
-\draw[decorate, decoration={brace, amplitude=3pt}, draw=leak] ($(s3.north west)+(0,1.5mm)$) -- ($(s8.north east)+(0,1.5mm)$)
-  node[midway, above=2.5pt, note, align=center, text=leak] {cascade: informative lead = 2, so every verdict copies it\\[-1pt]and these signals are never revealed};
+% agents 1-2 could equally be two fake agents: dashed box around their signal, agent and verdict
+\draw[leak, dashed, line width=0.6pt, rounded corners=3pt, dash pattern=on 2pt off 1.4pt]
+  ($(s1.north west)+(-2.6mm,1.0mm)$) rectangle ($(v2.south east)+(2.6mm,-1.0mm)$);
+
+% braces: the story in two numbered steps
+\draw[decorate, decoration={brace, amplitude=3pt}, draw=sub] ($(s1.north west)+(-2.6mm,2.6mm)$) -- ($(s2.north east)+(2.6mm,2.6mm)$)
+  node[midway, above=2.5pt, note, align=center] {\textbf{\color{ink}1}\enspace two wrong signals,\\[-1pt]\textbf{\color{leak}or two fake agents}};
+\draw[decorate, decoration={brace, amplitude=3pt}, draw=sub] ($(s3.north west)+(0,2.6mm)$) -- ($(s8.north east)+(0,2.6mm)$)
+  node[midway, above=2.5pt, note, align=center] {\textbf{\color{ink}2}\enspace two revealed C beat one N, so agent 3
+  \textbf{\color{leak}overrides},\\[-1pt]and every later agent copies C, revealing nothing};
 
 % takeaway card
-\node[draw=rule, fill=card, rounded corners=4pt, inner sep=4pt, text width=46mm, align=left, font=\scriptsize,
+\node[draw=rule, fill=card, rounded corners=4pt, inner sep=4pt, text width=44mm, align=left, font=\scriptsize,
       anchor=west] (tk) at ($(x8)+(8mm,3mm)$) {%
-  \textbf{Pooled}, the 8 signals favour \textbf{\color{leak}N} (5 of 8; P(C) = 0.23). The swarm
-  announces \textbf{\color{safe}C} unanimously.\\[3pt]
-  Agent 3 \textbf{\color{leak}overrides} its own signal: two revealed signals outweigh one.\\[3pt]
-  \textbf{Captured:} copy the majority whatever the signal.
-  \textbf{Deaf:} follow the signal whatever the majority.
-  \textbf{Bayesian:} override exactly at an informative lead of 2, and report 0.65 or 0.86, not the naive
-  count's 0.98.};
+  \textbf{Result:} 5 of 8 signals favour the truth, \textbf{\color{leak}N}, yet all 8 announce
+  \textbf{\color{safe}C}.\\[3pt]
+  \textbf{\color{leak}Fake agents} posting C at 1--2 would give agent 3 the same history, so the chain
+  follows them too.\\[3pt]
+  Exact Bayes stays at 0.65--0.86. Counting every verdict as evidence climbs to 0.98.};
 
 \end{tikzpicture}
 \end{document}
